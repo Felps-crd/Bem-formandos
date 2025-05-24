@@ -182,38 +182,105 @@ section.vestibulares{
   justify-content: center;
 }
 
+/*
+background-color: #033F7B;
+    border: 2px solid #EFC84A;
+    color: #EFC84A;
+    transition: 0.7s;
+    */
+
 .botoes-vestibulares .enem{
   background-color: #4CAF50;
+}
+.botoes-vestibulares .enem:hover{
+  border: 1px solid #ffffff;
+  background-color: #1E5E20;
+  color: #ffff;
+  transition: 0.5s;
 }
 .botoes-vestibulares .fuvest{
   background-color: #E99117;
 }
+.botoes-vestibulares .fuvest:hover{
+  border: 1px solid #ffffff;
+  background-color: #A1712E;
+  color: #ffff;
+  transition: 0.5s;
+}
 .botoes-vestibulares .unicamp{
   background-color: #BE87E8;
+}
+.botoes-vestibulares .unicamp:hover{
+  border: 1px solid #ffffff;
+  background-color: #57267D;
+  color: #ffff;
+  transition: 0.5s;
 }
 .botoes-vestibulares .fatec{
   background-color: #D65B5B;
 }
+.botoes-vestibulares .fatec:hover{
+  border: 1px solid #ffffff;
+  background-color: #862929;
+  color: #ffff;
+  transition: 0.5s;
+}
 .botoes-vestibulares .unesp{
   background-color: #EFC84A;
+}
+.botoes-vestibulares .unesp:hover{
+  border: 1px solid #ffffff;
+  background-color: #A4831B;
+  color: #ffff;
+  transition: 0.5s;
 }
 .botoes-vestibulares .ufesp{
   background-color: #6DA5FA;
 }
+.botoes-vestibulares .ufesp:hover{
+  border: 1px solid #ffffff;
+  background-color: #1E4A8C;
+  color: #ffff;
+  transition: 0.5s;
+}
 .botoes-vestibulares .sisu{
   background-color: #DD96B0;
+}
+.botoes-vestibulares .sisu:hover{
+  border: 1px solid #ffffff;
+  background-color: #B02256;
+  color: #ffff;
+  transition: 0.5s;
 }
 .botoes-vestibulares .prouni{
   background-color: #61CFC6;
 }
+.botoes-vestibulares .prouni:hover{
+  border: 1px solid #ffffff;
+  background-color: #0D776E;
+  color: #ffff;
+  transition: 0.5s;
+}
 .botoes-vestibulares .fies{
   background-color: #C7A485;
+}
+.botoes-vestibulares .fies:hover{
+  border: 1px solid #ffffff;
+  background-color: #945014;
+  color: #ffff;
+  transition: 0.5s;
 }
 .botoes-vestibulares .provao{
   padding-top: 0px;
   background-color: #A99BD0;
   height: 60.542px;
-  font-size: 28px;
+  font-size: 25px;
+}
+.botoes-vestibulares .provao:hover{
+  border: 1px solid #ffffff;
+  background-color: #3D2B74;
+  color: #ffffff;
+  transition: 0.5s;
 }
 footer{
   width: 100%;
