@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Graduate&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/estilos/style-modal.css">
 
     <title>Bem Formandos</title>
 </head>
@@ -22,11 +24,43 @@
                 </a>
             </div>
 
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
+            <button class="btn-cadastro" data-modal="modal-cadastro">
+                Cadastre-se
+            </button>
         </header>
         <!-- fim cabeçalho -->
+
+        <!--MODAL CADASTRO-->
+
+        <dialog id="modal-cadastro">
+            
+            <form action="" method="post">
+
+                <div class="modal-header">
+                    <button type="button" class="close-modal" data-modal="modal-cadastro">
+                        <i class="bi bi-arrow-left-circle"></i>
+                    </button>
+                    
+                    <h1 class="modal-title">
+                        CADASTRO
+                    </h1>
+                    <span class="regua"></span>
+                </div><!--Fim header modal-->
+
+                <div class="modal-body">
+                    <div class="input-group">
+                        <div class="input">
+                            <i class="bi bi-person"></i>
+                            <input type="text" placeholder="Nome de usuário">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            
+        </dialog>
+
+        <!--FIM MODAL CADASTRO-->
 
         <!-- inicio principal -->
         <main>
@@ -65,5 +99,6 @@
             </div>
         </footer>
     </div>
+    <script src="assets/Javascript/script.js"></script>
 </body>
 </html>
