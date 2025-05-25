@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Graduate&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,10 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.container-conteudo{
+  display: flex;
 }
 
 header{
@@ -182,13 +188,6 @@ section.vestibulares{
   justify-content: center;
 }
 
-/*
-background-color: #033F7B;
-    border: 2px solid #EFC84A;
-    color: #EFC84A;
-    transition: 0.7s;
-    */
-
 .botoes-vestibulares .enem{
   background-color: #4CAF50;
 }
@@ -299,9 +298,6 @@ footer{
   font-weight: 400;
   padding: 10px;
 }
-
-
-
 
 
 @media (max-width: 600px) {
