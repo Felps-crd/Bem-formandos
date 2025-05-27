@@ -1,3 +1,26 @@
+<?php
+
+if(isset($_POST['submit'])){
+/*    print_r($_POST['user_name']);
+    print_r($_POST['user_email']);
+    print_r($_POST['user_senha']);
+}
+*/
+
+include_once('conexao.php');
+
+$user_name = $_POST['user_name'];
+$user_email = $_POST['user_email'];
+$user_senha = $_POST['user_senha'];
+
+$result = mysqli_query($conexao, "INSERT INTO usuario(user_name,user_email,user_senha) 
+VALUES ('$user_name', '$user_email', '$user_senha')");
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -35,7 +58,7 @@
 
         <dialog id="modal-cadastro">
             
-            <form action="" method="post">
+            <form action="index.php" method="post">
 
                 <div class="modal-header">
                     <button type="button" class="close-modal" data-modal="modal-cadastro">
@@ -52,24 +75,23 @@
                     <div class="input-group">
                         <div class="input">
                             <i class="bi bi-person"></i>
-                            <input type="text" placeholder="Nome de usuário">
+                            <input type="text" name="user_name" id="user_name" placeholder="Nome de usuário">
                         </div>
                         <div class="input">
                             <i class="fa-regular fa-envelope"></i>
-                            <input type="text" placeholder="E-mail">
+                            <input type="text" name="user_email" id="user_email" placeholder="E-mail">
                         </div>
                         <div class="input">
                             <i class="bi bi-lock"></i>
-                            <input type="text" placeholder="Senha">
+                            <input type="text" name="user_senha" id="user_senha" placeholder="Senha">
                         </div>
                     </div>
 
                     
                 <div class="content-button">
-                    <button class="btn-cadastrar">
-                        Criar conta
-                    </button>
 
+                    <input class="btn-cadastrar" name="submit" type="submit" value="Criar conta">
+                
                     <div class="modal-ou">
                         <span class="regua-2"></span><label>ou</label><span class="regua-2"></span>
                     </div>
