@@ -2,7 +2,12 @@
 nav.menu-lateral{
     width: 70px;
     height: 100vh;
-    background-color: #4CAF50;
+    /* Variáveis CSS para cores */
+    --bg-color: #4CAF50;
+    --hover-color: #29812C;
+    --text-color: #1E5E20;
+
+    background-color: var(--bg-color);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.547);
@@ -13,11 +18,12 @@ nav.menu-lateral{
   .btn-expandir{
     width: 100%;
     padding-left: 10%;
+    color: var(--text-color);
   }
   
   .btn-expandir i{
     
-    color: #1E5E20;
+    /* color: #1E5E20; */
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
@@ -46,27 +52,31 @@ nav.menu-lateral{
   }
   
   ul li.item-menu:hover {
-    background-color: #1E5E20;
     transition: 0.7s;
     border-radius: 10px;
+    background-color: var(--hover-color);
   }
   
-  .titulo-enem span p{
+  .titulo-vestibular span p{
     font-family: Graduate;
     font-size: 40px;
     margin-top: 50px;
     margin-left: 10px;
     margin-bottom: 20px;
-    color: #1E5E20;
+    color: var(--text-color);
     writing-mode: vertical-rl;
     text-orientation: upright;
     transition: all 0.4s ease;
     opacity: 1;
   }
-  
-  .titulo-enem .regua {
+  .titulo-vestibular a{
+    text-decoration: none;
+  }
+  .titulo-vestibular .regua {
     display: none;
   }
+
+  
   
   /* FIM LAYOUT MENU COMPACTADO */
   
@@ -154,7 +164,7 @@ nav.menu-lateral{
     display: block;
   }
   
-  .menu-lateral.expandido .titulo-enem span p {
+  .menu-lateral.expandido .titulo-vestibular span p {
     writing-mode: horizontal-tb;
     text-orientation: initial;
     margin-top: 0;
@@ -163,12 +173,12 @@ nav.menu-lateral{
     opacity: 1;
   }
   
-  .menu-lateral.expandido .titulo-enem .regua {
+  .menu-lateral.expandido .titulo-vestibular .regua {
     display: block;
     margin: 10px;
     width: 85%;
     height: 1px;
-    background-color: #1E5E20;
+    background-color: var(--text-color);
   }
   
   .menu-lateral.expandido ul li.item-menu a{
@@ -178,7 +188,14 @@ nav.menu-lateral{
     padding: 20px;
     font-family: Gabarito;
     display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;          
+    overflow: hidden;
+    border-radius: 10px;          
+    transition: background-color 0.3s ease;
   }
   
   /*===============FIM LAYOUT EXPANDIDO==================*/
   /*FIM LAYOUT MENU*/
+  

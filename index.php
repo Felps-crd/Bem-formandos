@@ -134,10 +134,10 @@ VALUES ('$user_name', '$user_email', '$user_senha')");
             <section class="vestibulares">
                 <p>Escolha o seu vestibular e comece sua jornada rumo à universidade!</p>
                 <div class="botoes-vestibulares">
-                    <a href="home-enem.html" class="enem">Enem</a>
+                    <a href="vestibulares/enem/home-enem.html" class="enem">Enem</a>
                     <a href="#" class="fuvest">Fuvest</a>
                     <a href="#" class="unicamp">Unicamp</a>
-                    <a href="#" class="fatec">Fatec</a>
+                    <a href="vestibulares/fatec/home-fatec.html" class="fatec">Fatec</a>
                     <a href="#" class="unesp">Unesp</a>
                     <a href="#" class="ufesp">Ufesp</a>
                     <a href="#" class="sisu">Sisu</a>
