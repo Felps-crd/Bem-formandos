@@ -38,6 +38,38 @@ VALUES ('$user_name', '$user_email', '$user_senha')");
     <title>Bem Formandos</title>
 </head>
 <body>
+
+    <!-- Configurações para poder Entrar com o Google -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDmxN8BJ8JLLblq-ZVnJstgG_192bF9Gw8",
+    authDomain: "bem-formandos.firebaseapp.com",
+    projectId: "bem-formandos",
+    storageBucket: "bem-formandos.firebasestorage.app",
+    messagingSenderId: "593097423170",
+    appId: "1:593097423170:web:f055ece36c03f0d73630db"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  window.loginWithGoogle = async function () {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Usuário:", user);
+      alert("Bem-vindo, " + user.displayName);
+    } catch (error) {
+      console.error("Erro no login:", error.message);
+    }
+  }
+</script>
+    <!-- Encerramneto das Configurações para poder Entrar com o Google -->
+
     <div class="container-principal">
         <!-- inicio cabeçalho -->
         <header>
@@ -55,68 +87,76 @@ VALUES ('$user_name', '$user_email', '$user_senha')");
         <!-- fim cabeçalho -->
 
         <!--MODAL CADASTRO-->
+       
 
-        <dialog id="modal-cadastro">
-            
-            <form action="index.php" method="post">
+        <!--Aqui escurece o fundo-->
+<div id="modal-cadastro" class="modal-overlay" 
+style="display: none; position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%; background: hsla(0, 0.00%, 0.00%, 0.60); justify-content: center; align-items: center; z-index: 1000;">
+        <!--Aqui escurece o fundo-->
 
-                <div class="modal-header">
-                    <button type="button" class="close-modal" data-modal="modal-cadastro">
-                        <i class="bi bi-arrow-left-circle"></i>
-                    </button>
-                    
-                    <h1 class="modal-title">
-                        CADASTRO
-                    </h1>
-                    <span class="regua"></span>
-                </div><!--Fim header modal-->
+        <!--Configuração das cores do funco da parte de cadastro-->
+    <form action="index.php" method="post" style=" padding-top: 20px;
+    justify-content: center;
+    justify-items: center;
+    width: 600px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #003366 0%, #0073E6 100%);;">
+        <!--Configuração das cores do funco da parte de cadastro-->
 
-                <div class="modal-body">
-                    <div class="input-group">
-                        <div class="input">
-                            <i class="bi bi-person"></i>
-                            <input type="text" name="user_name" id="user_name" placeholder="Nome de usuário">
-                        </div>
-                        <div class="input">
-                            <i class="fa-regular fa-envelope"></i>
-                            <input type="text" name="user_email" id="user_email" placeholder="E-mail">
-                        </div>
-                        <div class="input">
-                            <i class="bi bi-lock"></i>
-                            <input type="text" name="user_senha" id="user_senha" placeholder="Senha">
-                        </div>
-                    </div>
+        
+        <div class="modal-header">
+            <button type="button" class="close-modal" onclick="fecharModal('modal-cadastro')">
+                <i class="bi bi-arrow-left-circle"></i>
+            </button>
 
-                    
-                <div class="content-button">
+            <h1 class="modal-title">CADASTRO</h1>
+            <span class="regua"></span>
+        </div><!--Fim header modal-->
 
-                    <input class="btn-cadastrar" name="submit" type="submit" value="Criar conta">
-                
-                    <div class="modal-ou">
-                        <span class="regua-2"></span><label>ou</label><span class="regua-2"></span>
-                    </div>
-
-                    <button class="btn-google">
-                        <i class="bi bi-google"></i>
-                        Entrar com google
-                    </button>
+        <div class="modal-body">
+            <div class="input-group">
+                <div class="input">
+                    <i class="bi bi-person"></i>
+                    <input type="text" name="user_name" id="user_name" placeholder="Nome de usuário" required>
                 </div>
-            </div>
-
-            <div class="modal-footer">
-                <span class="regua"></span>
-
-                <div class="entrar">
-                    <p>Já possui uma conta?</p>
-                    <a href="#">Entrar</a>
+                <div class="input">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" name="user_email" id="user_email" placeholder="E-mail" required>
                 </div>
+                <div class="input">
+                    <i class="bi bi-lock"></i>
+                    <input type="password" name="user_senha" id="user_senha" placeholder="Senha" required>
+                </div>
+        </div>
+
+            <div class="content-button">
+                <input class="btn-cadastrar" name="submit" type="submit" value="Criar conta">
+
+                <div class="modal-ou">
+                    <span class="regua-2"></span><label>ou</label><span class="regua-2"></span>
+                </div>
+
+                <button class="btn-google" type="button" onclick="loginWithGoogle()">
+                    <i class="bi bi-google"></i>
+                    Entrar com google
+                </button>
             </div>
+        </div>
 
-            </form>
-            
-        </dialog>
+        <div class="modal-footer">
+            <span class="regua"></span>
+            <div class="entrar">
+                <p>Já possui uma conta?</p>
+                <a href="#">Entrar</a>
+            </div>
+        </div>
 
-        <!--FIM MODAL CADASTRO-->
+    </form>
+</div>
+<!--FIM MODAL CADASTRO-->
+
 
         <!-- inicio principal -->
         <main>
@@ -156,5 +196,26 @@ VALUES ('$user_name', '$user_email', '$user_senha')");
         </footer>
     </div>
     <script src="assets/Javascript/script.js"></script>
+
+    <script>
+  function abrirModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = "flex";
+  }
+
+  function fecharModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = "none";
+  }
+
+  // Botões que abrem modal com data-modal
+  document.querySelectorAll('[data-modal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-modal');
+      abrirModal(modalId);
+    });
+  });
+</script>
+
 </body>
 </html>
