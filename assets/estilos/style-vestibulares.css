@@ -1,0 +1,62 @@
+p{
+    color: #1E1E1E;
+    font-size: 32px;
+    font-family: Gabarito;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-top: 30px;
+}
+h1{
+   color: var(--cor-titulo);
+    font-size: 40px;
+    font-family: Gabarito;
+    font-weight: 600;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    text-align: center;
+}
+.menu-lateral.enem {
+  --bg-color: #4CAF50;
+  --hover-color: #29812C;
+  --text-color: #1E5E20;
+}
+.container-conteudo.enem{
+  --cor-titulo: #4CAF50;
+}
+
+.menu-lateral.fatec {
+  --bg-color: #D65B5B;
+  --hover-color: #a73a3ade;
+  --text-color: #862929;
+  --text-color: #703232;
+
+}
+.container-conteudo.fatec{
+  --cor-titulo: #D65B5B;
+}
+.menu-lateral.fuvest {
+  --bg-color: #E99117;
+  --hover-color: #9d5432de;
+  --text-color: #A1712E;
+}
+.container-conteudo.menu-lateral.fuvest{
+  --cor-titulo: #E99117;
+}
+
+.menu-lateral.unicamp {
+  --bg-color: #BE87E8;
+  --hover-color: #8037b8;
+  --text-color: ##57267D;
+}
+.container-conteudo.menu-lateral.menu-lateral.unicamp{
+  --cor-titulo: #BE87E8;
+}
+
+.menu-lateral.unesp {
+  --bg-color: #EFC84A;
+  --hover-color: #b0a82f;
+  --text-color: #A4831B;
+}
+.container-conteudo.menu-lateral.menu-lateral.unesp{
+  --cor-titulo: #EFC84A;
+}
