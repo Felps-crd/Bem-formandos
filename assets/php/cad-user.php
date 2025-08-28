@@ -19,14 +19,14 @@ else{
 
     if($check->num_rows > 0){
         // Usuário já cadastrado
-        $retorna = ['status' => false, 'msg' => "Esse usuário já está cadastrado!"];
+        $retorna = ['status' => false, 'msg' => "Este usuário já está cadastrado!"];
     } else{
         //insere no banco
         $stmt = $conexao->prepare("INSERT INTO usuarios(usuario, email) VALUES (?, ?)");
         $stmt->bind_param("ss", $dados['user_name'], $dados['user_email']);
         
         if($stmt->execute()){
-            $retorna = ['status' => true, 'msg' => "Agora quando houver atualização dos vestibulares, você recebera via e-mail"];
+            $retorna = ['status' => true, 'msg' => "Agora quando houver atualização dos vestibulares, você receberá via e-mail"];
         }else{
             $retorna = ['status' => false, 'msg' => "Erro ao cadastrar usuário!"];
         }
