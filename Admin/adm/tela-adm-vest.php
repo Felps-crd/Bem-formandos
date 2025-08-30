@@ -1,3 +1,26 @@
+<?php
+session_start();
+include_once('../../assets/php/conexao.php');
+
+// Verifica se está logado
+if(!isset($_SESSION['adm_id'])){
+  header("Location: login-adm.php");
+  exit;
+}
+
+// Total de funcionários (todos os cargos)
+$total_funcionarios = $conexao->query("SELECT COUNT(*) as total FROM funcionarios")->fetch_assoc()['total'];
+
+// Total de vestibulares
+$total_vestibulares = $conexao->query("SELECT COUNT(*) as total FROM vestibulares")->fetch_assoc()['total'];
+
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -39,14 +62,18 @@
                             <button type="button" id="btn-trocar-foto">Trocar foto</button>
                             <button type="button" id="btn-remover-foto">Remover foto</button>
                         </div>
+
                 </div>
-                <h1 id="nome-perfil">Nome do adm</h1>
-                <p id="email-perfil">exemplo@email.com</p>
+
+                <h1 id="nome-perfil"><?php echo $_SESSION['adm_nome']; ?></h1>
+                <p id="email-perfil"><?php echo $_SESSION['adm_email']; ?></p>
                 <button type="button" id="btn-alterar-senha">Alterar senha</button>
                 <div id="form-senha" style="display:none; text-align:center; margin-top:20px;">
                     <input type="password" id="nova-senha" style="border: none; outline: none; font-size: 15px;" placeholder="Nova senha" required>
                     <button type="button" id="salvar-senha">Salvar</button>
                 </div>
+
+                <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">Sair</button>
             </div>
         </div>
       </div>  
@@ -65,7 +92,7 @@
                 <!--Card funcionarios-->
                 <div class="card-cont">
                     <h3>Total de funcionários</h3>
-                    <p class="number"><?php echo $total_vestibulares; ?></p>
+                    <p class="number"><?php echo $total_funcionarios; ?></p>
                     <i class="bi bi-people card-icon"></i>
                 </div>
             

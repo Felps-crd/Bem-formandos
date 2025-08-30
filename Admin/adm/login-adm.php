@@ -1,3 +1,32 @@
+<?php
+session_start();
+include_once('../../assets/php/conexao.php');
+
+if(isset($_POST['submit'])){
+    $usuario = $_POST['adm_name'];
+    $senha   = $_POST['adm_senha'];
+
+    // Verifica se existe o admin
+    $stmt = $conexao->prepare("SELECT * FROM funcionarios WHERE usuario=? AND senha=? AND cargo='adm'");
+    $stmt->bind_param("ss", $usuario, $senha);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if($result->num_rows === 1){
+        $admin = $result->fetch_assoc();
+        // cria variáveis de sessão para o admin logado
+        $_SESSION['adm_id'] = $admin['id'];
+        $_SESSION['adm_nome'] = $admin['nome'];
+        $_SESSION['adm_email'] = $admin['email'];
+        header("Location: tela-adm-vest.php"); // redireciona para a tela administrativa
+        exit;
+    } else {
+        echo "<script>alert('Usuário ou senha incorretos');</script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -39,7 +68,7 @@
         <!--Aqui escurece o fundo-->
 
         <!--Configuração das cores do fundo da parte de cadastro-->
-        <form action="" method="post" style=" padding-top: 20px;
+        <form action="login-adm.php" method="post" style=" padding-top: 20px;
             justify-content: center;
             justify-items: center;
             width: 600px;
