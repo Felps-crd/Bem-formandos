@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
         <header>
             <div class="logo">
                 <a href="#" class="logo">
-                <img src="assets/imagens/logo-temp 1.png" alt="Ícone de formatura">
+                <img src="assets/imagens/logo.png" alt="Ícone de formatura">
 
                 <h1>BEM FORMANDOS</h1>
 

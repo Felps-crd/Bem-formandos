@@ -1,9 +1,9 @@
 /* INICIO LAYOUT MENU COMPACTADO */
-nav.menu-lateral{
+ nav.menu-lateral{
     width: 70px;
-    height: 100vh;
+    height: 100vh; */
     /* Variáveis CSS para cores */
-    --bg-color: #4CAF50;
+    --bg-color: linear-gradient(135deg, #4CAF50 0%, #4CAF79 100%);
     --hover-color: #29812C;
     --text-color: #1E5E20;
 
@@ -13,22 +13,23 @@ nav.menu-lateral{
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.547);
     transition: width 0.4s ease, padding 0.4s ease;
     overflow: hidden;
-  }
-  
-  .btn-expandir{
+  } 
+
+
+   .btn-expandir{
     width: 100%;
     padding-left: 10%;
     color: var(--text-color);
   }
   
-  .btn-expandir i{
+  .btn-expandir i{ */
     
-    /* color: #1E5E20; */
-    font-size: 50px;
+     color: #1E5E20; 
+     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
-  }
-  
+  } 
+
   ul{
     list-style: none;
     display: none;
@@ -74,10 +75,8 @@ nav.menu-lateral{
   }
   .titulo-vestibular .regua {
     display: none;
-  }
+  } 
 
-  
-  
   /* FIM LAYOUT MENU COMPACTADO */
   
   /*=============LAYOUT EXPANDIDO ANTES=====================*/
