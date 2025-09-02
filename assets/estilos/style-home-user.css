@@ -154,6 +154,7 @@ button {
     font-size: 15px;
     outline: none;
 }
+<<<<<<< HEAD
 
 .btn-sair {
     position: absolute;
@@ -176,3 +177,5 @@ button {
 .btn-sair:hover {
     background-color: #b91c1c; /* vermelho mais escuro */
 }
+=======
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f

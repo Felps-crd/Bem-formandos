@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 session_start();
 include_once('../../assets/php/conexao.php');
@@ -27,6 +28,8 @@ if(isset($_POST['submit'])){
 
 ?>
 
+=======
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -68,7 +71,11 @@ if(isset($_POST['submit'])){
         <!--Aqui escurece o fundo-->
 
         <!--Configuração das cores do fundo da parte de cadastro-->
+<<<<<<< HEAD
         <form action="login-adm.php" method="post" style=" padding-top: 20px;
+=======
+        <form action="" method="post" style=" padding-top: 20px;
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f
             justify-content: center;
             justify-items: center;
             width: 600px;

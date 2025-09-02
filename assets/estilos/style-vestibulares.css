@@ -36,27 +36,48 @@ h1{
 }
 .menu-lateral.fuvest {
   --bg-color: #E99117;
+<<<<<<< HEAD
   --hover-color: #AB680B;
   --text-color: #6D4104;
 }
 .container-conteudo.fuvest{
+=======
+  --hover-color: #9d5432de;
+  --text-color: #A1712E;
+}
+.container-conteudo.menu-lateral.fuvest{
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f
   --cor-titulo: #E99117;
 }
 
 .menu-lateral.unicamp {
   --bg-color: #BE87E8;
+<<<<<<< HEAD
   --hover-color: #8E3FCB;
   --text-color: #612D88;
 }
 .container-conteudo.unicamp{
+=======
+  --hover-color: #8037b8;
+  --text-color: ##57267D;
+}
+.container-conteudo.menu-lateral.menu-lateral.unicamp{
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f
   --cor-titulo: #BE87E8;
 }
 
 .menu-lateral.unesp {
   --bg-color: #EFC84A;
+<<<<<<< HEAD
   --hover-color: #C19B1F;
   --text-color: #8B6F14;
 }
 .container-conteudo.unesp{
+=======
+  --hover-color: #b0a82f;
+  --text-color: #A4831B;
+}
+.container-conteudo.menu-lateral.menu-lateral.unesp{
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f
   --cor-titulo: #EFC84A;
 }

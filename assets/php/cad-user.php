@@ -19,14 +19,22 @@ else{
 
     if($check->num_rows > 0){
         // Usuário já cadastrado
+<<<<<<< HEAD
         $retorna = ['status' => false, 'msg' => "Este usuário já está cadastrado!"];
+=======
+        $retorna = ['status' => false, 'msg' => "Esse usuário já está cadastrado!"];
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f
     } else{
         //insere no banco
         $stmt = $conexao->prepare("INSERT INTO usuarios(usuario, email) VALUES (?, ?)");
         $stmt->bind_param("ss", $dados['user_name'], $dados['user_email']);
         
         if($stmt->execute()){
+<<<<<<< HEAD
             $retorna = ['status' => true, 'msg' => "Agora quando houver atualização dos vestibulares, você receberá via e-mail"];
+=======
+            $retorna = ['status' => true, 'msg' => "Agora quando houver atualização dos vestibulares, você recebera via e-mail"];
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f
         }else{
             $retorna = ['status' => false, 'msg' => "Erro ao cadastrar usuário!"];
         }

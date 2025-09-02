@@ -18,6 +18,7 @@ senha varchar(25) not null,
 cargo Enum('adm', 'funcionario') not null -- somente esses dois dados podem ser colocados, ai na area de cadastro do site tera um dropdown nessa area para escolher entre os dois
 );
 
+<<<<<<< HEAD
 
 -- Começo tabela dos vestibulares com auxiliar
 
@@ -94,3 +95,9 @@ VALUES
 select * from funcionarios;
 select * from usuarios;
 TRUNCATE TABLE usuarios;
+=======
+-- Criar tabela dos vestibulares, mas ainda tem que ver como que vai ser
+
+select * from funcionarios;
+select * from usuarios;
+>>>>>>> dfbd8abfc7d1f7777f86c662a4d50501ea22ee8f
