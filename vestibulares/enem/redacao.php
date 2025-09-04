@@ -44,36 +44,62 @@
                     <p>A redação do Enem é uma das partes mais importantes da prova e pode ser o diferencial para sua aprovação. Ela vale até 1000 pontos e é avaliada por meio de cinco competências específicas. <br>
                     Entender a estrutura e os critérios é fundamental para alcançar uma boa nota.</p>
                     </section>
-                    <section class="estrutura-redacao">
+                    <section id="estrutura-redacao">
                         <h2>Estrutura da Redação do ENEM</h2>
                         <p>A redação do Enem segue o modelo dissertativo-argumentativo em prosa. Isso significa que o candidato deve defender um ponto de vista sobre um tema de ordem social, científica, cultural ou política.</p><br>
                         <p>Ela deve conter:</p>
+                            <div class="passos-redacao">
+                            <div class="card-estrutura">
+                                <div>
+                                    <h3>Introdução</h3>
+                                <p>Apresentação do tema e da tese que será defendida.</p>
+                                </div>
+                            </div>
+                            <div class="card-estrutura">
+                                <div>
+                                    <h3>Desenvolvimento</h3>
+                                    <p>Dois parágrafos com argumentos, dados ou exemplos que sustentem a tese.</p>
+                                </div>
+                            </div>
+                            <div class="card-estrutura">
+                                <div>
+                                    <h3>Conclusão</h3>
+                                <p>Retomada da tese e proposta de intervenção detalhada e viável.</p>
+                                </div>
+                            </div>
+                        </div>
                     </section>
-                        <div class="estrutura redacao">
-                        <div class="card-estrutura">
-                            <div>
-                                <h3>Introdução</h3>
-                            <p>Apresentação do tema e da tese que será defendida.</p>
-                            </div>
-                        </div>
-                        <div class="card-estrutura">
-                            <div>
-                                <h3>Desenvolvimento</h3>
-                                <p>Dois parágrafos com argumentos, dados ou exemplos que sustentem a tese.</p>
-                            </div>
-                        </div>
-                        <div class="card-estrutura">
-                            <div>
-                                <h3>Conclusão</h3>
-                            <p>Retomada da tese e proposta de intervenção detalhada e viável.</p>
-                            </div>
-                        </div>
-                    </div>
+                        
                 
                 <section id="criterios">
                     <h2>Critérios de Avaliação</h2>
                     <p>A redação do Enem é avaliada com base em cinco competências, cada uma valendo até 200 pontos:</p>
+                    <div class="area-criterios">
+                        <div class="card-criterio">
+                            <h3>Domínio da Norma Culta</h3>
+                            <p>Demonstrar domínio da modalidade escrita formal da língua portuguesa.</p>
+                        </div>
+                        <div class="card-criterio">
+                            <h3>Compreensão do Tema</h3>
+                            <p>Compreender a proposta de redação e aplicar conceitos das várias áreas de conhecimento.</p>
+                        </div>
+                        <div class="card-criterio">
+                            <h3>Organização das Informações</h3>
+                            <p>Selecionar, relacionar, organizar e interpretar informações em defesa da tese.</p>
+                        </div>
+                        <div class="card-criterio">
+                            <h3>Mecanismos Linguísticos</h3>
+                            <p>Uso de palavras e expressões que ligam as ideias, estabelecendo relações lógicas e garantindo a progressão do raciocínio para uma argumentação fluida e clara.</p>
+                        </div>
+                        <div class="card-criterio">
+                            <h3>Proposta de Intervenção</h3>
+                            <p>Elaborar proposta de intervenção para o problema abordado, respeitando os direitos humanos.</p>
+                        </div>
+
+                    </div>
                 </section>
+
+
             </div>
             <aside class="painel-lateral">
                 <div class="card">

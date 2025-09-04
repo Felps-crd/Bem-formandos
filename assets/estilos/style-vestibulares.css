@@ -36,6 +36,13 @@ h2{
   font-weight: 700;
   padding-bottom: 15px;
 }
+h3{
+  color: #1F2937;
+  font-family: Gabarito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
 .card h4{
   color: #1F2937;
   font-size: 16px;
@@ -224,6 +231,71 @@ h2{
     color: #6B7280;
     font-family: Inter, Arial, sans-serif;
     font-weight: 500;
+}
+
+#estrutura-redacao{
+  margin-top: 50px;
+}
+
+.passos-redacao h3{
+  color: #1F2937;
+  font-family: Gabarito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.passos-redacao p{
+  color: rgba(30, 30, 30, 0.50);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.passos-redacao{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+}
+
+.area-criterios{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-estrutura{
+  text-align: center;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  width: 205px;
+  height: 210px;
+  align-content: center;
+  padding: 5px;
+
+}
+
+.card-criterio p{
+  color: rgba(30, 30, 30, 0.50);
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.card-criterio{
+  text-align: center;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  width: 520px;
+  height: 180px;
+  align-content: center;
+  padding: 45px;
 }
 
 .menu-lateral.fatec {
