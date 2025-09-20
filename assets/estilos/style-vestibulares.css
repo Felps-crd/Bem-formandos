@@ -1,0 +1,336 @@
+.main-vestibulares{
+    display: grid;
+    grid-template-columns: 280px 1fr 320px; 
+    align-items: start;
+    padding: 40px 0;
+    gap: 80px; 
+}
+p{
+  color: #2F3847;
+  font-size: 22px;
+  font-family: Inter;
+  font-weight: 400;
+}
+#introducao p{
+    color: #2F3847;
+    font-size: 22px;
+    font-family: Inter;
+    font-weight: 500;
+    word-wrap: break-word;
+    margin-top: 30px;
+    text-align: justify;
+}
+h1{
+  color: #1F2937;
+  font-size: 41px;
+  font-family: Inter;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 60px;
+}
+h2{
+  color: #1F2937;
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+h3{
+  color: #1F2937;
+  font-family: Gabarito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.card h4{
+  color: #1F2937;
+  font-size: 16px;
+  font-family: Gabarito;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.card p{
+  color: rgba(47, 56, 71, 0.90);
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 400;
+}
+
+.ler-mais{
+  padding-top: 15px;
+}
+
+.ler-mais a{
+  color: #34A853;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.container-conteudo{
+  display: flex;
+  gap: 32px;
+  padding: 40px 0;
+}
+.sidebar {
+  flex: 0 0 250px;
+}
+
+.conteudo-enem {
+    max-width: 100%; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    border-radius: 12px;
+    border: 1px solid #E5E7EB; 
+    background: #fff;
+    padding: 40px 48px;
+    margin-bottom: 32px;
+}
+
+.conteudo-enem p{
+  text-align: justify;
+}
+
+.titulo{
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.titulo i{
+  color:#4CAF50;
+  font-size: 45px;
+  padding: 20px;
+}
+
+.painel-lateral {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 0 0 320px;
+  margin-right: 24px;
+}
+
+.painel-lateral .card{
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  padding: 24px 20px;
+}
+
+.titulo-card{
+  font-family: Gabarito;
+  color: #1F2937;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.titulo-card i{
+  padding-right: 10px;
+}
+
+.painel-lateral .card hr{
+      border: none; 
+      background: transparent; 
+      margin: 1em 0; 
+      height: 1px; 
+      background-color: #cccccccc; 
+}
+
+.painel-lateral .card ul{
+      list-style-type: none;
+      color: #2F3847E5;
+      font-family: Inter;
+      font-size: 14px;
+}
+.painel-lateral .card ul li{
+  padding: 20px;
+}
+.card ul li a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.dica-importante {
+  background: #E6F4EA;
+  border-left: 6px solid #4CAF50;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 24px 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.dica-importante p{
+  font-family: Inter;
+  color: #226B43;
+  font-size: 16px;
+  font-weight: 500;
+  word-wrap: break-word;
+  justify-content: center; 
+  display: flex; 
+  flex-direction: column;
+}
+.dica-importante i{
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-right: 12px;
+}
+.dica-importante strong {
+  color: #228B22;
+  font-size: 20px;
+  font-family: Inter;
+}
+
+.areas-provas {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.area-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #E5E7EB;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 28px 24px;
+    gap: 24px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.area-card:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+}
+
+.area-card i {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    flex-shrink: 0;
+}
+
+.area-card h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.25rem;
+    font-family: Inter, Arial, sans-serif;
+    color: #1F2937;
+    font-weight: 700;
+}
+
+.area-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #6B7280;
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 500;
+}
+
+#estrutura-redacao{
+  margin-top: 50px;
+}
+
+.passos-redacao h3{
+  color: #1F2937;
+  font-family: Gabarito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.passos-redacao p{
+  color: rgba(30, 30, 30, 0.50);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.passos-redacao{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+}
+
+.area-criterios{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-estrutura{
+  text-align: center;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  width: 205px;
+  height: 210px;
+  align-content: center;
+  padding: 5px;
+
+}
+
+.card-criterio p{
+  color: rgba(30, 30, 30, 0.50);
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.card-criterio{
+  text-align: center;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  width: 520px;
+  height: 180px;
+  align-content: center;
+  padding: 45px;
+}
+
+.menu-lateral.fatec {
+  --bg-color: #D65B5B;
+  --hover-color: #a73a3ade;
+  --text-color: #862929;
+  --text-color: #703232;
+
+}
+.container-conteudo.fatec{
+  --cor-titulo: #D65B5B;
+}
+.menu-lateral.fuvest {
+  --bg-color: #E99117;
+  --hover-color: #AB680B;
+  --text-color: #6D4104;
+}
+.container-conteudo.fuvest{
+  --cor-titulo: #E99117;
+}
+
+.menu-lateral.unicamp {
+  --bg-color: #BE87E8;
+  --hover-color: #8E3FCB;
+  --text-color: #612D88;
+}
+.container-conteudo.unicamp{
+  --cor-titulo: #BE87E8;
+}
+
+.menu-lateral.unesp {
+  --bg-color: #EFC84A;
+  --hover-color: #C19B1F;
+  --text-color: #8B6F14;
+}
+.container-conteudo.unesp{
+  --cor-titulo: #EFC84A;
+}

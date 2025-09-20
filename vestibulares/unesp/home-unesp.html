@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/estilos/style.css">
+    <link rel="stylesheet" href="../../assets/estilos/style-menu.css">
+    <link rel="stylesheet" href="../../assets/estilos/style-vestibulares.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Graduate&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../assets/imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <title>Bem Formandos</title>
+</head>
+<body>
+    <div class="container-principal">
+        <!-- inicio cabeçalho -->
+        <header>
+            <div class="logo">
+                <a href="../../index.php" class="logo">
+                <img src="../../assets/imagens/logo-temp 1.png" alt="Ícone de formatura">
+                <h1>BEM FORMANDOS</h1>
+                </a>
+            </div>
+
+            <a href="#">
+            <button class="btn-cadastro">Cadastre-se</button>
+            </a>
+        </header>
+        <!-- fim cabeçalho -->
+
+        <div class="container-conteudo unesp">
+        <!-- Início Menu -->
+        <nav class="menu-lateral unesp">
+
+            <div class="btn-expandir">
+                <i class="bi bi-list"></i>
+            </div><!--Botão expandir-->
+
+            <div class="titulo-vestibular">
+                <a href="home-unesp.html"><span><p class="titulo-vestibular-texto">Unesp</p></span></a>
+                <span class="regua"></span>
+            </div><!--Titulo Enem-->
+
+     <!-- Topicos dentro dos Vestibulares-->
+            <ul>
+                <li class="item-menu">
+                    <a href="redacao.html">
+                        <span class="item">
+                            <i class="bi bi-book"></i>
+                            Redação
+                        </span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="calendario.html">
+                        <span class="item">
+                            <i class="bi bi-calendar4"></i>
+                            Calendário
+                        </span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="inscricao.html">
+                        <span class="item">
+                            <i class="bi bi-check2-circle"></i>
+                            Inscrição
+                        </span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="isencao-taxa.html">
+                        <span class="item">
+                            <i class="bi bi-x-circle"></i>
+                            Isenção de taxa
+                        </span>
+                    </a>
+                </li>
+            </ul>
+    <!-- Topicos dentro dos Vestibulares-->
+
+        </nav>
+
+
+        <!-- Fim Menu -->
+
+        <!-- inicio principal -->
+        <main>
+            <div class="conteudo-home">
+           <h1>Unesp: o que é e pra que serve?</h1>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita eligendi maiores libero commodi amet, culpa illum dolore et ad nulla! Rerum, magni ipsa quasi numquam aliquid nostrum. Impedit, excepturi consectetur.</p>
+           </div>
+        </main>
+        <!-- fim principal -->
+        </div>
+
+        <footer class="rodape">
+            <div class="text">
+                <span>© 2025 Bem Formandos</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const botao = document.querySelector(".btn-expandir");
+        const menu = document.querySelector(".menu-lateral");
+      
+        botao.addEventListener("click", () => {
+          menu.classList.toggle("expandido");
+        });
+      </script>
+</body>
+</html>
