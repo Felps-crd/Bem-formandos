@@ -1,27 +1,28 @@
+/* Estilos padrões todas páginas*/
+a{
+  text-decoration: none;
+}
 .main-vestibulares{
     display: grid;
-    grid-template-columns: 280px 1fr 320px; 
+    grid-template-columns: 280px 1fr 350px; 
     align-items: start;
     padding: 40px 0;
-    gap: 80px; 
+    gap: 5%; 
 }
 p{
-  color: #2F3847;
+  color: var(--cor-texto-primaria);
   font-size: 22px;
   font-family: Inter;
   font-weight: 400;
 }
 #introducao p{
-    color: #2F3847;
-    font-size: 22px;
-    font-family: Inter;
     font-weight: 500;
     word-wrap: break-word;
     margin-top: 30px;
     text-align: justify;
 }
 h1{
-  color: #1F2937;
+  color: var(--cor-titulo);
   font-size: 41px;
   font-family: Inter;
   font-weight: 700;
@@ -30,43 +31,29 @@ h1{
   line-height: 60px;
 }
 h2{
-  color: #1F2937;
+  color: var(--cor-titulo);
   font-size: 24px;
   font-family: Inter;
   font-weight: 700;
   padding-bottom: 15px;
 }
 h3{
-  color: #1F2937;
+  color: var(--cor-titulo);
   font-family: Gabarito;
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
-}
-.card h4{
-  color: #1F2937;
-  font-size: 16px;
-  font-family: Gabarito;
-  font-weight: 600;
-  padding-bottom: 5px;
-}
-.card p{
-  color: rgba(47, 56, 71, 0.90);
-  font-size: 14px;
-  font-family: Inter;
-  font-weight: 400;
 }
 
-.ler-mais{
-  padding-top: 15px;
-}
-
-.ler-mais a{
-  color: #34A853;
-  font-size: 14px;
-  font-family: Inter;
-  font-weight: 600;
-  text-decoration: none;
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    border-radius: 12px;
+    border: 1px solid #E5E7EB; 
+    background: var(--backgrond);
+    padding: 40px 80px;
+    margin-bottom: 32px;
 }
 
 .container-conteudo{
@@ -74,21 +61,8 @@ h3{
   gap: 32px;
   padding: 40px 0;
 }
-.sidebar {
-  flex: 0 0 250px;
-}
 
-.conteudo-enem {
-    max-width: 100%; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-    border-radius: 12px;
-    border: 1px solid #E5E7EB; 
-    background: #fff;
-    padding: 40px 48px;
-    margin-bottom: 32px;
-}
-
-.conteudo-enem p{
+.conteudo p{
   text-align: justify;
 }
 
@@ -99,24 +73,39 @@ h3{
 }
 
 .titulo i{
-  color:#4CAF50;
   font-size: 45px;
   padding: 20px;
 }
 
+/* FIM estilos padrões todas páginas*/
+
+/* PAINEL LATERAL ESQUERDO */
+h4{
+  color: var(--cor-titulo);
+  font-size: 16px;
+  font-family: Gabarito;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.card p{
+  color: var(--cor-texto-secundaria);
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 400;
+}
+
 .painel-lateral {
-  position: -webkit-sticky;
   position: sticky;
   top: 100px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   flex: 0 0 320px;
-  margin-right: 24px;
+  margin-right: 10%;
 }
 
 .painel-lateral .card{
-  background: #fff;
+  background: var(--backgrond);
   border-radius: 12px;
   border: 1px solid #E5E7EB;
   padding: 24px 20px;
@@ -124,7 +113,7 @@ h3{
 
 .titulo-card{
   font-family: Gabarito;
-  color: #1F2937;
+  color: var(--cor-titulo);
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -144,31 +133,60 @@ h3{
 
 .painel-lateral .card ul{
       list-style-type: none;
-      color: #2F3847E5;
+      color: var(--cor-texto-secundaria);
       font-family: Inter;
       font-size: 14px;
 }
 .painel-lateral .card ul li{
   padding: 20px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.painel-lateral .card ul li:hover{
+  background-color: var(--cor-secundaria-enem);
+  color: var(--cor-destaque-enem);
+  transition: 0.2s;
 }
 .card ul li a{
   text-decoration: none;
   color: inherit;
 }
 
+.ler-mais{
+  padding-top: 15px;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 600;
+}
+
+/* FIM painel lateral esquerdo*/
+
+
+
+/* ENEM */
+.titulo--enem i{ color:#4CAF50;}
+.ler-mais--enem a{color: var(--cor-principal-enem)}
+.ler-mais--enem a:hover{
+  color: var(--cor-destaque-enem);
+  text-decoration: underline;
+}
+
+/* HOME ENEM */
 .dica-importante {
-  background: #E6F4EA;
-  border-left: 6px solid #4CAF50;
+  background: var(--cor-secundaria-enem);
+  border-left: 6px solid var(--cor-principal-enem);
   border-radius: 10px;
   padding: 18px 20px;
   margin: 24px 40px;
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  width: 60%;
+  align-self: center;
 }
 .dica-importante p{
   font-family: Inter;
-  color: #226B43;
+  color: var(--cor-destaque-enem);
   font-size: 16px;
   font-weight: 500;
   word-wrap: break-word;
@@ -177,7 +195,7 @@ h3{
   flex-direction: column;
 }
 .dica-importante i{
-  color: #4CAF50;
+  color: var(--cor-principal-enem);
   font-size: 2rem;
   margin-right: 12px;
 }
@@ -187,11 +205,12 @@ h3{
   font-family: Inter;
 }
 
+/* AREAS CONHECIMENTO PROVAS ENEM */
 .areas-provas {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin: 32px 0;
+    padding: 40px 30px 70px 30px;
 }
 
 .area-card {
@@ -203,12 +222,13 @@ h3{
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     padding: 28px 24px;
     gap: 24px;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    transition: 0.2s;
 }
 
 .area-card:hover {
     border-color: #4CAF50;
     box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+    transition: 0.2s;
 }
 
 .area-card i {
@@ -221,7 +241,7 @@ h3{
     margin: 0 0 6px 0;
     font-size: 1.25rem;
     font-family: Inter, Arial, sans-serif;
-    color: #1F2937;
+    color: var(--cor-titulo);
     font-weight: 700;
 }
 
@@ -232,17 +252,12 @@ h3{
     font-family: Inter, Arial, sans-serif;
     font-weight: 500;
 }
+/* FIM AREAS CONHECIMENTO PROVAS ENEM;
+FIM HOME ENEM */
 
+/* REDACAO ENEM */
 #estrutura-redacao{
   margin-top: 50px;
-}
-
-.passos-redacao h3{
-  color: #1F2937;
-  font-family: Gabarito;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
 }
 
 .passos-redacao p{
@@ -257,25 +272,60 @@ h3{
 .passos-redacao{
   display: flex;
   align-items: center;
-  padding: 15px;
-  gap: 15px;
+  padding: 40px 30px 70px 30px;
+  justify-content: space-around;
+  gap: 1em;
+}
+
+.dot{
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  color: #f8f8f8;
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: 800;
+}
+.dot--enem{ background-color: var(--cor-principal-enem); }
+
+
+.card-estrutura{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  width: 205px;
+  height: 210px;
+  align-items: center;
+  padding: 5px;
+}
+
+.numero-criterio{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  color: #f8f8f8;
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 700;
+  background-color: var(--cor-principal-enem);
+  margin-bottom: 8px;
 }
 
 .area-criterios{
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.card-estrutura{
-  text-align: center;
-  border: 1px solid #E5E7EB;
-  border-radius: 10px;
-  width: 205px;
-  height: 210px;
-  align-content: center;
-  padding: 5px;
-
+  align-items: center;
+  padding: 40px 30px 70px 30px;
 }
 
 .card-criterio p{
@@ -290,13 +340,46 @@ h3{
 
 .card-criterio{
   text-align: center;
-  border: 1px solid #E5E7EB;
+  border: 2px solid #E5E7EB;
   border-radius: 10px;
   width: 520px;
   height: 180px;
-  align-content: center;
-  padding: 45px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: box-shadow 0.2s, border-color 0.2s, scale 0.2s;
 }
+.card-criterio:hover{
+    border-color: var(--cor-principal-enem);
+    box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+    scale: 1.05;
+}
+
+/* FIM ENEM */
+
+
+
+/* VARIAVEIS CSS */
+:root{
+  /* GLOBAIS */
+  --backgrond: #fff;
+  --cor-titulo: #1F2937;
+  --cor-texto-primaria: #2F3847;
+  --cor-texto-secundaria: #434B59;
+  --cor-texto-terciaria: #8B8B8B;
+
+  /* ENEM */
+  --cor-principal-enem: #34A853;
+  --cor-destaque-enem: #247046;
+  --cor-secundaria-enem: #DAEDE7;
+
+
+}
+
+
+
 
 .menu-lateral.fatec {
   --bg-color: #D65B5B;

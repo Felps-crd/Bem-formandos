@@ -34,40 +34,35 @@
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-enem.php';?>
 
-            <div class="conteudo-enem">
+            <div class="conteudo">
                 <section id="introducao">
-                    <div class="titulo">
-                        <i class="bi bi-pen-fill"></i>
-                        <h1>REDAÇÃO</h1>
-                    </div>
+                    <h1 class="titulo titulo--enem"><i class="bi bi-pen-fill"></i>REDAÇÃO</h1>
                     <hr>
                     <p>A redação do Enem é uma das partes mais importantes da prova e pode ser o diferencial para sua aprovação. Ela vale até 1000 pontos e é avaliada por meio de cinco competências específicas. <br>
                     Entender a estrutura e os critérios é fundamental para alcançar uma boa nota.</p>
                     </section>
+
                     <section id="estrutura-redacao">
                         <h2>Estrutura da Redação do ENEM</h2>
                         <p>A redação do Enem segue o modelo dissertativo-argumentativo em prosa. Isso significa que o candidato deve defender um ponto de vista sobre um tema de ordem social, científica, cultural ou política.</p><br>
                         <p>Ela deve conter:</p>
                             <div class="passos-redacao">
-                            <div class="card-estrutura">
-                                <div>
-                                    <h3>Introdução</h3>
-                                <p>Apresentação do tema e da tese que será defendida.</p>
+                                <div class="card-estrutura">
+                                    <span class="dot dot--enem">1</span>
+                                        <h3>Introdução</h3>
+                                    <p>Apresentação do tema e da tese que será defendida.</p>
+                                </div>
+                                <div class="card-estrutura">
+                                    <span class="dot dot--enem">2</span>
+                                        <h3>Desenvolvimento</h3>
+                                        <p>Dois parágrafos com argumentos, dados ou exemplos que sustentem a tese.</p>
+                                </div>
+                                <div class="card-estrutura">
+                                    <span class="dot dot--enem">3</span>
+                                        <h3>Conclusão</h3>
+                                    <p>Retomada da tese e proposta de intervenção detalhada e viável.</p>
                                 </div>
                             </div>
-                            <div class="card-estrutura">
-                                <div>
-                                    <h3>Desenvolvimento</h3>
-                                    <p>Dois parágrafos com argumentos, dados ou exemplos que sustentem a tese.</p>
-                                </div>
-                            </div>
-                            <div class="card-estrutura">
-                                <div>
-                                    <h3>Conclusão</h3>
-                                <p>Retomada da tese e proposta de intervenção detalhada e viável.</p>
-                                </div>
-                            </div>
-                        </div>
                     </section>
                         
                 
@@ -76,26 +71,63 @@
                     <p>A redação do Enem é avaliada com base em cinco competências, cada uma valendo até 200 pontos:</p>
                     <div class="area-criterios">
                         <div class="card-criterio">
+                            <span class="numero-criterio">C1</span>
                             <h3>Domínio da Norma Culta</h3>
                             <p>Demonstrar domínio da modalidade escrita formal da língua portuguesa.</p>
                         </div>
                         <div class="card-criterio">
+                            <span class="numero-criterio">C2</span>
                             <h3>Compreensão do Tema</h3>
                             <p>Compreender a proposta de redação e aplicar conceitos das várias áreas de conhecimento.</p>
                         </div>
                         <div class="card-criterio">
+                            <span class="numero-criterio">C3</span>
                             <h3>Organização das Informações</h3>
                             <p>Selecionar, relacionar, organizar e interpretar informações em defesa da tese.</p>
                         </div>
                         <div class="card-criterio">
+                            <span class="numero-criterio">C4</span>
                             <h3>Mecanismos Linguísticos</h3>
-                            <p>Uso de palavras e expressões que ligam as ideias, estabelecendo relações lógicas e garantindo a progressão do raciocínio para uma argumentação fluida e clara.</p>
+                            <p>Uso de palavras e expressões que ligam as ideias, estabelecendo relações lógicas e progressão do raciocínio.</p>
                         </div>
                         <div class="card-criterio">
+                            <span class="numero-criterio">C5</span>
                             <h3>Proposta de Intervenção</h3>
                             <p>Elaborar proposta de intervenção para o problema abordado, respeitando os direitos humanos.</p>
                         </div>
+                    </div>
+                </section>
 
+                <section id="erros">
+                    <h2>Erros mais Comuns</h2>
+                    <p>Muitos candidatos perdem pontos preciosos por descuidos que poderiam ser evitados. Conheça os erros mais frequentes na redação do Enem e confira como não repetir essas falhas.</p>
+                    <div class="area-erros">
+                        <div class="erros-zeram">
+                            <span class="titulo-erros-zeram">
+                                <i class="bi bi-x-circle-fill"></i>
+                                <h4 class="titulo-cards-coloridos">Que zeram</h4>
+                            </span>
+                                <ul class="lista-erros">
+                                    <li>Fuga total do tema</li>
+                                    <li>Menos de 7 linhas</li>
+                                    <li>Outro gênero textual</li>
+                                    <li>Desrespeito aos direitos humanos</li>
+                                    <li>Cópia dos textos motivadores</li>
+                                </ul>
+                        </div>
+                        <div class="erros-reduzem">
+                            <span class="titulo-erros-reduzem">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                                <h4 class="titulo-cards-coloridos">Que reduzem nota</h4>
+                            </span>
+                                <ul class="lista-erros">
+                                    <li>Uso de linguagem coloquial ou gírias</li>
+                                    <li>Problemas de coesão e coerência</li>
+                                    <li>Argumentação fraca, sem repertório</li>
+                                    <li>Conclusão sem proposta clara</li>
+                                    <li>Erros gramaticais e ortográficos</li>
+                                </ul>
+                        </div>
                     </div>
                 </section>
 
@@ -109,9 +141,11 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#oque-e-enem">O que é o ENEM</a></li>
-                            <li><a href="#areas-conhecimento">Áreas de conhecimento</a></li>
-                            <li><a href="#acessibilidade">Acessibilidade</a></li>
+                            <li><a href="#estrutura-redacao">Estrutura da redação do ENEM</a></li>
+                            <li><a href="#criterios">Critérios de avaliação</a></li>
+                            <li><a href="#erros">Erros mais comuns</a></li>
+                            <li><a href="#">Dicas</a></li>
+                            <li><a href="#">Temas já cobrados no ENEM</a></li>
                         </ul>
                 </div>
                 <div class="card">
@@ -122,11 +156,11 @@
                     <hr>
                     <h4>Como se inscrever no ENEM</h4>
                         <p>Passo a passo para fazer sua inscrição</p>
-                        <div class="ler-mais"><a href="inscricao.php">Ler mais</a></div>
+                        <div class="ler-mais ler-mais--enem"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
                     <h4>Redação ENEM</h4>
                         <p>Tudo sobre a redação do ENEM</p>
-                        <div class="ler-mais"><a href="redacao.php">Ler mais</a></div>
+                        <div class="ler-mais ler-mais--enem"><a href="redacao.php">Ler mais</a></div>
                 </div>
             </aside>
         </main>

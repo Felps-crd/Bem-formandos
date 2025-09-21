@@ -17,6 +17,7 @@
 </head>
 <body>
     <div class="container-principal">
+
         <!-- inicio cabeçalho -->
         <header>
             <div class="logo">
@@ -31,15 +32,15 @@
             </a>
         </header>
         <!-- fim cabeçalho -->
+
+        <!-- BARRA DE NAVEGAÇÃO LATERAL -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-enem.php';?>
 
-            <div class="conteudo-enem">
+            <div class="conteudo">
                 <section id="introducao">
-                    <div class="titulo">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <h1>ENEM: O QUE É E PARA QUE SERVE?</h1>
-                    </div>
+                    <h1 class="titulo titulo--enem"><i class="bi bi-info-circle-fill"></i>ENEM: O QUE É E PARA QUE SERVE?</h1>
+
                     <hr>
                     <p>O Enem (Exame Nacional do Ensino Médio) foi criado em 1998 para avaliar como os estudantes estão saindo do ensino médio. Mas desde 2009, ele ganhou um papel super importante: virou a principal forma de entrar em faculdades públicas e conseguir bolsas ou financiamentos.</p>
                     </section>
@@ -52,6 +53,7 @@
                     </div>
                     <p>Qualquer pessoa que já terminou ou está terminando o ensino médio pode fazer o Enem. Quem ainda está estudando pode participar como "treineiro", só pra testar seus conhecimentos.</p>
                     <br>
+                    
                 <section id="areas-conhecimento">
                 <p>A prova acontece em dois dias e tem 180 questões divididas em quatro áreas:</p>
                 <div class="areas-provas">
@@ -90,6 +92,8 @@
                     <p>O Enem também garante recursos de acessibilidade, atendimento espacializado e até explicação para pessoas privadas de liberdade. É um exame que busca ser inclusivo e dar mais chances para todo mundo.</p>
                 </section>
             </div>
+
+            <!-- PAINEL LATERAL ESQUERDO -->
             <aside class="painel-lateral">
                 <div class="card">
                     <div class="titulo-card">
@@ -111,13 +115,15 @@
                     <hr>
                     <h4>Como se inscrever no ENEM</h4>
                         <p>Passo a passo para fazer sua inscrição</p>
-                        <div class="ler-mais"><a href="inscricao.php">Ler mais</a></div>
+                        <div class="ler-mais ler-mais--enem"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
                     <h4>Redação ENEM</h4>
                         <p>Tudo sobre a redação do ENEM</p>
-                        <div class="ler-mais"><a href="redacao.php">Ler mais</a></div>
+                        <div class="ler-mais ler-mais--enem"><a href="redacao.php">Ler mais</a></div>
                 </div>
             </aside>
+            <!-- FIM PAINEL LATERAL ESQUERDO  -->
+
         </main>
 
         <footer class="rodape">

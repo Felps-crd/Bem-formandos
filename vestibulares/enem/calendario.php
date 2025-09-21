@@ -35,12 +35,12 @@
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-enem.php';?>
 
-            <div class="conteudo-enem">
+            <div class="conteudo">
                 <section id="introducao">
-                    <div class="titulo">
+                    <h1 class="titulo titulo--enem">
                         <i class="bi bi-calendar-fill"></i>
-                        <h1>CALENDÁRIO</h1>
-                    </div>
+                        CALENDÁRIO
+                    </h1>
                     <hr>
 
             </div>
@@ -65,11 +65,11 @@
                     <hr>
                     <h4>Como se inscrever no ENEM</h4>
                         <p>Passo a passo para fazer sua inscrição</p>
-                        <div class="ler-mais"><a href="inscricao.php">Ler mais</a></div>
+                        <div class="ler-mais ler-mais--enem"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
                     <h4>Redação ENEM</h4>
                         <p>Tudo sobre a redação do ENEM</p>
-                        <div class="ler-mais"><a href="redacao.php">Ler mais</a></div>
+                        <div class="ler-mais ler-mais--enem"><a href="redacao.php">Ler mais</a></div>
                 </div>
             </aside>
         </main>
