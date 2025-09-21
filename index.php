@@ -188,16 +188,11 @@ if (isset($_POST['submit'])) {
             <section class="vestibulares">
                 <p>Escolha o seu vestibular e comece sua jornada rumo à universidade!</p>
                 <div class="botoes-vestibulares">
-                    <a href="vestibulares/enem/home-enem.html" class="enem">Enem</a>
-
+                    <a href="vestibulares/enem/home-enem.php" class="enem">Enem</a>
                     <a href="vestibulares/fuvest/home-fuvest.html" class="fuvest">Fuvest</a>
                     <a href="vestibulares/unicamp/home-unicamp.html" class="unicamp">Unicamp</a>
                     <a href="vestibulares/fatec/home-fatec.html" class="fatec">Fatec</a>
                     <a href="vestibulares/unesp/home-unesp.html" class="unesp">Unesp</a>
-                    <a href="vestibulares/enem/SISU.html" class="sisu" >Sisu</a>
-                    <a href="vestibulares/enem/PROUNI.html" class="prouni">ProUni</a>
-                    <a href="vestibulares/enem/FIES.html" class="fies">Fies</a>
-                    <a href="#" class="ufesp">Particulares</a>
                     <a href="#" class="provao">Provão<br>Paulista</a>
                 </div>
             </section>

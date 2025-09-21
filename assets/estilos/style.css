@@ -170,18 +170,18 @@ section.vestibulares{
   margin-bottom: 40px;
 }
 
-.botoes-vestibulares{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 50px;
+.botoes-vestibulares {
+  display: flex;
+  gap: 50px;                 /* Espaço entre os botões */
   margin: 0 auto;
-  justify-items: center;
+  justify-content: center;   /* Centraliza todos os botões */
   align-items: center;
+  flex-wrap: nowrap;         /* Impede que quebrem de linha */
+  overflow-x: auto;          /* Se não couberem na tela, cria rolagem horizontal */
   width: 100%;
-  
 }
 
-.botoes-vestibulares a{
+.botoes-vestibulares a {
   padding-top: 8px;
   text-decoration: none;
   font-family: Gabarito;
@@ -195,8 +195,9 @@ section.vestibulares{
   border-radius: 8px;
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  flex-wrap: wrap;
+  display: flex;             /* Garante centralização do texto */
   justify-content: center;
+  align-items: center;
 }
 
 .botoes-vestibulares .enem{
