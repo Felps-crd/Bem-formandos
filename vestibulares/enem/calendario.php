@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="../../assets/imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <title>Bem Formandos</title>
+    <title>Calendário ENEM | Bem Formandos</title>
 </head>
 <body>
     <div class="container-principal">
@@ -37,11 +37,46 @@
 
             <div class="conteudo">
                 <section id="introducao">
-                    <h1 class="titulo titulo--enem">
-                        <i class="bi bi-calendar-fill"></i>
-                        CALENDÁRIO
-                    </h1>
+                    <h1 class="titulo titulo--enem"><i class="bi bi-calendar-fill"></i>CALENDÁRIO</h1>
                     <hr>
+                    <p>Fique por dentro de todas as datas importantes do ENEM 2025. Aqui você encontra o cronograma completo com prazos de inscrição, pagamento, aplicação das provas e divulgação dos resultados.</p>
+                </section>
+                 <section id="cronograma"> 
+                    <h2>Cronograma Completo ENEM 2025</h2> <!-- alterar ano por variável que armazena o ano atualizado -->
+                    <div class="calendario">
+                        <div class="calendario-card" data-etapa="inscricoes">
+                            <div class="calendario-card-header">
+                                <span class="icone-card"><i class="bi bi-person-check-fill"></i></span>
+                                <span class="calendario-card-titulo">Inscrições</span>
+                                <span class="calendario-card-mes">Maio</span>
+                            </div>
+                            <hr class="calendario-divisor">
+                            <div class="calendario-card-body">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Solicitação de isenção de taxa:</span>
+                                    <span class="calendario-item-data">14/05/2025 - 25/05/2025</span>
+                                </div>
+                            <hr class="calendario-divisor">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Período de incrições:</span>
+                                    <span class="calendario-item-data">26/05/2025 - 06/06/2025</span>
+                                </div>
+                            <hr class="calendario-divisor">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Solicitação de atendimento especializado:</span>
+                                    <span class="calendario-item-data">26/05/2025 - 06/06/2025</span>
+                                </div>
+                            <hr class="calendario-divisor">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Tratamento pelo nome social:</span>
+                                    <span class="calendario-item-data">26/05/2025 - 06/06/2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -52,7 +87,7 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#oque-e-enem">O que é o ENEM</a></li>
+                            <li><a href="#introducao">Calendário</a></li>
                             <li><a href="#areas-conhecimento">Áreas de conhecimento</a></li>
                             <li><a href="#acessibilidade">Acessibilidade</a></li>
                         </ul>

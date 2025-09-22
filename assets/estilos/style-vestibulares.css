@@ -297,7 +297,7 @@ FIM HOME ENEM */
   flex-direction: column;
   gap: 8px;
   justify-content: center;
-  border: 1px solid #E5E7EB;
+  border: 1px solid var(--cor-borda);
   border-radius: 10px;
   width: 205px;
   height: 210px;
@@ -357,6 +357,213 @@ FIM HOME ENEM */
     scale: 1.05;
 }
 
+/* ERROS */
+
+.area-erros{
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 30px 70px 30px;
+}
+
+.erros{
+  width: 290px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+.titulo-erros{
+  display: flex;
+  font-size: 1.20rem;
+  gap: 3%;
+  padding-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-cards-coloridos{
+  font-size: 1.20rem;
+  font-weight: 700;
+  font-family: Inter;
+}
+
+.lista {
+  font-family: Inter;
+  font-size: 1rem;
+  color: var(--cor-texto-primaria);
+  padding: 3% 2% 2% 10%;
+}
+.lista li{
+  padding: 1%;
+}
+
+
+.--erros-zeram .titulo-erros{color: #A83434;}
+.--erros-reduzem .titulo-erros{color: #e7bf0f;}
+
+.--erros-zeram{
+    border: 1px solid #A83434;
+    box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+}
+.--erros-reduzem{
+  border: 1px solid #e7bf0f;
+  box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+}
+
+.area-dicas-redacao{
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 30px 70px 30px;
+}
+.dicas{
+  width: 290px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid var(--cor-destaque-enem);
+  box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+}
+.titulo-dicas{
+  display: flex;
+  font-size: 1.20rem;
+  gap: 3%;
+  padding-top: 5%;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor-destaque-enem);
+}
+
+.linha-do-tempo{
+  display: flex;
+  justify-self: center;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 700px;
+  position: relative;
+}
+.linha-do-tempo::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #4CAF50, #4CAF79);
+  z-index: 0;
+  border-radius: 2px;
+}
+.linha-do-tempo__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circulo{
+  width: 20px;
+  height: 20px;
+  background-color: var(--cor-principal-enem);
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.ano{
+  margin-bottom: 5px;
+  color: var(--cor-texto-primaria);
+  font-family: Gabarito;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.tema{
+  color: var(--cor-texto-secundaria);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* FIM REDACAO ENEM */
+
+/* CALENDARIO ENEM */
+#cronograma{
+  margin-top: 50px;
+}
+
+.calendario {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 32px 0;
+  font-family: Inter;
+}
+
+.calendario-card {
+  background: var(--backgrond);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 2px solid var(--cor-borda);
+  padding: 28px 24px;
+  min-width: 320px;
+}
+
+.calendario-divisor {
+  border: none;
+  border-top: 1px solid var(--cor-borda);
+  margin: 10px 0;
+}
+
+.calendario-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.icone-card{
+  color: var(--backgrond);
+  background-color: var(--cor-principal-enem);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;              
+  align-items: center;        
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.calendario-card-titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cor-titulo);
+}
+
+.calendario-card-mes {
+  margin-left: auto;
+  background: var(--cor-principal-enem);
+  color: var(--backgrond);
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 4px 16px;
+  font-size: 1rem;
+}
+
+.calendario-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  padding: 1% 0%;
+}
+
+.calendario-item-label {
+  color: var(--cor-texto-primaria);
+  font-weight: 500;
+}
+
+.calendario-item-data {
+  color: var(--cor-texto-primaria);
+  font-weight: 700;
+  
+}
+
 /* FIM ENEM */
 
 
@@ -369,6 +576,7 @@ FIM HOME ENEM */
   --cor-texto-primaria: #2F3847;
   --cor-texto-secundaria: #434B59;
   --cor-texto-terciaria: #8B8B8B;
+  --cor-borda: #E5E7EB;
 
   /* ENEM */
   --cor-principal-enem: #34A853;

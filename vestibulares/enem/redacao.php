@@ -102,12 +102,12 @@
                     <h2>Erros mais Comuns</h2>
                     <p>Muitos candidatos perdem pontos preciosos por descuidos que poderiam ser evitados. Conheça os erros mais frequentes na redação do Enem e confira como não repetir essas falhas.</p>
                     <div class="area-erros">
-                        <div class="erros-zeram">
-                            <span class="titulo-erros-zeram">
+                        <div class="erros --erros-zeram">
+                            <span class="titulo-erros">
                                 <i class="bi bi-x-circle-fill"></i>
-                                <h4 class="titulo-cards-coloridos">Que zeram</h4>
+                                <h4 class="titulo-cards-coloridos">Que Zeram</h4>
                             </span>
-                                <ul class="lista-erros">
+                                <ul class="lista lista--erros">
                                     <li>Fuga total do tema</li>
                                     <li>Menos de 7 linhas</li>
                                     <li>Outro gênero textual</li>
@@ -115,12 +115,12 @@
                                     <li>Cópia dos textos motivadores</li>
                                 </ul>
                         </div>
-                        <div class="erros-reduzem">
-                            <span class="titulo-erros-reduzem">
+                        <div class="erros --erros-reduzem">
+                            <span class="titulo-erros">
                                 <i class="bi bi-exclamation-circle-fill"></i>
-                                <h4 class="titulo-cards-coloridos">Que reduzem nota</h4>
+                                <h4 class="titulo-cards-coloridos">Que Reduzem Nota</h4>
                             </span>
-                                <ul class="lista-erros">
+                                <ul class="lista lista--erros">
                                     <li>Uso de linguagem coloquial ou gírias</li>
                                     <li>Problemas de coesão e coerência</li>
                                     <li>Argumentação fraca, sem repertório</li>
@@ -130,7 +130,58 @@
                         </div>
                     </div>
                 </section>
+                <section id="dicas-redacao">
+                    <h2>Dicas</h2>
+                    <p>Além de evitar erros, é importante adotar estratégias de treino que ajudam a melhorar a escrita e ganhar segurança para o dia da prova. Confira algumas orientações práticas:</p>
+                    <div class="area-dicas-redacao">
+                        <div class="dicas dicas--treinar">
+                            <span class="titulo-dicas">
+                                <i class="bi bi-lightbulb-fill"></i>
+                                <h4 class="titulo-cards-coloridos">Para Treinar</h4>
+                            </span>
+                                <ul class="lista lista--dicas">
+                                    <li>Escreva uma redação por semana</li>
+                                    <li>Leia redações nota 1000</li>
+                                    <li>Estude atualidades para ampliar repertório</li>
+                                    <li>Use cronômetro para simular a prova</li>
+                                </ul>
+                        </div>
+                        <div class="dicas dicas--revisar">
+                            <span class="titulo-dicas">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <h4 class="titulo-cards-coloridos">Antes de Entregar</h4>
+                            </span>
+                                <ul class="lista lista--dicas">
+                                    <li>Revisar ortografia e gramática</li>
+                                    <li>Checar se o tema foi atendido</li>
+                                    <li>Garantir coesão entre parágrafos</li>
+                                    <li>Apresentar proposta de intervenção completa</li>
+                                </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="temas-anteriores">
+                    <h2>Temas já Cobrados no ENEM</h2>
+                    <p>Analisar os temas das edições anteriores é uma ótima forma de se preparar. Assim, você entende como a banca propõe os assuntos e consegue treinar sua escrita de forma mais direcionada</p>
 
+                    <div class="linha-do-tempo">
+                        <div class="linha-do-tempo__item">
+                            <div class="circulo"></div>
+                            <div class="ano">2024</div>
+                            <div class="tema">Desafios para a valorização da herança africana no Brasil</div>
+                        </div>    
+                        <div class="linha-do-tempo__item">
+                            <div class="circulo"></div>
+                            <div class="ano">2023</div>
+                            <div class="tema">Trabalho de cuidado realizado pela mulher.</div>
+                        </div>    
+                        <div class="linha-do-tempo__item">
+                            <div class="circulo"></div>
+                            <div class="ano">2022</div>
+                            <div class="tema">Valorização de comunidades e povos tradicionais.</div>
+                        </div>    
+                    </div>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -144,8 +195,8 @@
                             <li><a href="#estrutura-redacao">Estrutura da redação do ENEM</a></li>
                             <li><a href="#criterios">Critérios de avaliação</a></li>
                             <li><a href="#erros">Erros mais comuns</a></li>
-                            <li><a href="#">Dicas</a></li>
-                            <li><a href="#">Temas já cobrados no ENEM</a></li>
+                            <li><a href="#dicas-redacao">Dicas</a></li>
+                            <li><a href="#temas-anteriores">Temas já cobrados no ENEM</a></li>
                         </ul>
                 </div>
                 <div class="card">
