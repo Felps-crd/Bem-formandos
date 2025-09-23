@@ -74,6 +74,55 @@
                             </div>
                         </div>
 
+                        <div class="calendario-card" data-etapa="pagamento">
+                            <div class="calendario-card-header">
+                                <span class="icone-card"><i class="bi bi-credit-card-fill"></i></span>
+                                <span class="calendario-card-titulo">Pagamento</span>
+                                <span class="calendario-card-mes">Junho</span>
+                            </div>
+                            <hr class="calendario-divisor">
+                            <div class="calendario-card-body">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Resultado da solicitação de isenção de taxa:</span>
+                                    <span class="calendario-item-data">13/05/2025</span>
+                                </div>
+                            <hr class="calendario-divisor">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Recurso da isenção:</span>
+                                    <span class="calendario-item-data">13/05/2025 - 17/05/2025</span>
+                                </div>
+                            <hr class="calendario-divisor">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Pagamento da taxa de inscrição:</span>
+                                    <span class="calendario-item-data">26/05/2025 - 27/06/2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calendario-card" data-etapa="cartao-de-confirmacao">
+                            <div class="calendario-card-header">
+                                <span class="icone-card"><i class="bi bi--fill"></i></span>
+                                <span class="calendario-card-titulo">Cartão de Confirmação</span>
+                                <span class="calendario-card-mes">Outubro</span>
+                            </div>
+                            <hr class="calendario-divisor">
+                            <div class="calendario-card-body">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label"> Disponibilização do cartão:</span>
+                                    <span class="calendario-item-data">23/10/2025</span>
+                                </div>
+                            <hr class="calendario-divisor">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Consulta de locais de prova:</span>
+                                    <span class="calendario-item-data">23/10/2025</span>
+                                </div>
+                            <hr class="calendario-divisor">
+                                <div class="calendario-item">
+                                    <span class="calendario-item-label">Recurso de local de prova:</span>
+                                    <span class="calendario-item-data">23/10/2025 - 29/10/2025</span>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </section>
@@ -87,9 +136,8 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#introducao">Calendário</a></li>
-                            <li><a href="#areas-conhecimento">Áreas de conhecimento</a></li>
-                            <li><a href="#acessibilidade">Acessibilidade</a></li>
+                            <li><a href="#introducao">Cronograma ENEM 2025</a></li>
+                            <li><a href="#">Informações Importantes</a></li>
                         </ul>
                 </div>
                 <div class="card">
