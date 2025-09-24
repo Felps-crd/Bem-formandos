@@ -1,0 +1,266 @@
+* :not(dialog){
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%; 
+  height: 100%; 
+  position: relative; 
+  background: #F8F8F8; 
+}
+
+main {
+  flex: 1;
+}
+
+.titulo{
+  text-align: center;
+  padding-right: 40px;
+}
+
+.titulo h1{
+  color: #EFC84A;
+  text-align: center;
+  font-family: Gabarito;
+  font-size: 36px;
+  font-weight: 400;
+
+  border: 2px solid #EFC84A; /* espessura, tipo e cor da borda */
+  background-color: #003d79;   /* cor de fundo dentro da borda */
+  padding: 10px; /* espaço entre o texto e a borda */
+  border-radius: 8px; /* deixa as bordas arredondadas (opcional) */
+  display: inline-block; /* faz a borda se ajustar ao tamanho do texto */
+}
+
+.container-principal{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header{
+  width: 100%;
+  height: 92px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #003366 0%, #0073E6 100%);
+  padding: 15px 30px; 
+}
+
+header a{
+  text-decoration: none;
+}
+  
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 50px;
+}
+  
+.logo img{
+  width: 80px;
+  height: 80px;
+}
+.logo h1{
+  color: #EFC84A;
+  text-align: center;
+  font-family: Gabarito;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.btn-cadastro{
+  width: 184px;
+  height: 50px;
+  padding: 10px 20px;
+  margin-right: 110px;
+  background: #EFC84A; 
+  border-radius: 8px;
+  justify-content: center;
+  display: flex; 
+  flex-direction: column; 
+  color: #033F7B; 
+  font-size: 24px; 
+  font-family: Gabarito; 
+  font-weight: 400; 
+  border: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-cadastro:hover{
+  background-color: #033F7B;
+  border: 2px solid #EFC84A;
+  color: #EFC84A;
+  transition: 0.7s;
+}
+
+footer{
+  width: 100%;
+  height: 63px;
+  display: block;
+  background: linear-gradient(90deg, #003366 0%, #0066CC 100%);
+  text-align: center;
+  padding: 10px;
+}
+  
+.rodape .text{
+  flex-direction: column; 
+  color: rgba(255, 255, 255, 0.70); 
+  font-size: 15px; 
+  font-family: Gabarito; 
+  font-weight: 400;
+  padding: 10px;
+}
+
+.selecao-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;           /* espaçamento entre os botões */
+  height: 70vh;        /* ocupa quase a tela toda */
+}
+
+.btn-opcao {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  
+  background: #EFC84A;
+  color: #033F7B;
+  font-size: 24px;
+  font-family: Gabarito, sans-serif;
+  font-weight: 600;
+  
+  border: 2px solid #033F7B;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover botao login*/
+.btn-opcao:hover {
+  background: #033F7B;
+  color: #EFC84A;
+  border-color: #EFC84A;
+  transform: 1s;
+}
+
+@media (min-width: 1025px) {
+  header {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .titulo h1 {
+      font-size: 36px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      gap: 10px;
+      text-align: center;
+  }
+
+  .logo {
+      margin-left: 0;       /* remove a margem que empurra */
+      justify-content: center;
+  }
+
+  .logo img {
+      width: 60px;
+      height: 60px;
+  }
+
+  .logo h1 {
+      font-size: 28px;
+      text-align: center;
+  }
+
+  .titulo{
+    padding: 0;
+  }
+
+  .titulo h1 {
+      font-size: 26px;
+      padding: 8px 16px;
+  }
+
+  .btn-cadastro {
+      width: auto;
+      padding: 8px 16px;
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      gap: 10px;
+      padding: 15px;
+  }
+
+  .logo {
+      margin-left: 0;
+      justify-content: center;
+  }
+
+  .logo img {
+      width: 50px;
+      height: 50px;
+  }
+
+  .logo h1 {
+      font-size: 22px;
+      text-align: center;
+  }
+
+  .titulo{
+    padding: 0;
+  }
+
+  .titulo h1 {
+      font-size: 20px;
+      padding: 6px 12px;
+  }
+
+  .btn-cadastro {
+      width: 100%;
+      margin-right: 0;
+      font-size: 16px;
+      height: auto;
+  }
+
+  footer {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .selecao-login {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    margin-top: 50px;
+}
+
+.btn-opcao {
+    width: 100%;
+    max-width: 250px;
+    height: 70px;
+    font-size: 20px;
+}
+}
