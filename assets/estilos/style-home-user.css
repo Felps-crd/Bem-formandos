@@ -1,0 +1,156 @@
+
+.material-symbols-outlined {
+  font-size: 50px;
+  line-height: 1;
+  cursor: pointer;
+  color: #EFC84A;
+  position: relative;
+    top: 50%; 
+}
+.icones-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 45px; 
+  margin-right: 120px;
+  text-decoration: none;
+}
+#abre-perfil {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+#abre-perfil.ativo { 
+    background: #EFC84A; 
+    border-top-left-radius: 50px; 
+    border-top-right-radius: 50px;
+    color: #006BD6;
+    z-index: 1001;
+    position: relative;
+    box-shadow:
+        0 -4px 12px -2px rgba(0,0,0,0.10),   /* superior */
+        4px 0 12px -2px rgba(0,0,0,0.10),    /* direita */
+       -4px 0 12px -2px rgba(0,0,0,0.10);    /* esquerda */
+}
+#abre-perfil.ativo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -35px;      
+    height: 35px;      
+    background: #EFC84A;
+    z-index: 0;
+    
+}
+
+
+.perfil-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#perfil {
+    position: absolute;
+    top: 76px; 
+    right: 0;
+    left: auto;
+    width: 522px; 
+    height: 500px;
+    background: #EFC84A;
+    border-radius: 10px;
+   box-shadow: 0 8px 24px -8px rgba(0,0,0,0.18), /* baixo */
+                8px 0 16px -8px rgba(0,0,0,0.10),  /* direita */
+               -8px 0 16px -8px rgba(0,0,0,0.10);  /* esquerda */
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.2s, transform 0.2s;
+    opacity: 0;
+    transform: scaleY(0.95);
+    overflow: hidden;
+}
+#perfil.aberto {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+#foto-perfil {
+          width: 190px;
+          height: 190px;
+          border-radius: 50%;
+          margin: 20px auto 10px auto;
+          display: block;
+          object-fit: cover;
+          padding: 10px;
+          
+}
+#nome-perfil {
+    text-align: center;
+    font-family: Gabarito;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 5px;
+    color: #002447;
+    margin-bottom: 5px;
+}
+#email-perfil {
+    text-align: center;
+    color: #00254B;
+    font-size: 28px;
+    font-family: Gabarito;
+    font-weight: 400;
+    margin-top: 0;
+}
+button {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 220px;
+    height: 40px;
+    background-color: #0066CC;  
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: Gabarito;
+    font-weight: 400;
+    cursor: pointer;
+}
+#btn-trocar-foto, #btn-remover-foto {
+    display: inline-block;
+    width: 120px;
+    margin: 10px 5px 0 5px;
+    font-size: 16px;
+    height: 35px;
+}
+#alterar-senha {
+    width: 220px;
+    height: 40px;
+    background-color: #0066CC;  
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: Gabarito;
+    font-weight: 400;
+    cursor: pointer;
+}
+#nova-senha {
+    width: 145px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
+
+.input-senha{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 15px;
+    outline: none;
+}
