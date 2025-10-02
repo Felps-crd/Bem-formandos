@@ -79,12 +79,12 @@ while ($row = $result->fetch_assoc()) {
     }
 
     // Links
-    if ($row['link_titulo']) {
-        $cards[$vest_id][$cat_id]['links'][] = [
-            'titulo' => $row['link_titulo'],
-            'link' => $row['link_url']
-        ];
-    }
+    if (isset($row['link_titulo']) && $row['link_titulo'] !== '') {
+      $cards[$vest_id][$cat_id]['links'][] = [
+          'titulo' => $row['link_titulo'],
+          'link'   => isset($row['link_url']) ? $row['link_url'] : ''
+      ];
+  }
 
 }
 ?>
@@ -106,7 +106,7 @@ while ($row = $result->fetch_assoc()) {
     <link rel="stylesheet" href="../../assets/estilos/style-card-adm.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Tela administrativa</title>
+    <title>Vestibular | ADM</title>
     <style>
         /* === MODAL OVERLAY NOVO === */
 .modal-overlay{
@@ -189,18 +189,21 @@ while ($row = $result->fetch_assoc()) {
             <div class="icones-cabecalho">
                 <a href="../adm.html"><span class="material-symbols-outlined">home</span></a>
                 <div class="perfil-dropdown">
-                    <span class="material-symbols-outlined" id="abre-perfil">person</span>
-                    <div id="perfil">
-                        <h1 id="nome-perfil"><?php echo $_SESSION['adm_nome']; ?></h1>
-                        <p id="email-perfil"><?php echo $_SESSION['adm_email']; ?></p>
-                        <button type="button" id="btn-alterar-senha">Alterar senha</button>
-                        <div id="form-senha" style="display:none; text-align:center; margin-top:20px;">
-                            <input type="password" id="nova-senha" placeholder="Nova senha" required>
-                            <button type="button" id="salvar-senha">Salvar</button>
-                        </div>
-                        <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">Sair</button>
-                    </div>
+            <span class="material-symbols-outlined" id="abre-perfil">person</span>
+
+            <div id="perfil">
+
+                <h1 id="nome-perfil"><?php echo $_SESSION['adm_nome']; ?></h1>
+                <p id="email-perfil"><?php echo $_SESSION['adm_email']; ?></p>
+                <button type="button" id="btn-alterar-senha">Alterar senha</button>
+                <div id="form-senha" style="display:none; text-align:center; margin-top:20px;">
+                    <input type="password" id="nova-senha" style="border: none; outline: none; font-size: 15px;" placeholder="Nova senha" required>
+                    <button type="button" id="salvar-senha">Salvar</button>
                 </div>
+
+                <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">Sair</button>
+            </div>
+        </div>
             </div>
         </header>
 
@@ -213,88 +216,115 @@ while ($row = $result->fetch_assoc()) {
                 <div class="card-cont">
                     <h3>Total de funcionários</h3>
                     <p class="number"><?= $total_funcionarios ?></p>
-                    <i class="fa fa-users card-icon"></i>
+                    <i class="bi bi-people card-icon"></i>
                 </div>
                 <div class="card-cont">
                     <h3>Total de Vestibulares</h3>
                     <p class="number"><?= $total_vestibulares ?></p>
-                    <i class="fa fa-graduation-cap card-icon"></i>
+                    <i class="bi bi-star card-icon"></i>
                 </div>
             </section>
+            <!--Fim Cards rows de vestibulares e funcionarios-->
+
+            <!-- ABAS -->
+            <div class="tab-container">
+                <a href="tela-adm-func.php" class="tab">
+                  <i class="bi bi-people"></i> Funcionários
+                </a>
+                <a href="tela-adm-vest.html" class="tab active">
+                  <i class="bi bi-star"></i> Vestibulares
+                </a>
+            </div>
+            <!-- FIM ABAS -->
 
             <!-- Conteúdo principal -->
             <div class="content-box">
-                <div class="header">
+            <div class="header">
+                  <div>
                     <h2>Gerenciar Vestibulares</h2>
-                    <button class="btn-new abrir-modal"><i class="fa-solid fa-plus"></i> Novo Vestibular</button>
+                    <p>Cadastre, edite ou remova informações sobre vestibulares</p>
+                  </div>
+                  <button class="btn-new abrir-modal" data-id=""><i class="fa-solid fa-plus"></i> Novo Vestibular</button>
                 </div>
 
+                <!-- Lista de Vestibulares -->
                 <div class="cards-container">
 
-
-                    <?php foreach ($cards as $vest_id => $categorias): ?>
-                        <?php foreach ($categorias as $cat_id => $dados): ?>
-                            <div class="card">
-                                <div class="card-left">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                    <div class="info">
-                                        <h3><?= htmlspecialchars($dados['vestibular']) ?></h3>
-                                        <p><?= htmlspecialchars($dados['categoria']) ?> - 
-                                           R$ <?= number_format($dados['taxa'], 2, ',', '.') ?></p>
-                                        <?php if (!empty($dados['eventos'])): ?>
-                                            <ul>
-                                                <?php foreach ($dados['eventos'] as $evento): ?>
-                                                    <li><?= htmlspecialchars($evento['titulo']) ?>:
-                                                        <?= date("d/m/Y", strtotime($evento['inicio'])) ?>
-                                                        <?php if ($evento['fim']): ?>
-                                                            até <?= date("d/m/Y", strtotime($evento['fim'])) ?>
-                                                        <?php endif; ?>
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        <?php endif; ?>
-
-                                        <?php if (!empty($dados['informacoes'])): ?>
-    <ul>
-        <?php foreach ($dados['informacoes'] as $info): ?>
-            <li><strong><?= htmlspecialchars($info['titulo']) ?>:</strong> <?= htmlspecialchars($info['conteudo']) ?></li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-
-<?php if (!empty($dados['links'])): ?>
-    <ul>
-        <?php foreach ($dados['links'] as $link): ?>
-            <li><a href="<?= htmlspecialchars($link['link']) ?>" target="_blank"><?= htmlspecialchars($link['titulo']) ?></a></li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-                                    </div>
-                                </div>
-                                <div class="card-right">
-                                    <button 
-                                        class="btn-icon edit abrir-modal"
-                                        data-vest-id="<?= $dados['vestibular_id'] ?>"
-                                        data-nome="<?= htmlspecialchars($dados['vestibular']) ?>"
-                                        data-cat-id="<?= $dados['categoria_id'] ?>"
-                                        data-categoria="<?= htmlspecialchars($dados['categoria']) ?>"
-                                        data-taxa="<?= $dados['taxa'] ?>"
-                                        data-eventos='<?= json_encode($dados['eventos']) ?>'>
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </button>
-                                    <button class="btn-icon delete" onclick="if(confirm('Excluir?')) location.href='excluir_vestibular.php?id=<?= $dados['vestibular_id'] ?>'">
-                                        <i class="fa-regular fa-trash-can"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    <?php endforeach; ?>
+                <?php foreach ($cards as $vest_id => $categorias): ?>
+    <?php foreach ($categorias as $cat_id => $dados): ?>
+        <div class="card">
+            <div class="card-left">
+                <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="info">
+                    <h3><?= htmlspecialchars($dados['vestibular']) ?></h3>
+                    <p>
+                        <?= htmlspecialchars($dados['categoria']) ?>  
+                        Inscrições: 
+                        <?php 
+                            // pega evento de inscrição
+                            $insc = array_filter($dados['eventos'], fn($e) => stripos($e['titulo'], 'inscri') !== false);
+                            if($insc){
+                                $insc = reset($insc);
+                                echo date("d/m/Y", strtotime($insc['inicio'])) . 
+                                    ($insc['fim'] ? " - " . date("d/m/Y", strtotime($insc['fim'])) : "");
+                            } else {
+                                echo "dia-mes-ano";
+                            }
+                        ?>
+                        Prova: 
+                        <?php 
+                            // pega evento de prova
+                            $prova = array_filter($dados['eventos'], fn($e) => stripos($e['titulo'], 'prova') !== false);
+                            if($prova){
+                                $prova = reset($prova);
+                                echo date("d/m/Y", strtotime($prova['inicio']));
+                            } else {
+                                echo "dia-mes-ano";
+                            }
+                        ?>
+                        R$ <?= number_format($dados['taxa'], 2, ',', '.') ?>
+                    </p>
                 </div>
             </div>
+            <div class="card-right">
+                <button class="btn-icon edit abrir-modal"
+                    data-vest-id="<?= $dados['vestibular_id'] ?>"
+                    data-nome="<?= htmlspecialchars($dados['vestibular']) ?>"
+                    data-cat-id="<?= $dados['categoria_id'] ?>"
+                    data-categoria="<?= htmlspecialchars($dados['categoria']) ?>"
+                    data-taxa="<?= $dados['taxa'] ?>"
+                    data-eventos='<?= json_encode($dados['eventos']) ?>'>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+                <button class="btn-icon delete" 
+                    onclick="if(confirm('Excluir?')) location.href='excluir_vestibular.php?id=<?= $dados['vestibular_id'] ?>'">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php endforeach; ?>
+
+                   
+                </div>
+            </div>
+
+              <!--FIM CONTEUDO-->
+
         </main>
+              <!-- fim principal -->
+
+
+        <!--Footer-->
+        <footer class="rodape">
+            <div class="text">
+                <span>© 2025 Bem Formandos</span>
+            </div>
+        </footer>
+
     </div>
 
-    <!-- Modal -->
+    
     <!-- Modal -->
 <div id="modal-vestibular" class="modal-overlay">
   <div class="modal-box">
@@ -340,6 +370,7 @@ while ($row = $result->fetch_assoc()) {
     </form>
   </div>
 </div>
+<!--Fim Modal -->
 
 
     <script>
