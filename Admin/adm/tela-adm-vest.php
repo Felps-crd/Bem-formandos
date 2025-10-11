@@ -106,128 +106,10 @@ while ($row = $result->fetch_assoc()) {
     <link rel="stylesheet" href="../../assets/estilos/style-card-adm.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/estilos/style-modal-vest.css">
     <title>Vestibular | ADM</title>
     <style>
-        /* === MODAL OVERLAY NOVO === */
-.modal-overlay{
-  display:none;               /* inicia escondido */
-  position:fixed;
-  inset:0;                    /* top/right/bottom/left:0 */
-  background:rgba(0,0,0,.5);
-  z-index:1000;
-  justify-content:center;     /* centraliza horizontal */
-  align-items:center;         /* centraliza vertical */
-  padding:24px;
-  overflow-y:auto;            /* se ficar maior que a tela, rola */
-}
-
-.modal-box{
-  background:#fff;
-  width:min(680px, 95vw);
-  max-height:90vh;            /* nunca passa da tela */
-  border-radius:12px;
-  box-shadow:0 15px 35px rgba(0,0,0,.25);
-  display:flex;
-  flex-direction:column;
-}
-
-/* Cabeçalho */
-.modal-header{
-  position:sticky; top:0;     /* fica preso ao topo enquanto rola */
-  background:#fff;
-  padding:20px 24px 8px;
-  border-top-left-radius:12px;
-  border-top-right-radius:12px;
-}
-.modal-header h2{ margin:0; font-size:20px; }
-.modal-header .subtitle{ margin:6px 0 0; font-size:14px; color:#6b7280; }
-.btn-close{
-  position:absolute; right:12px; top:10px;
-  border:none; background:transparent;
-  font-size:24px; cursor:pointer; line-height:1;
-}
-
-/* Corpo do formulário */
-.modal-body{
-  padding:16px 24px 0;
-  overflow:auto;              /* rolagem interna */
-}
-.modal-body label{ display:block; font-weight:600; margin-top:12px; }
-.modal-body input{
-  width:100%; margin-top:6px; padding:10px 12px;
-  border:1px solid #d1d5db; border-radius:8px; font-size:14px;
-}
-.row-inputs{
-  display:grid; grid-template-columns:1fr 1fr; gap:12px;
-}
-
-/* Rodapé */
-.modal-footer{
-  position:sticky; bottom:0; background:#fff;
-  padding:16px 24px 20px; display:flex; justify-content:flex-end; gap:10px;
-  border-bottom-left-radius:12px; border-bottom-right-radius:12px;
-}
-.modal-footer .btn{
-  padding:10px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:600;
-}
-.modal-footer .btn.cancel{ background:#e5e7eb; }
-.modal-footer .btn.save{ background:#1d4ed8; color:#fff; }
-.modal-footer .btn.cancel:hover{ filter:brightness(.95); }
-.modal-footer .btn.save:hover{ filter:brightness(1.05); }
-
-/* Inputs estilo material */
-.modal-body label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 4px;
-  display: block;
-}
-
-.modal-body input,
-.modal-body select {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  font-size: 14px;
-  transition: border .2s, box-shadow .2s;
-}
-
-.modal-body input:focus,
-.modal-body select:focus {
-  outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
-}
-
-.row-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  align-items: center;
-}
-
-/* Botões com mais estilo */
-.modal-footer .btn {
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 10px 20px;
-}
-
-.modal-footer .btn.save {
-  background: #2563eb;
-  color: #fff;
-  font-weight: 600;
-}
-
-.modal-footer .btn.cancel {
-  background: #f3f4f6;
-  font-weight: 600;
-  color: #374151;
-}
-
-
+       
     </style>
 </head>
 <body>
@@ -406,17 +288,116 @@ while ($row = $result->fetch_assoc()) {
   <option value="Vestibular Próprio">Vestibular Próprio</option>
 </select>
 
-<label>Data Isenção taxa</label>
+<h2 class="modal-secao">Inscrição</h2>
+
+<label>Solicitação de isenção de taxa</label>
 <div class="row-inputs">
   <input type="date" name="isen_inicio">
   <input type="date" name="isen_fim">
 </div>
 
-<label>Data Inscrição</label>
+<label>Período de inscrições</label>
 <div class="row-inputs">
   <input type="date" name="insc_inicio">
   <input type="date" name="insc_fim">
 </div>
+
+<label>Solicitação de atendimento especializado</label>
+<div class="row-inputs">
+  <input type="date" name="espec_inicio">
+  <input type="date" name="espec_fim">
+</div>
+
+<label>Tratamento pelo nome social</label>
+<div class="row-inputs">
+  <input type="date" name="social_inicio">
+  <input type="date" name="social_fim">
+</div>
+
+<h2 class="modal-secao">Pagamento</h2>
+
+<label>Resultado da solicitação de isenção de taxa</label>
+<div class="row-inputs">
+  <input type="date" name="resultIsen_data">
+</div>
+
+<label>Recurso da isenção</label>
+<div class="row-inputs">
+  <input type="date" name="recurso_inicio">
+  <input type="date" name="recurso_fim">
+</div>
+
+<label>Pagamento da taxa de inscrição</label>
+<div class="row-inputs">
+  <input type="date" name="pagamTaxa_inicio">
+  <input type="date" name="pagamTaxa_fim">
+</div>
+
+<h2 class="modal-secao">Cartão de Confirmação</h2>
+
+<label>Disponibilização do cartão:</label>
+<div class="row-inputs">
+  <input type="date" name="dispCartao_data">
+</div>
+
+<label>Consulta de locais de prova:</label>
+<div class="row-inputs">
+  <input type="date" name="consLocal_data">
+</div>
+
+<label>Recurso de local de prova:</label>
+<div class="row-inputs">
+  <input type="date" name="recuLocal_inicio">
+  <input type="date" name="recuLocal_fim">
+</div>
+
+<h2 class="modal-secao">Aplicação das Provas</h2>
+
+<label>1° dia de provas: </label>
+<div class="row-inputs">
+  <input type="date" name="diaProva1_data">
+</div>
+
+<label>2° dia de provas: </label>
+<div class="row-inputs">
+  <input type="date" name="diaProva2_data">
+</div>
+
+<label>Horário de aplicação:</label>
+<div class="row-inputs">
+<input type="date" name="horaApli_inicio">
+<input type="date" name="horaApli_fim"></div>
+
+<h2 class="modal-secao">Reaplicação</h2>
+
+<label>Solicitação de reaplicação:</label>
+<div class="row-inputs">
+<input type="date" name="soliReapli_inicio">
+<input type="date" name="soliReapli_fim"></div>
+
+<label>Resultado da solicitação:</label>
+<div class="row-inputs">
+<input type="date" name="resulSoli_data"></div>
+
+<label>Reaplicação:</label>
+<div class="row-inputs">
+<input type="date" name="reapli_inicio">
+<input type="date" name="reapli_fim"></div>
+
+<h2 class="modal-secao">Resultados</h2>
+
+<label>Gabarito oficial:</label>
+<div class="row-inputs">
+<input type="date" name="gabaOfi_data"></div>
+
+<label>Resultado final:</label>
+<div class="row-inputs">
+<input type="date" name="resuFinal_data"></div>
+
+
+<label>Espelho da redação:</label>
+<div class="row-inputs">
+<input type="date" name="espeReda_data"></div>
 
 <label>Data Prova</label>
 <div class="row-inputs">
@@ -427,7 +408,6 @@ while ($row = $result->fetch_assoc()) {
 <label>Taxa</label>
 <div class="row-inputs">
   <input type="number" step="0.01" name="taxa" id="vest-taxa" placeholder="R$ 100,00" required>
-  <button type="button" class="btn add-fee">+</button>
 </div>
 
 <label>Link</label>
@@ -449,9 +429,7 @@ while ($row = $result->fetch_assoc()) {
 
 
     <script>
-        
-  // ===== Perfil (seu código existente pode ficar aqui) =====
-  // ... (se já está funcionando, mantenha)
+
 
   // ===== Modal de Vestibular =====
   const overlay   = document.getElementById('modal-vestibular');

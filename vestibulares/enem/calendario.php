@@ -45,6 +45,49 @@ try {
     <link rel="shortcut icon" href="../../assets/imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+<style>
+    .area-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.titulo-bloco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.titulo-bloco h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-left: 8px;
+}
+
+.titulo-bloco i {
+    font-size: 1.5rem;
+    color: #008037;
+}
+
+.titulo-bloco .mes {
+    background-color: #25d366;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.itens-bloco p {
+    margin: 6px 0;
+    color: #333;
+    font-size: 0.95rem;
+}
+</style>
 <body>
 <div class="container-principal">
     <!-- Cabeçalho -->
@@ -70,26 +113,89 @@ try {
             </section>
 
             <section id="cronograma">
-                <h2>Cronograma Completo ENEM 2025</h2>
-                <div class="areas-provas">
-                    <?php if (!empty($eventos)): ?>
-                        <?php foreach ($eventos as $evento): ?>
-                            <div class="area-card">
-                                <i class="bi bi-calendar-event-fill"></i>
-                                <div>
-                                    <h3><?php echo htmlspecialchars($evento['titulo']); ?></h3>
-                                    <p><strong>Início:</strong> <?php echo date('d/m/Y', strtotime($evento['data_inicio'])); ?></p>
-                                    <?php if ($evento['data_fim']): ?>
-                                        <p><strong>Fim:</strong> <?php echo date('d/m/Y', strtotime($evento['data_fim'])); ?></p>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    <?php else: ?>
-                        <p>Nenhum evento cadastrado ainda.</p>
-                    <?php endif; ?>
-                </div>
-            </section>
+    <h2>Cronograma Completo ENEM 2025</h2>
+
+    <!-- INSCRIÇÕES -->
+    <div class="area-card">
+        <div class="titulo-bloco">
+            <i class="bi bi-pencil-square"></i>
+            <h3>Inscrições</h3>
+            
+        </div>
+        <div class="itens-bloco">
+            <?php
+            foreach ($eventos as $e) {
+                if (stripos($e['titulo'], 'inscrição') !== false || stripos($e['titulo'], 'isenção') !== false || stripos($e['titulo'], 'atendimento especializado') !== false) {
+                    echo "<p><strong>{$e['titulo']}:</strong> " . date('d/m/Y', strtotime($e['data_inicio']));
+                    if (!empty($e['data_fim'])) echo " - " . date('d/m/Y', strtotime($e['data_fim']));
+                    echo "</p>";
+                }
+            }
+            ?>
+        </div>
+    </div>
+
+    <!-- PAGAMENTO -->
+    <div class="area-card">
+        <div class="titulo-bloco">
+            <i class="bi bi-cash-stack"></i>
+            <h3>Pagamento</h3>
+            
+        </div>
+        <div class="itens-bloco">
+            <?php
+            foreach ($eventos as $e) {
+                if (stripos($e['titulo'], 'pagamento') !== false || stripos($e['titulo'], 'recurso') !== false || stripos($e['titulo'], 'resultado da solicitação') !== false) {
+                    echo "<p><strong>{$e['titulo']}:</strong> " . date('d/m/Y', strtotime($e['data_inicio']));
+                    if (!empty($e['data_fim'])) echo " - " . date('d/m/Y', strtotime($e['data_fim']));
+                    echo "</p>";
+                }
+            }
+            ?>
+        </div>
+    </div>
+
+    <!-- CARTÃO DE CONFIRMAÇÃO -->
+    <div class="area-card">
+        <div class="titulo-bloco">
+            <i class="bi bi-credit-card-2-front-fill"></i>
+            <h3>Cartão de Confirmação</h3>
+            
+        </div>
+        <div class="itens-bloco">
+            <?php
+            foreach ($eventos as $e) {
+                if (stripos($e['titulo'], 'cartão') !== false || stripos($e['titulo'], 'local de prova') !== false) {
+                    echo "<p><strong>{$e['titulo']}:</strong> " . date('d/m/Y', strtotime($e['data_inicio']));
+                    if (!empty($e['data_fim'])) echo " - " . date('d/m/Y', strtotime($e['data_fim']));
+                    echo "</p>";
+                }
+            }
+            ?>
+        </div>
+    </div>
+
+    <!-- APLICAÇÃO DAS PROVAS -->
+    <div class="area-card">
+        <div class="titulo-bloco">
+            <i class="bi bi-journal-check"></i>
+            <h3>Aplicação das Provas</h3>
+            
+        </div>
+        <div class="itens-bloco">
+            <?php
+            foreach ($eventos as $e) {
+                if (stripos($e['titulo'], 'prova') !== false) {
+                    echo "<p><strong>{$e['titulo']}:</strong> " . date('d/m/Y', strtotime($e['data_inicio']));
+                    if (!empty($e['data_fim'])) echo " - " . date('d/m/Y', strtotime($e['data_fim']));
+                    echo "</p>";
+                }
+            }
+            ?>
+        </div>
+    </div>
+
+</section>
         </div>
 
         <!-- Painel lateral -->
