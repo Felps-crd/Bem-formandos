@@ -52,12 +52,6 @@
                 <p>Qualquer pessoa que já terminou ou está terminando o ensino médio pode fazer o Enem. Quem ainda está estudando pode participar como "treineiro", só pra testar seus conhecimentos.</p>
                 <br>
 
-                <!-- Cronograma -->
-                <section id="cronograma"> 
-                    <h2>Cronograma Completo ENEM 2025</h2>
-                    <?php include __DIR__ . '/calendario.php'; ?>
-                </section>
-
                 <!-- Áreas de conhecimento -->
                 <section id="areas-conhecimento">
                     <p>A prova acontece em dois dias e tem 180 questões divididas em quatro áreas:</p>

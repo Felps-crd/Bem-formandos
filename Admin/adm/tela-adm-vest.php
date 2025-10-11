@@ -175,6 +175,59 @@ while ($row = $result->fetch_assoc()) {
 .modal-footer .btn.cancel:hover{ filter:brightness(.95); }
 .modal-footer .btn.save:hover{ filter:brightness(1.05); }
 
+/* Inputs estilo material */
+.modal-body label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.modal-body input,
+.modal-body select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: border .2s, box-shadow .2s;
+}
+
+.modal-body input:focus,
+.modal-body select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
+}
+
+.row-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Botões com mais estilo */
+.modal-footer .btn {
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.modal-footer .btn.save {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+.modal-footer .btn.cancel {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+
     </style>
 </head>
 <body>
@@ -286,6 +339,9 @@ while ($row = $result->fetch_assoc()) {
                     </p>
                 </div>
             </div>
+
+            
+
             <div class="card-right">
                 <button class="btn-icon edit abrir-modal"
                     data-vest-id="<?= $dados['vestibular_id'] ?>"
@@ -334,34 +390,53 @@ while ($row = $result->fetch_assoc()) {
       <button type="button" class="btn-close" onclick="fecharModal()">×</button>
     </div>
     <form id="form-vest" method="post" action="salvar_vestibular.php" class="modal-body">
-      <input type="hidden" name="id" id="vest-id">
+      
 
       <label>Instituição</label>
-      <input type="text" name="nome" id="vest-nome" required>
+<div class="row-inputs">
+  <input type="text" name="nome" id="vest-nome" placeholder="Ex: USP" required>
+  <input type="text" id="vest-id" name="id" readonly style="color: #6b7280;">
 
-      <label>Categoria</label>
-      <input type="text" name="categoria" id="vest-categoria" required>
+</div>
 
-      <label>Data Isenção Taxa</label>
-      <div class="row-inputs">
-        <input type="date" name="isen_inicio">
-        <input type="date" name="isen_fim">
-      </div>
+<label>Categoria</label>
+<select name="categoria" id="vest-categoria" required>
+  <option value="">Selecione...</option>
+  <option value="ENEM">ENEM</option>
+  <option value="Vestibular Próprio">Vestibular Próprio</option>
+</select>
 
-      <label>Data Inscrição</label>
-      <div class="row-inputs">
-        <input type="date" name="insc_inicio">
-        <input type="date" name="insc_fim">
-      </div>
+<label>Data Isenção taxa</label>
+<div class="row-inputs">
+  <input type="date" name="isen_inicio">
+  <input type="date" name="isen_fim">
+</div>
 
-      <label>Data Prova</label>
-      <input type="date" name="data_prova">
+<label>Data Inscrição</label>
+<div class="row-inputs">
+  <input type="date" name="insc_inicio">
+  <input type="date" name="insc_fim">
+</div>
 
-      <label>Taxa</label>
-      <input type="number" step="0.01" name="taxa" id="vest-taxa" required>
+<label>Data Prova</label>
+<div class="row-inputs">
+  <input type="date" name="data_prova">
+  <button type="button" class="btn add-date">+</button>
+</div>
 
-      <label>Link</label>
-      <input type="url" name="link">
+<label>Taxa</label>
+<div class="row-inputs">
+  <input type="number" step="0.01" name="taxa" id="vest-taxa" placeholder="R$ 100,00" required>
+  <button type="button" class="btn add-fee">+</button>
+</div>
+
+<label>Link</label>
+<input type="url" name="link" placeholder="https://...">
+
+<a href="#" style="display:block; margin-top:12px; color:#2563eb; font-size:14px; font-weight:500; text-decoration:none;">
+  Demais datas
+</a>
+
 
       <div class="modal-footer">
         <button type="button" class="btn cancel" onclick="fecharModal()">Cancelar</button>

@@ -19,7 +19,7 @@ try {
 }
 
 // ID do ENEM (ajuste se for diferente)
-$vestibular_id = 4;
+$vestibular_id = 2;
 
 try {
     $stmt = $pdo->prepare("SELECT titulo, data_inicio, data_fim FROM calendario WHERE vestibular_id = ?");
