@@ -1,103 +1,128 @@
 <?php
+
+
+// salvar_vestibular.php (versão completa revisada)
+session_start();
 include_once('../../assets/php/conexao.php');
 
-$id        = $_POST['id'] ?? null;
-$nome      = $_POST['nome'] ?? '';
-$categoria = $_POST['categoria'] ?? '';
-$taxa      = $_POST['taxa'] ?? 0.00;
-
-// Datas do calendário
-$isen_inicio = $_POST['isen_inicio'] ?: null;
-$isen_fim    = $_POST['isen_fim'] ?: null;
-$insc_inicio = $_POST['insc_inicio'] ?: null;
-$insc_fim    = $_POST['insc_fim'] ?: null;
-$data_prova  = $_POST['data_prova'] ?: null;
-
-if(empty($nome)){
-    echo "<script>alert('O nome do vestibular é obrigatório'); history.back();</script>";
+if (!isset($_SESSION['adm_id'])) {
+    header("Location: login-adm.php");
     exit;
 }
 
-if($id){ // editar vestibular
-    // Atualiza vestibular
-    $stmt = $conexao->prepare("UPDATE vestibulares SET nome=?, taxa=? WHERE id=?");
-    $stmt->bind_param("sdi", $nome, $taxa, $id);
-    $stmt->execute();
-
-    // Atualiza categoria
-    if($categoria){
-        $stmt = $conexao->prepare("SELECT id FROM categorias WHERE vestibular_id=?");
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $res = $stmt->get_result();
-
-        if($res->num_rows){
-            $row = $res->fetch_assoc();
-            $cat_id = $row['id'];
-            $stmt = $conexao->prepare("UPDATE categorias SET nome=? WHERE id=?");
-            $stmt->bind_param("si", $categoria, $cat_id);
-            $stmt->execute();
-        } else {
-            // Se não existir categoria, cria
-            $stmt = $conexao->prepare("INSERT INTO categorias (vestibular_id, nome) VALUES (?,?)");
-            $stmt->bind_param("is", $id, $categoria);
-            $stmt->execute();
-        }
-    }
-
-    // Atualiza calendário
-    $eventos = [
-        ['titulo'=>'isenção','inicio'=>$isen_inicio,'fim'=>$isen_fim],
-        ['titulo'=>'inscrição','inicio'=>$insc_inicio,'fim'=>$insc_fim],
-        ['titulo'=>'prova','inicio'=>$data_prova,'fim'=>null],
-    ];
-
-    foreach($eventos as $ev){
-        $stmt = $conexao->prepare("SELECT id FROM calendario WHERE vestibular_id=? AND titulo=?");
-        $stmt->bind_param("is", $id, $ev['titulo']);
-        $stmt->execute();
-        $res = $stmt->get_result();
-
-        if($res->num_rows){
-            $row = $res->fetch_assoc();
-            $stmt2 = $conexao->prepare("UPDATE calendario SET data_inicio=?, data_fim=? WHERE id=?");
-            $stmt2->bind_param("ssi", $ev['inicio'], $ev['fim'], $row['id']);
-            $stmt2->execute();
-        } else if($ev['inicio']){
-            $stmt2 = $conexao->prepare("INSERT INTO calendario (vestibular_id, titulo, data_inicio, data_fim) VALUES (?,?,?,?)");
-            $stmt2->bind_param("isss", $id, $ev['titulo'], $ev['inicio'], $ev['fim']);
-            $stmt2->execute();
-        }
-    }
-
-} else { // adicionar vestibular
-    $stmt = $conexao->prepare("INSERT INTO vestibulares (nome, taxa) VALUES (?,?)");
-    $stmt->bind_param("sd", $nome, $taxa);
-    $stmt->execute();
-    $id = $stmt->insert_id;
-
-    // Cria categoria e eventos se existirem
-    if($categoria){
-        $stmt = $conexao->prepare("INSERT INTO categorias (vestibular_id, nome) VALUES (?,?)");
-        $stmt->bind_param("is", $id, $categoria);
-        $stmt->execute();
-    }
-
-    $eventos = [
-        ['titulo'=>'isenção','inicio'=>$isen_inicio,'fim'=>$isen_fim],
-        ['titulo'=>'inscrição','inicio'=>$insc_inicio,'fim'=>$insc_fim],
-        ['titulo'=>'prova','inicio'=>$data_prova,'fim'=>null],
-    ];
-
-    foreach($eventos as $ev){
-        if($ev['inicio']){
-            $stmt = $conexao->prepare("INSERT INTO calendario (vestibular_id, titulo, data_inicio, data_fim) VALUES (?,?,?,?)");
-            $stmt->bind_param("isss", $id, $ev['titulo'], $ev['inicio'], $ev['fim']);
-            $stmt->execute();
-        }
-    }
+// Função para normalizar datas
+function norm_date($d) {
+    $d = trim((string)$d);
+    return ($d === '' || $d === null) ? null : $d;
 }
 
-header("Location: tela-adm-vest.php");
-exit;
+// Recebe dados do POST
+$vest_id = isset($_POST['id']) ? intval($_POST['id']) : 0;
+$nome    = isset($_POST['nome']) ? trim($_POST['nome']) : '';
+$taxa = isset($_POST['taxa']) ? floatval($_POST['taxa']) : 0.00;
+$eventos_post = $_POST['eventos'] ?? [];
+
+if ($vest_id <= 0) {
+    $_SESSION['flash_error'] = "Vestibular inválido.";
+    header("Location: tela-adm-vest.php");
+    exit;
+}
+
+$mysqli = $conexao;
+$mysqli->begin_transaction();
+
+try {
+    // Atualiza vestibular
+    $sqlUpdateVest = "UPDATE vestibulares SET nome = ?, taxa = ? WHERE id = ?";
+    $stmtVest = $mysqli->prepare($sqlUpdateVest);
+    if (!$stmtVest) throw new Exception("Prepare update vestibular falhou: " . $mysqli->error);
+    $stmtVest->bind_param('sdi', $nome, $taxa, $vest_id);
+    if (!$stmtVest->execute()) throw new Exception("Execute update vestibular falhou: " . $stmtVest->error);
+    $stmtVest->close();
+
+    // Buscar eventos existentes no banco
+    $existing_ids = [];
+    $sqlExist = "SELECT id FROM calendario WHERE vestibular_id = ?";
+    $stmt = $mysqli->prepare($sqlExist);
+    if (!$stmt) throw new Exception("Prepare select eventos falhou: " . $mysqli->error);
+    $stmt->bind_param('i', $vest_id);
+    if (!$stmt->execute()) throw new Exception("Execute select eventos falhou: " . $stmt->error);
+    $res = $stmt->get_result();
+    while ($r = $res->fetch_assoc()) {
+        $existing_ids[] = (int)$r['id'];
+    }
+    $stmt->close();
+
+    
+    // Preparar UPDATE e INSERT para eventos
+    $sqlUpdateEvent = "UPDATE calendario SET titulo = ?, data_inicio = ?, data_fim = ? WHERE id = ? AND vestibular_id = ?";
+    $stmtUpdate = $mysqli->prepare($sqlUpdateEvent);
+    if (!$stmtUpdate) throw new Exception("Prepare update evento falhou: " . $mysqli->error);
+
+    $sqlInsertEvent = "INSERT INTO calendario (vestibular_id, titulo, data_inicio, data_fim) VALUES (?, ?, ?, ?)";
+    $stmtInsert = $mysqli->prepare($sqlInsertEvent);
+    if (!$stmtInsert) throw new Exception("Prepare insert evento falhou: " . $mysqli->error);
+
+    $submitted_ids = [];
+
+    foreach ($eventos_post as $ev) {
+        if (!is_array($ev)) continue;
+
+        $ev_id_raw = $ev['id'] ?? '';
+        $ev_id = intval($ev_id_raw);
+        $ev_titulo = trim($ev['titulo'] ?? '');
+        $ev_inicio = !empty($ev['inicio']) ? $ev['inicio'] : null; // null se não preencher
+        $ev_fim    = !empty($ev['fim']) ? $ev['fim'] : null;
+
+        // Ignora eventos sem título ou sem data de início
+        if ($ev_titulo === '' || $ev_inicio === null) continue;
+
+        if ($ev_id > 0) {
+            // Update existente
+            $stmtUpdate->bind_param('ssssi', $ev_titulo, $ev_inicio, $ev_fim, $ev_id, $vest_id);
+            if (!$stmtUpdate->execute()) throw new Exception("Update evento falhou para id {$ev_id}: " . $stmtUpdate->error);
+            $submitted_ids[] = $ev_id;
+        } else {
+            // Insert novo
+            $stmtInsert->bind_param('isss', $vest_id, $ev_titulo, $ev_inicio, $ev_fim);
+            if (!$stmtInsert->execute()) throw new Exception("Insert evento falhou para '{$ev_titulo}': " . $stmtInsert->error);
+            $submitted_ids[] = (int)$stmtInsert->insert_id;
+        }
+    }
+
+    $stmtUpdate->close();
+    $stmtInsert->close();
+
+    // Deletar eventos que foram removidos no formulário
+    $to_delete = array_diff($existing_ids, $submitted_ids);
+    if (!empty($to_delete)) {
+        $sqlDel = "DELETE FROM calendario WHERE id = ? AND vestibular_id = ?";
+        $stmtDel = $mysqli->prepare($sqlDel);
+        if (!$stmtDel) throw new Exception("Prepare delete evento falhou: " . $mysqli->error);
+
+        foreach ($to_delete as $del_id) {
+            $did = intval($del_id);
+            $stmtDel->bind_param('ii', $did, $vest_id);
+            if (!$stmtDel->execute()) {
+                throw new Exception("Delete evento falhou para id {$did}: " . $stmtDel->error);
+            }
+        }
+        $stmtDel->close();
+    }
+
+
+   
+
+    $mysqli->commit();
+    $_SESSION['flash_success'] = "Vestibular e eventos salvos com sucesso.";
+    header("Location: tela-adm-vest.php");
+    exit;
+
+} catch (Exception $e) {
+    $mysqli->rollback();
+
+    // FORÇAR exibição do erro para debugging
+    echo "Erro: " . htmlspecialchars($e->getMessage());
+    exit;
+}
 ?>

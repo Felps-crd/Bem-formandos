@@ -52,7 +52,7 @@ while ($row = $result->fetch_assoc()) {
             'vestibular_id' => $vest_id,
             'vestibular' => $row['vestibular'],
             'categoria_id' => $cat_id,
-            'categoria'  => $row['categoria'] ?? 'Sem Categoria',
+            'categoria'  => $row['categoria'] ?? ',',
             'taxa'       => $row['taxa'],
             'eventos'    => [],
             'informacoes' => [],
@@ -166,7 +166,7 @@ while ($row = $result->fetch_assoc()) {
                 <a href="tela-adm-func.php" class="tab">
                   <i class="bi bi-people"></i> Funcionários
                 </a>
-                <a href="tela-adm-vest.html" class="tab active">
+                <a href="tela-adm-vest.php" class="tab active">
                   <i class="bi bi-star"></i> Vestibulares
                 </a>
             </div>
@@ -228,12 +228,12 @@ while ($row = $result->fetch_assoc()) {
                 <button class="btn-icon edit abrir-modal"
                     data-vest-id="<?= $dados['vestibular_id'] ?>"
                     data-nome="<?= htmlspecialchars($dados['vestibular']) ?>"
-                    data-cat-id="<?= $dados['categoria_id'] ?>"
-                    data-categoria="<?= htmlspecialchars($dados['categoria']) ?>"
-                    data-taxa="<?= $dados['taxa'] ?>"
-                    data-eventos='<?= json_encode($dados['eventos']) ?>'>
+                
+                  
+                    data-taxa="<?= $dados['taxa'] ?>">
                     <i class="fa-regular fa-pen-to-square"></i>
                 </button>
+
                 <button class="btn-icon delete" 
                     onclick="if(confirm('Excluir?')) location.href='excluir_vestibular.php?id=<?= $dados['vestibular_id'] ?>'">
                     <i class="fa-regular fa-trash-can"></i>
@@ -281,129 +281,12 @@ while ($row = $result->fetch_assoc()) {
 
 </div>
 
-<label>Categoria</label>
-<select name="categoria" id="vest-categoria" required>
-  <option value="">Selecione...</option>
-  <option value="ENEM">ENEM</option>
-  <option value="Vestibular Próprio">Vestibular Próprio</option>
-</select>
-
-<h2 class="modal-secao">Inscrição</h2>
-
-<label>Solicitação de isenção de taxa</label>
-<div class="row-inputs">
-  <input type="date" name="isen_inicio">
-  <input type="date" name="isen_fim">
-</div>
-
-<label>Período de inscrições</label>
-<div class="row-inputs">
-  <input type="date" name="insc_inicio">
-  <input type="date" name="insc_fim">
-</div>
-
-<label>Solicitação de atendimento especializado</label>
-<div class="row-inputs">
-  <input type="date" name="espec_inicio">
-  <input type="date" name="espec_fim">
-</div>
-
-<label>Tratamento pelo nome social</label>
-<div class="row-inputs">
-  <input type="date" name="social_inicio">
-  <input type="date" name="social_fim">
-</div>
-
-<h2 class="modal-secao">Pagamento</h2>
-
-<label>Resultado da solicitação de isenção de taxa</label>
-<div class="row-inputs">
-  <input type="date" name="resultIsen_data">
-</div>
-
-<label>Recurso da isenção</label>
-<div class="row-inputs">
-  <input type="date" name="recurso_inicio">
-  <input type="date" name="recurso_fim">
-</div>
-
-<label>Pagamento da taxa de inscrição</label>
-<div class="row-inputs">
-  <input type="date" name="pagamTaxa_inicio">
-  <input type="date" name="pagamTaxa_fim">
-</div>
-
-<h2 class="modal-secao">Cartão de Confirmação</h2>
-
-<label>Disponibilização do cartão:</label>
-<div class="row-inputs">
-  <input type="date" name="dispCartao_data">
-</div>
-
-<label>Consulta de locais de prova:</label>
-<div class="row-inputs">
-  <input type="date" name="consLocal_data">
-</div>
-
-<label>Recurso de local de prova:</label>
-<div class="row-inputs">
-  <input type="date" name="recuLocal_inicio">
-  <input type="date" name="recuLocal_fim">
-</div>
-
-<h2 class="modal-secao">Aplicação das Provas</h2>
-
-<label>1° dia de provas: </label>
-<div class="row-inputs">
-  <input type="date" name="diaProva1_data">
-</div>
-
-<label>2° dia de provas: </label>
-<div class="row-inputs">
-  <input type="date" name="diaProva2_data">
-</div>
-
-<label>Horário de aplicação:</label>
-<div class="row-inputs">
-<input type="date" name="horaApli_inicio">
-<input type="date" name="horaApli_fim"></div>
-
-<h2 class="modal-secao">Reaplicação</h2>
-
-<label>Solicitação de reaplicação:</label>
-<div class="row-inputs">
-<input type="date" name="soliReapli_inicio">
-<input type="date" name="soliReapli_fim"></div>
-
-<label>Resultado da solicitação:</label>
-<div class="row-inputs">
-<input type="date" name="resulSoli_data"></div>
-
-<label>Reaplicação:</label>
-<div class="row-inputs">
-<input type="date" name="reapli_inicio">
-<input type="date" name="reapli_fim"></div>
-
-<h2 class="modal-secao">Resultados</h2>
-
-<label>Gabarito oficial:</label>
-<div class="row-inputs">
-<input type="date" name="gabaOfi_data"></div>
-
-<label>Resultado final:</label>
-<div class="row-inputs">
-<input type="date" name="resuFinal_data"></div>
 
 
-<label>Espelho da redação:</label>
-<div class="row-inputs">
-<input type="date" name="espeReda_data"></div>
-
-<label>Data Prova</label>
-<div class="row-inputs">
-  <input type="date" name="data_prova">
-  <button type="button" class="btn add-date">+</button>
-</div>
+<!-- container dinâmico para eventos (adicionado no modal) -->
+<h2 class="modal-secao">Datas (geradas)</h2>
+<div id="eventos-dinamicos"></div>
+<!-- fim container -->
 
 <label>Taxa</label>
 <div class="row-inputs">
@@ -413,9 +296,6 @@ while ($row = $result->fetch_assoc()) {
 <label>Link</label>
 <input type="url" name="link" placeholder="https://...">
 
-<a href="#" style="display:block; margin-top:12px; color:#2563eb; font-size:14px; font-weight:500; text-decoration:none;">
-  Demais datas
-</a>
 
 
       <div class="modal-footer">
@@ -428,84 +308,237 @@ while ($row = $result->fetch_assoc()) {
 <!--Fim Modal -->
 
 
-    <script>
+<script>
+/* ======= Modal dinâmico - criar/editar eventos (envio via POST tradicional) ======= */
 
+const overlay = document.getElementById('modal-vestibular');
+const formVest = document.getElementById('form-vest');
+const titleEl = document.getElementById('modal-title');
 
-  // ===== Modal de Vestibular =====
-  const overlay   = document.getElementById('modal-vestibular');
-  const formVest  = document.getElementById('form-vest');
-  const titleEl   = document.getElementById('modal-title');
+const inputId   = document.getElementById('vest-id');    // name="id" (vestibular id)
+const inputNome = document.getElementById('vest-nome');  // name="nome"
+const inputTaxa = document.getElementById('vest-taxa');  // name="taxa"
 
-  const inputId   = document.getElementById('vest-id');
-  const inputNome = document.getElementById('vest-nome');
-  const inputCat  = document.getElementById('vest-categoria');
-  const inputTaxa = document.getElementById('vest-taxa');
+const eventosContainer = document.getElementById('eventos-dinamicos');
 
-  // Campos de data que existem no formulário
-  const inputIsenIni = formVest.elements['isen_inicio'];
-  const inputIsenFim = formVest.elements['isen_fim'];
-  const inputInscIni = formVest.elements['insc_inicio'];
-  const inputInscFim = formVest.elements['insc_fim'];
-  const inputProva   = formVest.elements['data_prova'];
+function abrirModal(){ overlay.style.display = 'flex'; }
+function fecharModal(){ overlay.style.display = 'none'; }
 
-  function abrirModal(){ overlay.style.display = 'flex'; }
-  function fecharModal(){ overlay.style.display = 'none'; }
+/* Limpa form: deixa campos do vestibular e remove blocos de evento */
+function limparForm() {
+  formVest.reset();
+  eventosContainer.innerHTML = '';
+}
 
-  // Novo vestibular
-  document.querySelector('.btn-new').addEventListener('click', () => {
+let eventoIndex = 0; // índice global para os eventos do form
+
+function criarBlocoEvento(ev = {}) {
+  const index = eventoIndex++; // cada bloco recebe um índice único
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'evento-bloco';
+  wrapper.style.marginBottom = '10px';
+  wrapper.style.padding = '8px';
+  wrapper.style.border = '1px solid #e6e6e6';
+  wrapper.style.borderRadius = '6px';
+
+  // Título
+  const labelTitulo = document.createElement('label');
+  labelTitulo.textContent = 'Título do evento';
+  labelTitulo.style.display = 'block';
+  labelTitulo.style.fontWeight = '600';
+  wrapper.appendChild(labelTitulo);
+
+  const inputTitulo = document.createElement('input');
+  inputTitulo.type = 'text';
+  inputTitulo.name = `eventos[${index}][titulo]`; // <- índice fixo
+  inputTitulo.value = ev.titulo || '';
+  inputTitulo.placeholder = 'Ex: Período de inscrições';
+  inputTitulo.style.width = '100%';
+  inputTitulo.style.marginTop = '6px';
+  wrapper.appendChild(inputTitulo);
+
+  // Hidden id
+  const hiddenId = document.createElement('input');
+  hiddenId.type = 'hidden';
+  hiddenId.name = `eventos[${index}][id]`;
+  hiddenId.value = ev.id || '';
+  wrapper.appendChild(hiddenId);
+
+  // Datas início/fim
+  const rowDates = document.createElement('div');
+  rowDates.className = 'row-dates';
+  rowDates.style.display = 'flex';
+  rowDates.style.gap = '8px';
+  rowDates.style.marginTop = '8px';
+
+  const divInicio = document.createElement('div');
+  divInicio.style.flex = '1';
+  const labelInicio = document.createElement('label');
+  labelInicio.textContent = 'Início';
+  labelInicio.style.display = 'block';
+  divInicio.appendChild(labelInicio);
+  const inputInicio = document.createElement('input');
+  inputInicio.type = 'date';
+  inputInicio.name = `eventos[${index}][inicio]`; // <- índice fixo
+  inputInicio.value = ev.inicio || '';
+  inputInicio.style.width = '100%';
+  divInicio.appendChild(inputInicio);
+
+  const divFim = document.createElement('div');
+  divFim.style.flex = '1';
+  const labelFim = document.createElement('label');
+  labelFim.textContent = 'Fim (opcional)';
+  labelFim.style.display = 'block';
+  divFim.appendChild(labelFim);
+  const inputFim = document.createElement('input');
+  inputFim.type = 'date';
+  inputFim.name = `eventos[${index}][fim]`; // <- índice fixo
+  inputFim.value = ev.fim || '';
+  inputFim.style.width = '100%';
+  divFim.appendChild(inputFim);
+
+  rowDates.appendChild(divInicio);
+  rowDates.appendChild(divFim);
+  wrapper.appendChild(rowDates);
+
+  // Botão remover
+  const btns = document.createElement('div');
+  btns.style.marginTop = '8px';
+  btns.style.display = 'flex';
+  btns.style.gap = '8px';
+
+  const btnRemove = document.createElement('button');
+  btnRemove.type = 'button';
+  btnRemove.textContent = 'Remover';
+  btnRemove.className = 'btn-remove-event';
+  btnRemove.style.background = '#ef4444';
+  btnRemove.style.color = '#fff';
+  btnRemove.style.border = 'none';
+  btnRemove.style.padding = '6px 10px';
+  btnRemove.style.borderRadius = '6px';
+  btnRemove.addEventListener('click', () => wrapper.remove());
+
+  btns.appendChild(btnRemove);
+  wrapper.appendChild(btns);
+
+  return wrapper;
+}
+
+/* Botão para adicionar novo evento (sempre abaixo do container) */
+function garantirBotaoAdd() {
+  let btnAdd = document.getElementById('btn-add-evento');
+  if (!btnAdd) {
+    btnAdd = document.createElement('button');
+    btnAdd.type = 'button';
+    btnAdd.id = 'btn-add-evento';
+    btnAdd.textContent = '+ Adicionar evento';
+    btnAdd.style.display = 'inline-block';
+    btnAdd.style.marginTop = '8px';
+    btnAdd.style.padding = '6px 10px';
+    btnAdd.style.borderRadius = '6px';
+    btnAdd.style.border = '1px dashed #6b7280';
+    btnAdd.style.background = 'transparent';
+    btnAdd.addEventListener('click', () => {
+      eventosContainer.appendChild(criarBlocoEvento({ id: '', titulo: '', inicio: '', fim: '' }));
+      // scroll to the new block
+      eventosContainer.lastChild.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    eventosContainer.parentNode.insertBefore(btnAdd, eventosContainer.nextSibling);
+  }
+}
+
+/* Evento: abrir modal para novo vestibular */
+document.querySelectorAll('.btn-new').forEach(b => {
+  b.addEventListener('click', () => {
     titleEl.textContent = 'Novo Vestibular';
-    formVest.reset();
+    limparForm();
     inputId.value = '';
+    // criar 1 bloco vazio para começar
+    eventosContainer.appendChild(criarBlocoEvento({ id: '', titulo: '', inicio: '', fim: '' }));
+    garantirBotaoAdd();
+    abrirModal();
+  });
+});
+
+/* Evento: abrir modal para editar — faz fetch dos eventos do DB e cria blocos dinamicamente */
+document.querySelectorAll('.btn-icon.edit').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    titleEl.textContent = 'Editar Vestibular';
+
+    // Preenche campos básicos (atributos data-... no botão)
+    inputId.value   = btn.dataset.vestId || '';
+    inputNome.value = btn.dataset.nome || '';
+    inputTaxa.value = btn.dataset.taxa || '';
+
+    eventosContainer.innerHTML = ''; // limpa
+    // remove botão add antigo se existir (será recriado)
+    const existingAdd = document.getElementById('btn-add-evento');
+    if (existingAdd) existingAdd.remove();
+
+    const vestId = inputId.value;
+    if (!vestId) {
+      // abre modal vazio
+      eventosContainer.appendChild(criarBlocoEvento({ id: '', titulo: '', inicio: '', fim: '' }));
+      garantirBotaoAdd();
+      abrirModal();
+      return;
+    }
+
+    try {
+      const resp = await fetch(`fetch_events.php?id=${encodeURIComponent(vestId)}`, { credentials: 'same-origin' });
+      if (!resp.ok) throw new Error('Erro fetch eventos');
+      const events = await resp.json();
+
+      if (!events || events.length === 0) {
+        eventosContainer.appendChild(criarBlocoEvento({ id: '', titulo: '', inicio: '', fim: '' }));
+      } else {
+        events.forEach(ev => {
+          eventosContainer.appendChild(criarBlocoEvento({
+            id: ev.id || '',
+            titulo: ev.titulo || '',
+            inicio: ev.inicio || '',
+            fim: ev.fim || ''
+          }));
+        });
+      }
+
+      garantirBotaoAdd();
+    } catch (err) {
+      console.error('Erro ao buscar eventos:', err);
+      // fallback: cria bloco vazio
+      eventosContainer.appendChild(criarBlocoEvento({ id: '', titulo: '', inicio: '', fim: '' }));
+      garantirBotaoAdd();
+    }
 
     abrirModal();
   });
+});
 
-  // Editar vestibular
-  document.querySelectorAll('.btn-icon.edit').forEach(btn => {
-    btn.addEventListener('click', () => {
-      titleEl.textContent = 'Editar Vestibular';
+/* Fechar modal (botões e clique fora) */
+document.querySelector('#modal-vestibular .btn.cancel').addEventListener('click', (e) => {
+  e.preventDefault();
+  fecharModal();
+});
+document.querySelector('#modal-vestibular .btn-close').addEventListener('click', (e) => {
+  e.preventDefault();
+  fecharModal();
+});
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) fecharModal();
+});
 
-      // Preenche campos básicos
-      inputId.value   = btn.dataset.vestId || '';
-      inputNome.value = btn.dataset.nome || '';
-      inputCat.value  = btn.dataset.categoria || '';
-      inputTaxa.value = btn.dataset.taxa || '';
+/* Antes do submit: (opcional) podemos validar ou reorganizar nome dos inputs se precisar.
+   Aqui mantemos o submit tradicional; o form vai submeter para salvar_vestibular.php.
+   O salvar_vestibular.php espera:
+   - name="id" (vestibular id)
+   - name="nome", name="taxa", ...
+   - eventos[][id], eventos[][titulo], eventos[][inicio], eventos[][fim]
+*/
 
-      // Zera datas
-      inputIsenIni.value = inputIsenFim.value = '';
-      inputInscIni.value = inputInscFim.value = '';
-      inputProva.value   = '';
-
-      // Preenche datas a partir dos eventos (se existirem)
-      let eventos = [];
-      try { eventos = JSON.parse(btn.dataset.eventos || '[]'); } catch(e){ eventos = []; }
-
-      eventos.forEach(ev => {
-        const t = (ev.titulo || '').toLowerCase();
-        if (t.includes('isen')) {          // Isenção
-          inputIsenIni.value = ev.inicio || '';
-          inputIsenFim.value = ev.fim || '';
-        } else if (t.includes('inscri')) { // Inscrição
-          inputInscIni.value = ev.inicio || '';
-          inputInscFim.value = ev.fim || '';
-        } else if (t.includes('prova')) {  // Prova
-          inputProva.value = ev.inicio || '';
-        }
-      });
-
-      abrirModal();
-    });
-  });
-
-  // Botões de fechar
-  document.querySelector('#modal-vestibular .btn.cancel').addEventListener('click', fecharModal);
-  document.querySelector('#modal-vestibular .btn-close').addEventListener('click', fecharModal);
-
-  // Fecha ao clicar fora da caixa
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) fecharModal();
-  });
 </script>
+
 
  
 </body>

@@ -1,76 +1,5 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 
-=======
-<?php
-
-/*if(isset($_POST['submit'])){
-    print_r($_POST['user_name']);
-    print_r($_POST['user_email']);
-}c
-*/
-
-//===============Função para cadastrar email do usuario no banco de dados==============//
-/*
-if (isset($_POST['submit'])) {
-    include_once('conexao.php');
-
-    $user_name = $_POST['user_name'];
-    $user_email = $_POST['user_email'];
-
-    // Verifica se o usuário já existe
-    $check = mysqli_query($conexao, "SELECT * FROM usuarios WHERE usuario = '$user_name'");
-
-    if (mysqli_num_rows($check) > 0) {
-        // Já existe esse usuário
-        echo "<script>alert('Esse usuário já está cadastrado!');</script>";
-    } else {
-        // Insere no banco
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(usuario, email) VALUES ('$user_name', '$user_email')");
-
-        if ($result) {
-            
-        } else {
-            echo "<script>alert('Erro ao cadastrar usuário!');</script>";
-        }
-    }
-}
-//===============Fim da função para cadastrar email do usuario no banco de dados=============//
-
-*/
-
-if (isset($_POST['submit'])) {
-    include_once('conexao.php');
-
-    $user_name = $_POST['user_name'];
-    $user_email = $_POST['user_email'];
-
-    if (!isset($_POST['termos'])) {
-        echo "<script>alert('Você deve aceitar os Termos e Serviços.');</script>";
-        exit;
-    }
-
-    $check = mysqli_query($conexao, "SELECT * FROM usuarios WHERE usuario='$user_name' OR email='$user_email'");
-    if (mysqli_num_rows($check) > 0) {
-        echo "<script>alert('Usuário ou e-mail já cadastrado!');</script>";
-    } else {
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(usuario, email) VALUES ('$user_name','$user_email')");
-        if ($result) {
-            echo "<script>alert('Cadastro realizado com sucesso!');</script>";
-        } else {
-            echo "<script>alert('Erro ao cadastrar usuário!');</script>";
-        }
-    }
-}
-
-
-
-
-?>
-
-
-<!DOCTYPE html>
->>>>>>> c6e2c3073943838b5c6931514331b0ab42dff97b
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -87,16 +16,9 @@ if (isset($_POST['submit'])) {
 
     <title>Bem Formandos</title>
 </head>
-<<<<<<< HEAD
-
 <body>
 
 <!-- Configurações para poder Entrar com o Google -->
-=======
-<body>
-
-    <!-- Configurações para poder Entrar com o Google -->
->>>>>>> c6e2c3073943838b5c6931514331b0ab42dff97b
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
@@ -124,7 +46,6 @@ if (isset($_POST['submit'])) {
       formData.append('user_name', user.displayName);
       formData.append('user_email', user.email);
 
-<<<<<<< HEAD
 // Envia para o PHP salvar no banco
 const response = await fetch('assets/php/salvar_usuario_google.php', {
   method: 'POST',
@@ -135,17 +56,6 @@ const data = await response.json(); // <-- transforma o JSON em objeto
 console.log(data);
 alert(data.msg); // mostra só a mensagem amigável
 
-=======
-      // Envia para o PHP salvar no banco
-      const response = await fetch('assets/php/salvar_usuario_google.php', {
-        method: 'POST',
-        body: formData
-      });
-
-      const data = await response.text();
-      console.log(data);
-      alert(data); // Mostra se deu certo ou não
->>>>>>> c6e2c3073943838b5c6931514331b0ab42dff97b
 
       // Opcional: recarrega a página
       window.location.reload();
