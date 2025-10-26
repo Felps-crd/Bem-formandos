@@ -1,9 +1,26 @@
 :root{
-    --sidebar-bg: linear-gradient(135deg, #4CAF50 0%, #4CAF79 100%);
-    --sidebar-text: #C4E2C8;
     --sidebar-accent: #F8F8F8;
     --sidebar-title: #f8f8f8;
-    --sidebar-hover: #7DC385;
+    --sidebar-text: #F8F8F8B2;
+
+    --sidebar--enem-hover: #7DC385;
+    --sidebar--enem-bg: linear-gradient(135deg, #4CAF50 0%, #4CAF79 100%);
+
+    --sidebar--fatec-hover: #D97A7A;
+    --sidebar--fatec-bg: linear-gradient(159deg, #D65B5B 0.67%, #E06E70 99.28%);
+
+    --sidebar--fuvest-hover: #E9B765;
+    --sidebar--fuvest-bg: linear-gradient(159deg, #E99117 40.97%, #E27515 99.28%);
+
+    --sidebar--unesp-hover: #F3D37B;
+    --sidebar--unesp-bg: linear-gradient(159deg, #E5B000 40.97%, #EFC84A 99.28%);
+
+    --sidebar--unicamp-hover: #8976AD;
+    --sidebar--unicamp-bg: linear-gradient(159deg, #BE87E8 40.97%, #7B5ECD 99.28%);
+
+    --sidebar--provao-hover: #79AFE5;
+    --sidebar--provao-bg: linear-gradient(159deg, #0573E1 27.69%, #174370 93.12%);
+
 }
 .sidebar{
   width: 300px;
@@ -45,11 +62,22 @@
   border-radius: 8px;
   padding: .6rem .9rem;
   transition: background .15s ease, transform .15s ease;
+  background-color: transparent; 
 }
 
 .sidebar__link:hover{
-  background: var(--sidebar-hover);
   transform: translateX(3px);
+}
+
+.sidebar__item{
+  border-radius: 8px;
+}
+
+.sidebar__item a{
+   text-decoration: none;
+   font-size: 20px;
+   color: var(--sidebar-text);
+
 }
 
 .sidebar__menu-btn{
@@ -81,19 +109,6 @@
   flex-direction: column;
   gap: 6px;
   
-}
-
-.sidebar__item :hover{
-    color: var(--sidebar-accent);
-}
-.sidebar__item a{
-    text-decoration: none;
-    color: var(--sidebar-text);
-    font-size: 20px;
-}
-.sidebar__item--active .sidebar__link {
-  background: #7DC385;
-  color: var(--sidebar-accent);
 }
 
 /* barra lateral compactada */
@@ -133,6 +148,84 @@
 }
 
 /* barra lateral cada vestibular */
+/* ENEM */
 .sidebar--enem{
-  background: var(--sidebar-bg);
+  background: var(--sidebar--enem-bg);
+}
+.sidebar--enem .sidebar__item :hover{
+    color: var(--sidebar-accent);
+    background: var(--sidebar--enem-hover);
+}
+.sidebar--enem .sidebar__item--active .sidebar__link {
+  background: var(--sidebar--enem-hover);
+  color: var(--sidebar-accent);
+}
+
+
+/* FATEC */
+.sidebar--fatec{
+  background:var(--sidebar--fatec-bg);
+}
+.sidebar--fatec .sidebar__item :hover{
+    color: var(--sidebar-accent);
+    background:var(--sidebar--fatec-hover);
+}
+.sidebar--fatec .sidebar__item--active .sidebar__link {
+  background: var(--sidebar--fatec-hover);
+  color: var(--sidebar-accent);
+}
+
+/* FUVEST */
+.sidebar--fuvest{
+  background:var(--sidebar--fuvest-bg);
+}
+.sidebar--fuvest .sidebar__item :hover{
+    color: var(--sidebar-accent);
+    background:var(--sidebar--fuvest-hover);
+}
+.sidebar--fuvest .sidebar__item--active .sidebar__link {
+  background: var(--sidebar--fuvest-hover);
+  color: var(--sidebar-accent);
+}
+
+/* UNESP */
+.sidebar--unesp{
+  background:var(--sidebar--unesp-bg);
+}
+.sidebar--unesp .sidebar__item :hover{
+    color: var(--sidebar-accent);
+    background:var(--sidebar--unesp-hover);
+}
+.sidebar--unesp .sidebar__item--active .sidebar__link {
+  background: var(--sidebar--unesp-hover);
+  color: var(--sidebar-accent);
+}
+
+/* UNICAMP */
+.sidebar--unicamp{
+  background:var(--sidebar--unicamp-bg);
+}
+.sidebar--unicamp .sidebar__item :hover{
+    color: var(--sidebar-accent);
+    background:var(--sidebar--unicamp-hover);
+}
+.sidebar--unicamp .sidebar__item--active .sidebar__link {
+  background: var(--sidebar--unicamp-hover);
+  color: var(--sidebar-accent);
+}
+
+/* PROVAO PAULISTA */
+.sidebar--provao{
+  background:var(--sidebar--provao-bg);
+}
+.sidebar--provao .sidebar__item :hover{
+    color: var(--sidebar-accent);
+    background:var(--sidebar--provao-hover);
+}
+.sidebar--provao .sidebar__item--active .sidebar__link {
+  background: var(--sidebar--provao-hover);
+  color: var(--sidebar-accent);
+}
+.sidebar--provao .sidebar__title{
+  white-space: normal;
 }

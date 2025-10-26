@@ -36,7 +36,7 @@
 
                 <!-- Introdução -->
                 <section id="introducao">
-                    <h1 class="titulo titulo--enem"><i class="bi bi-info-circle-fill"></i> ENEM: O QUE É E PARA QUE SERVE?</h1>
+                    <h1 class="titulo titulo--enem"><i class="bi bi-info-circle-fill"></i> O QUE É ENEM</h1>
                     <hr>
                     <p>O Enem (Exame Nacional do Ensino Médio) foi criado em 1998 para avaliar como os estudantes estão saindo do ensino médio. Mas desde 2009, ele ganhou um papel super importante: virou a principal forma de entrar em faculdades públicas e conseguir bolsas ou financiamentos.</p>
                 </section>
@@ -105,7 +105,6 @@
                     <hr>
                     <ul>
                         <li><a href="#introducao">O que é o ENEM</a></li>
-                        <li><a href="#cronograma">Cronograma ENEM 2025</a></li>
                         <li><a href="#areas-conhecimento">Áreas de conhecimento</a></li>
                         <li><a href="#acessibilidade">Acessibilidade</a></li>
                     </ul>

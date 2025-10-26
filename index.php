@@ -168,25 +168,46 @@ alert(data.msg); // mostra só a mensagem amigável
         <!-- inicio principal -->
         <main>
             <section class="intro">
-                <div class="text-box">
-                  <h2>Quer saber tudo sobre os principais vestibulares de São Paulo?</h2>
-                  <p>
-                    Aqui você encontra informações atualizadas sobre provas, inscrições,
-                    cronogramas e dicas essenciais para sua aprovação.
-                  </p>
+              <div class="container">
+                <div class="intro-content">
+                    <div class="intro-text">
+                      <h2 class="intro-title">Quer saber tudo sobre os principais vestibulares de São Paulo?</h2>
+                      <p>
+                        Aqui você encontra informações atualizadas sobre provas, inscrições,
+                        cronogramas e dicas essenciais para sua aprovação.
+                      </p>
+                    </div>
+                    <div class="intro-img">
+                      <div class="img-container">
+                        <div class="elementos-flutuantes">
+                            <div class="elemento elemento-1"><i class="bi bi-book-fill"></i></div>
+                            <div class="elemento elemento-2"><i class="bi bi-award-fill"></i></div>
+                            <div class="elemento elemento-3"><i class="bi bi-search"></i></div>
+                            <div class="elemento elemento-4"><i class="bi bi-lightbulb-fill"></i></div>
+                        </div>
+                        <div class="imagem-principal">
+                          <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <img src="assets/imagens/img1.png" alt="Imagem representativa">
               </section>
 
             <section class="vestibulares">
-                <p>Escolha o seu vestibular e comece sua jornada rumo à universidade!</p>
-                <div class="botoes-vestibulares">
-                    <a href="vestibulares/enem/home-enem.php" class="enem">Enem</a>
-                    <a href="vestibulares/fuvest/home-fuvest.html" class="fuvest">Fuvest</a>
-                    <a href="vestibulares/unicamp/home-unicamp.html" class="unicamp">Unicamp</a>
-                    <a href="vestibulares/fatec/home-fatec.html" class="fatec">Fatec</a>
-                    <a href="vestibulares/unesp/home-unesp.html" class="unesp">Unesp</a>
-                    <a href="#" class="provao">Provão<br>Paulista</a>
+              <div class="container">
+                <div class="section-header">
+                  <h3 class="section-title">Escolha o seu vestibular e comece sua jornada!</h3>
+                  <p class="section-subtitle">Clique no vestibular de sua escolha para acessar informações detalhadas</p>
+                </div>
+                  <div class="botoes-vestibulares">
+                      <a href="vestibulares/enem/home-enem.php" class="enem">Enem</a>
+                      <a href="vestibulares/fuvest/home-fuvest.php" class="fuvest">Fuvest</a>
+                      <a href="vestibulares/unicamp/home-unicamp.php" class="unicamp">Unicamp</a>
+                      <a href="vestibulares/fatec/home-fatec.php" class="fatec">Fatec</a>
+                      <a href="vestibulares/unesp/home-unesp.php" class="unesp">Unesp</a>
+                      <a href="vestibulares/provao-paulista/home-provao.php" class="provao">Provão Paulista</a>
+                  </div>
                 </div>
             </section>
         </main>

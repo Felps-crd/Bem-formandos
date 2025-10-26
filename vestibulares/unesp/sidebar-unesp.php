@@ -1,18 +1,17 @@
 <?php
 $menu_items = [
-     'home-enem.php' => ['label' => 'O que é','icon' => 'bi bi-info-circle-fill'],
-     'redacao.php' => ['label' => 'Redação', 'icon' => 'bi bi-pen-fill'],
+     'home-unesp.php' => ['label' => 'O que é','icon' => 'bi bi-info-circle-fill'],
+     'vestibular.php' => ['label' => 'Vestibular', 'icon' => 'bi bi-pen-fill'],
      'calendario.php'=> ['label' => 'Calendário','icon' => 'bi bi-calendar-fill'],
      'inscricao.php' => ['label' => 'Inscrição', 'icon' => 'bi bi-person-check-fill'],
-     'SISU.php' => ['label' => 'SISU', 'icon' => 'bi bi-award-fill'],
-     'PROUNI.php'=>['label' => 'PROUNI', 'icon' => 'bi bi-clipboard-fill'],
-     'FIES.php' =>['label' => 'FIES', 'icon' => 'bi bi-credit-card-fill']
+     'cursos.php' => ['label' => 'Cursos Oferecidos', 'icon' => 'bi bi-clipboard-fill'], 
+     'classificacao.php'=>['label' => 'Sistema de Classificação', 'icon' => 'bi bi-award-fill']
 ];
 $current = basename($_SERVER['PHP_SELF']);
-$sidebar_title = $sidebar_title ?? 'ENEM'; 
+$sidebar_title = $sidebar_title ?? 'UNESP'; 
 ?>
 
-<nav id="sidebar" class="sidebar sidebar--enem" aria-label="Menu <?php echo htmlspecialchars($sidebar_title); ?>">
+<nav id="sidebar" class="sidebar sidebar--unesp" aria-label="Menu <?php echo htmlspecialchars($sidebar_title); ?>">
     <div class="sidebar__header">
         <button type="button" class="sidebar__menu-btn" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false">
             <i class="bi bi-list"></i>
