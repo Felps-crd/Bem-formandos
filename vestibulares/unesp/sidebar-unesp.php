@@ -1,7 +1,7 @@
 <?php
 $menu_items = [
      'home-unesp.php' => ['label' => 'O que é','icon' => 'bi bi-info-circle-fill'],
-     'vestibular.php' => ['label' => 'Vestibular', 'icon' => 'bi bi-pen-fill'],
+     'vestibular.php' => ['label' => 'Vestibular', 'icon' => 'bi bi-file-text-fill'],
      'calendario.php'=> ['label' => 'Calendário','icon' => 'bi bi-calendar-fill'],
      'inscricao.php' => ['label' => 'Inscrição', 'icon' => 'bi bi-person-check-fill'],
      'cursos.php' => ['label' => 'Cursos Oferecidos', 'icon' => 'bi bi-clipboard-fill'], 

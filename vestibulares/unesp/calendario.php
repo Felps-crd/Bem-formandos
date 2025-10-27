@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="../../assets/estilos/style.css">
     <link rel="stylesheet" href="../../assets/estilos/style-vestibulares.css">
     <link rel="stylesheet" href="../../assets/estilos/sidebars.css">
+    <link rel="stylesheet" href="../../assets/estilos/style-unesp.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../../assets/imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <title>Bem Formandos</title>
+    <title>Calendário Unesp | Bem Formandos</title>
 </head>
 <body>
     <div class="container-principal">
@@ -36,8 +37,8 @@
             <div class="conteudo">
                 <section id="introducao">
                     <h1 class="titulo titulo--unesp">
-                        <i class="bi bi-info-circle-fill"></i>
-                        O QUE É UNESP
+                        <i class="bi bi-calendar-fill"></i>
+                        CALENDÁRIO
                     </h1>
                     <hr>
 
@@ -61,13 +62,13 @@
                         <h3>Conteúdo Relacionado</h3>
                     </div>
                     <hr>
-                    <h4>Como se inscrever na unesp</h4>
+                    <h4>Como se inscrever na Unesp</h4>
                         <p>Passo a passo para fazer sua inscrição</p>
-                        <div class="ler-mais"><a href="inscricao.php">Ler mais</a></div>
+                        <div class="ler-mais ler-mais--unesp"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
-                    <h4></h4>
-                        <p></p>
-                        <div class="ler-mais"><a href="redacao.php">Ler mais</a></div>
+                    <h4>Vestibular Unesp</h4>
+                        <p>Tudo sobre o vestibular da Unesp</p>
+                        <div class="ler-mais ler-mais--unesp"><a href="vestibular.php">Ler mais</a></div>
                 </div>
             </aside>
         </main>

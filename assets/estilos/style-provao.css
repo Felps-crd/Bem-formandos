@@ -1,0 +1,26 @@
+:root{
+    --cor-principal-provao: #0073E6;
+    --cor-secundaria-provao: #b4d9ff;
+    --cor-destaque-provao: #0066CC;
+}
+.titulo--provao i{
+    color: var(--cor-principal-provao);
+}
+
+.painel-lateral .card ul li:hover{
+  background-color: var(--cor-secundaria-provao);
+  color: var(--cor-destaque-provao);
+  transition: 0.2s;
+}
+
+.ler-mais--provao a{
+    color: var(--cor-principal-provao);
+}
+.ler-mais--provao a:hover{
+  color: var(--cor-destaque-provao);
+  text-decoration: underline;
+}
+
+.destaques--provao i{
+    color: var(--cor-principal-provao);
+}

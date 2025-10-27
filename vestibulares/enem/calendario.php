@@ -35,10 +35,11 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendário ENEM | Bem Formandos</title>
+    <title>Calendário Enem | Bem Formandos</title>
     <link rel="stylesheet" href="../../assets/estilos/style.css">
     <link rel="stylesheet" href="../../assets/estilos/style-vestibulares.css">
     <link rel="stylesheet" href="../../assets/estilos/sidebars.css">
+    <link rel="stylesheet" href="../../assets/estilos/style-enem.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -113,7 +114,7 @@ try {
             </section>
 
             <section id="cronograma">
-    <h2>Cronograma Completo ENEM 2025</h2>
+    <h2>Cronograma Completo Enem 2025</h2>
 
     <!-- INSCRIÇÕES -->
     <div class="area-card">
@@ -207,7 +208,7 @@ try {
                 </div>
                 <hr>
                 <ul>
-                    <li><a href="#introducao">Cronograma ENEM 2025</a></li>
+                    <li><a href="#introducao">Cronograma Enem 2025</a></li>
                     <li><a href="#">Informações Importantes</a></li>
                 </ul>
             </div>
@@ -217,12 +218,12 @@ try {
                     <h3>Conteúdo Relacionado</h3>
                 </div>
                 <hr>
-                <h4>Como se inscrever no ENEM</h4>
+                <h4>Como se inscrever no Enem</h4>
                 <p>Passo a passo para fazer sua inscrição</p>
                 <div class="ler-mais ler-mais--enem"><a href="inscricao.php">Ler mais</a></div>
                 <hr>
-                <h4>Redação ENEM</h4>
-                <p>Tudo sobre a redação do ENEM</p>
+                <h4>Redação Enem</h4>
+                <p>Tudo sobre a redação do Enem</p>
                 <div class="ler-mais ler-mais--enem"><a href="redacao.php">Ler mais</a></div>
             </div>
         </aside>

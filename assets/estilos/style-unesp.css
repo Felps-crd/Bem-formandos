@@ -1,0 +1,26 @@
+:root{
+    --cor-principal-unesp: #EFC84A;
+    --cor-secundaria-unesp: #fdf3d3;
+    --cor-destaque-unesp: #E5B000;
+}
+.titulo--unesp i{
+    color: var(--cor-principal-unesp);
+}
+
+.painel-lateral .card ul li:hover{
+  background-color: var(--cor-secundaria-unesp);
+  color: var(--cor-destaque-unesp);
+  transition: 0.2s;
+}
+
+.ler-mais--unesp a{
+    color: var(--cor-principal-unesp);
+}
+.ler-mais--unesp a:hover{
+  color: var(--cor-destaque-unesp);
+  text-decoration: underline;
+}
+
+.destaques--unesp i{
+    color: var(--cor-principal-unesp);
+}

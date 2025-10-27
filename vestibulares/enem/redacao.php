@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="../../assets/estilos/style.css">
     <link rel="stylesheet" href="../../assets/estilos/style-vestibulares.css">
     <link rel="stylesheet" href="../../assets/estilos/sidebars.css">
+    <link rel="stylesheet" href="../../assets/estilos/style-enem.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../../assets/imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <title>Redação ENEM | Bem Formandos</title>
+    <title>Redação Enem | Bem Formandos</title>
 </head>
 <body>
     <div class="container-principal">
@@ -101,7 +102,7 @@
                 <section id="erros">
                     <h2>Erros mais Comuns</h2>
                     <p>Muitos candidatos perdem pontos preciosos por descuidos que poderiam ser evitados. Conheça os erros mais frequentes na redação do Enem e confira como não repetir essas falhas.</p>
-                    <div class="area-erros">
+                    <div class="cards-erros-dicas">
                         <div class="erros --erros-zeram">
                             <span class="titulo-erros">
                                 <i class="bi bi-x-circle-fill"></i>
@@ -133,7 +134,7 @@
                 <section id="dicas-redacao">
                     <h2>Dicas</h2>
                     <p>Além de evitar erros, é importante adotar estratégias de treino que ajudam a melhorar a escrita e ganhar segurança para o dia da prova. Confira algumas orientações práticas:</p>
-                    <div class="area-dicas-redacao">
+                    <div class="cards-erros-dicas">
                         <div class="dicas dicas--treinar">
                             <span class="titulo-dicas">
                                 <i class="bi bi-lightbulb-fill"></i>
@@ -163,23 +164,22 @@
                 <section id="temas-anteriores">
                     <h2>Temas já Cobrados no ENEM</h2>
                     <p>Analisar os temas das edições anteriores é uma ótima forma de se preparar. Assim, você entende como a banca propõe os assuntos e consegue treinar sua escrita de forma mais direcionada</p>
-
                     <div class="linha-do-tempo">
                         <div class="linha-do-tempo__item">
                             <div class="circulo"></div>
-                            <div class="ano">2024</div>
-                            <div class="tema">Desafios para a valorização da herança africana no Brasil</div>
-                        </div>    
+                            <div class="ano">2022</div>
+                            <div class="tema">Valorização de comunidades e povos tradicionais.</div>
+                        </div>  
                         <div class="linha-do-tempo__item">
                             <div class="circulo"></div>
                             <div class="ano">2023</div>
                             <div class="tema">Trabalho de cuidado realizado pela mulher.</div>
                         </div>    
-                        <div class="linha-do-tempo__item">
+                         <div class="linha-do-tempo__item">
                             <div class="circulo"></div>
-                            <div class="ano">2022</div>
-                            <div class="tema">Valorização de comunidades e povos tradicionais.</div>
-                        </div>    
+                            <div class="ano">2024</div>
+                            <div class="tema">Desafios para a valorização da herança africana no Brasil</div>
+                        </div>   
                     </div>
                 </section>
 

@@ -1,0 +1,26 @@
+:root{
+    --cor-principal-unicamp: #BE87E8;
+    --cor-secundaria-unicamp: #efdcfd;
+    --cor-destaque-unicamp: #8c29d8;
+}
+.titulo--unicamp i{
+    color: var(--cor-principal-unicamp);
+}
+
+.painel-lateral .card ul li:hover{
+  background-color: var(--cor-secundaria-unicamp);
+  color: var(--cor-destaque-unicamp);
+  transition: 0.2s;
+}
+
+.ler-mais--unicamp a{
+    color: var(--cor-principal-unicamp);
+}
+.ler-mais--unicamp a:hover{
+  color: var(--cor-destaque-unicamp);
+  text-decoration: underline;
+}
+
+.destaques--unicamp i{
+    color: var(--cor-principal-unicamp);
+}

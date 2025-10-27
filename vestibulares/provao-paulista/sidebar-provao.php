@@ -1,7 +1,7 @@
 <?php
 $menu_items = [
      'home-provao.php' => ['label' => 'O que é','icon' => 'bi bi-info-circle-fill'],
-     'vestibular.php' => ['label' => 'Vestibular', 'icon' => 'bi bi-pen-fill'],
+     'vestibular.php' => ['label' => 'Vestibular', 'icon' => 'bi bi-file-text-fill'],
      'calendario.php'=> ['label' => 'Calendário','icon' => 'bi bi-calendar-fill'],
      'inscricao.php' => ['label' => 'Inscrição', 'icon' => 'bi bi-person-check-fill'],
      'cursos.php' => ['label' => 'Universidades e Cursos', 'icon' => 'bi bi-clipboard-fill'], 

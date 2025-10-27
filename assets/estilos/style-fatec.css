@@ -1,0 +1,26 @@
+:root{
+    --cor-principal-fatec: #D65B5B;
+    --cor-secundaria-fatec: #F0D5D5;
+    --cor-destaque-fatec: #EA4335;
+}
+.titulo--fatec i{
+    color: var(--cor-principal-fatec);
+}
+
+.painel-lateral .card ul li:hover{
+  background-color: var(--cor-secundaria-fatec);
+  color: var(--cor-destaque-fatec);
+  transition: 0.2s;
+}
+
+.ler-mais--fatec a{
+    color: var(--cor-principal-fatec);
+}
+.ler-mais--fatec a:hover{
+  color: var(--cor-destaque-fatec);
+  text-decoration: underline;
+}
+
+.destaques--fatec i{
+    color: var(--cor-principal-fatec);
+}

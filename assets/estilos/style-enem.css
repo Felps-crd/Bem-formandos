@@ -1,0 +1,397 @@
+:root{
+    --cor-principal-enem: #34A853;
+    --cor-destaque-enem: #247046;
+    --cor-secundaria-enem: #DAEDE7;
+}
+.titulo--enem i{ color:#4CAF50;}
+.ler-mais--enem a{color: var(--cor-principal-enem)}
+.ler-mais--enem a:hover{
+  color: var(--cor-destaque-enem);
+  text-decoration: underline;
+}
+
+.painel-lateral .card ul li:hover{
+  background-color: var(--cor-secundaria-enem);
+  color: var(--cor-destaque-enem);
+  transition: 0.2s;
+}
+
+/* HOME ENEM */
+.dica-importante {
+  background: var(--cor-secundaria-enem);
+  border-left: 6px solid var(--cor-principal-enem);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 24px 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 60%;
+  align-self: center;
+}
+.dica-importante p{
+  font-family: Inter;
+  color: var(--cor-destaque-enem);
+  font-size: 16px;
+  font-weight: 500;
+  word-wrap: break-word;
+  justify-content: center; 
+  display: flex; 
+  flex-direction: column;
+}
+.dica-importante i{
+  color: var(--cor-principal-enem);
+  font-size: 2rem;
+  margin-right: 12px;
+}
+.dica-importante strong {
+  color: #228B22;
+  font-size: 20px;
+  font-family: Inter;
+}
+
+/* AREAS CONHECIMENTO PROVAS ENEM */
+.areas-provas {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 30px 70px 30px;
+}
+
+.area-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #E5E7EB;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 28px 24px;
+    gap: 24px;
+    transition: 0.2s;
+}
+
+.area-card:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+    transition: 0.2s;
+}
+
+.area-card i {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    flex-shrink: 0;
+}
+
+.area-card h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.25rem;
+    font-family: Inter, Arial, sans-serif;
+    color: var(--cor-titulo);
+    font-weight: 700;
+}
+
+.area-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #6B7280;
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 500;
+}
+/* FIM AREAS CONHECIMENTO PROVAS ENEM;
+FIM HOME ENEM */
+
+/* REDACAO ENEM */
+#estrutura-redacao{
+  margin-top: 50px;
+}
+
+.passos-redacao p{
+  color: rgba(30, 30, 30, 0.50);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.passos-redacao{
+  display: flex;
+  align-items: center;
+  padding: 40px 10px 70px 10px;
+  justify-content: space-around;
+}
+
+.dot--enem{ background-color: var(--cor-principal-enem); }
+
+
+.card-estrutura{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  width: 205px;
+  height: 210px;
+  align-items: center;
+  padding: 5px;
+}
+
+.numero-criterio{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  color: #f8f8f8;
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 700;
+  background-color: var(--cor-principal-enem);
+  margin-bottom: 8px;
+}
+
+.area-criterios{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 30px 70px 30px;
+}
+
+.card-criterio p{
+  color: rgba(30, 30, 30, 0.50);
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.card-criterio{
+  text-align: center;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  width: 520px;
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: box-shadow 0.2s, border-color 0.2s, scale 0.2s;
+}
+.card-criterio:hover{
+    border-color: var(--cor-principal-enem);
+    box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+    scale: 1.05;
+}
+
+/* ERROS */
+
+.cards-erros-dicas{
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 30px 70px 30px;
+  gap: 3%;
+}
+
+.erros{
+  width: 290px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+.titulo-erros{
+  display: flex;
+  font-size: 1.20rem;
+  gap: 3%;
+  padding-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-cards-coloridos{
+  font-size: 1.20rem;
+  font-weight: 700;
+  font-family: Inter;
+}
+
+.lista {
+  font-family: Inter;
+  font-size: 1rem;
+  color: var(--cor-texto-primaria);
+  padding: 3% 2% 2% 10%;
+}
+.lista li{
+  padding: 1%;
+}
+
+
+.--erros-zeram .titulo-erros{color: #A83434;}
+.--erros-reduzem .titulo-erros{color: #e7bf0f;}
+
+.--erros-zeram{
+    border: 1px solid #A83434;
+    box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+}
+.--erros-reduzem{
+  border: 1px solid #e7bf0f;
+  box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+}
+
+
+.dicas{
+  width: 290px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid var(--cor-destaque-enem);
+  box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+}
+.titulo-dicas{
+  display: flex;
+  font-size: 1.20rem;
+  gap: 3%;
+  padding-top: 5%;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor-destaque-enem);
+}
+
+.linha-do-tempo{
+  display: flex;
+  justify-self: center;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 700px;
+  position: relative;
+  gap: 5%;
+  margin-top: 30px;
+}
+.linha-do-tempo::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--cor-principal-enem);
+  z-index: 0;
+  border-radius: 2px;
+}
+.linha-do-tempo__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circulo{
+  width: 20px;
+  height: 20px;
+  background-color: var(--cor-principal-enem);
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 6px;
+}
+.ano{
+  margin-bottom: 5px;
+  color: var(--cor-texto-primaria);
+  font-family: Gabarito;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.tema{
+  color: var(--cor-texto-secundaria);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* FIM REDACAO ENEM */
+
+/* CALENDARIO ENEM */
+#cronograma{
+  margin-top: 50px;
+}
+
+.calendario {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 32px 0;
+  font-family: Inter;
+}
+
+.calendario-card {
+  background: var(--backgrond);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 2px solid var(--cor-borda);
+  padding: 28px 24px;
+  min-width: 320px;
+}
+
+.calendario-divisor {
+  border: none;
+  border-top: 1px solid var(--cor-borda);
+  margin: 10px 0;
+}
+
+.calendario-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.icone-card{
+  color: var(--backgrond);
+  background-color: var(--cor-principal-enem);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;              
+  align-items: center;        
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.calendario-card-titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cor-titulo);
+}
+
+.calendario-card-mes {
+  margin-left: auto;
+  background: var(--cor-principal-enem);
+  color: var(--backgrond);
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 4px 16px;
+  font-size: 1rem;
+}
+
+.calendario-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  padding: 1% 0%;
+}
+
+.calendario-item-label {
+  color: var(--cor-texto-primaria);
+  font-weight: 500;
+}
+
+.calendario-item-data {
+  color: var(--cor-texto-primaria);
+  font-weight: 700;
+  
+}

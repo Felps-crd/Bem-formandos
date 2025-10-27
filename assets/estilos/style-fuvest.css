@@ -1,0 +1,26 @@
+:root{
+    --cor-principal-fuvest: #E99117;
+    --cor-secundaria-fuvest: #F0C588;
+    --cor-destaque-fuvest: #E27515;
+}
+.titulo--fuvest i{
+    color: var(--cor-principal-fuvest);
+}
+
+.painel-lateral .card ul li:hover{
+  background-color: #ffefd6;
+  color: var(--cor-destaque-fuvest);
+  transition: 0.2s;
+}
+
+.ler-mais--fuvest a{
+    color: var(--cor-principal-fuvest);
+}
+.ler-mais--fuvest a:hover{
+  color: var(--cor-destaque-fuvest);
+  text-decoration: underline;
+}
+
+.destaques--fuvest i{
+    color: var(--cor-principal-fuvest);
+}
