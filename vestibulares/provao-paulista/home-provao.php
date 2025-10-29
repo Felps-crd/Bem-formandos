@@ -41,6 +41,43 @@
                         O QUE É PROVÃO PAULISTA
                     </h1>
                     <hr>
+                    <p>O Provão Paulista Seriado é uma avaliação anual desenvolvida pela Secretaria de Educação do Estado de São Paulo (Seduc-SP) em parceria com as três principais universidades públicas estaduais: Universidade de São Paulo (USP), Universidade Estadual de Campinas (Unicamp) e Universidade Estadual Paulista (Unesp).</p>
+                    <p>Criado em 2023, o programa oferece uma oportunidade adicional de ingresso no ensino superior para estudantes da rede pública estadual paulista.</p>
+                </section>
+
+                <section id="destaques">
+                    <div class="destaques destaques--provao">
+                        <h2 class="destaques-titulo">Destaques do Provão Paulista</h2>
+                        <div class="destaque-card">
+                            <i class="bi bi-people-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Acesso Democrático</h3>
+                                <p class="destaque-texto">Amplia o acesso ao ensino superior, garantindo oportunidades a estudantes da rede pública em todo o estado de São Paulo.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-award-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Ensino de Excelência</h3>
+                                <p class="destaque-texto">Oferece vagas em instituições reconhecidas nacionalmente pela qualidade acadêmica.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-graph-up"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo"> Valorização do Desempenho Contínuo</h3>
+                                <p class="destaque-texto">O sistema seriado considera o esforço do estudante ao longo das três séries do Ensino Médio, tornando o processo mais justo e inclusivo.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Milhares de Vagas Oferecidas</h3>
+                                <p class="destaque-texto">Com quase 50 mil vagas diretas desde sua criação, o programa se consolida como uma alternativa estratégica aos vestibulares tradicionais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -51,9 +88,8 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#introducao">O que é Provão Paulista</a></li>
+                            <li><a href="#destaques">Destaques do Provão Paulista</a></li>
                         </ul>
                 </div>
                 <div class="card">

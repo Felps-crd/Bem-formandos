@@ -41,7 +41,55 @@
                         O QUE É FATEC
                     </h1>
                     <hr>
+                    <p>As Faculdades de Tecnologia do Estado de São Paulo (FATEC), vinculadas ao Centro Paula Souza (CPS) e ao Governo do Estado de São Paulo, são instituições públicas de ensino superior reconhecidas pela excelência na formação tecnológica.</p>
+                    <p>Com cursos voltados para as demandas do mercado de trabalho, a Fatec prepara profissionais altamente qualificados, oferecendo educação gratuita e de qualidade.</p>
+                </section>
 
+                <section id="destaques">
+                    <div class="destaques destaques--fatec"> 
+                        <h2 class="destaques-titulo">Destaques da Fuvest</h2>
+                        <div class="destaque-card">
+                            <i class="bi bi-journal-bookmark-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Ensino Público e Gratuito</h3>
+                                <p class="destaque-texto">Acesso à educação de qualidade sem mensalidades.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-laptop-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Foco Tecnológico</h3>
+                                <p class="destaque-texto">Cursos alinhados às demandas do mercado de trabalho.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-briefcase-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Alta Empregabilidade</h3>
+                                <p class="destaque-texto">Grande parte dos egressos da Fatec conseguem emprego na área em pouco tempo.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-award-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Corpo Docente Qualificado</h3>
+                                <p class="destaque-texto">Professores com experiência acadêmica e profissional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="como-funciona">
+                    <h2 class="como-funciona-titulo">Como Funciona a Fatec</h2>
+                    <p class="como-funciona-texto">A Fatec oferece cursos de graduação tecnológica, com duração média de 2 a 3 anos, ideais para quem busca uma formação rápida e prática.
+                        <ul class="lista-caracteristicas">
+                            <li>Metodologia aplicada: aulas práticas, laboratórios modernos e integração com empresas.</li>
+                            <li>Abrangência: unidades em diversas cidades do Estado de São Paulo.</li>
+                            <li>Oportunidades: cursos em áreas como Tecnologia da Informação, Gestão, Produção Industrial, Logística, Saúde e Meio Ambiente.</li>
+                        </ul>
+                    <p>Graças à forte conexão com o setor produtivo, os alunos encontram excelentes oportunidades de inserção profissional logo após a graduação.</p>
+                    </p>
+                </section>
             </div>
             <aside class="painel-lateral">
                 <div class="card">
@@ -51,9 +99,9 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#introducao">O que é Fatec</a></li>
+                            <li><a href="#destaques">Destaques da Fatec</a></li>
+                            <li><a href="#como-funciona">Como Funciona a Fatec</a></li>
                         </ul>
                 </div>
                 <div class="card">

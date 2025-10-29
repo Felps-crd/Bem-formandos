@@ -48,31 +48,31 @@
                     <div class="destaques destaques--unicamp">
                         <h2 class="destaques-titulo">Destaques da Unicamp</h2>
                         <div class="destaque-card">
-                            <i class="bi bi-graph-up"></i>
+                            <i class="bi bi-book-fill"></i>
                             <div class="destaque-conteudo">
-                                <h3 class="destaque-titulo"> </h3>
-                                <p class="destaque-texto"> </p>
+                                <h3 class="destaque-titulo">Pesquisa e Ensino</h3>
+                                <p class="destaque-texto"> A 3ª melhor universidade da América Latina, com nota máxima em pesquisa e alta qualidade no ensino.</p>
                             </div>
                         </div>
                         <div class="destaque-card">
-                            <i class="bi bi-mortarboard-fill"></i>
+                            <i class="bi bi-leaf-fill"></i>
                             <div class="destaque-conteudo">
-                                <h3 class="destaque-titulo"> </h3>
-                                <p class="destaque-texto"> </p>
+                                <h3 class="destaque-titulo">Sustentabilidade</h3>
+                                <p class="destaque-texto">É a 2ª do Brasil em impacto sustentável e destaque mundial no ODS 9 (inovação e infraestrutura).</p>
                             </div>
                         </div>
                         <div class="destaque-card">
-                            <i class="bi bi-people-fill"></i>
+                            <i class="bi bi-search"></i>
                             <div class="destaque-conteudo">
-                                <h3 class="destaque-titulo"> </h3>
-                                <p class="destaque-texto"> </p>
+                                <h3 class="destaque-titulo">Iniciação Científica</h3>
+                                <p class="destaque-texto">Recebeu prêmio nacional do CNPq por excelência na formação de jovens pesquisadores.</p>
                             </div>
                         </div>
                         <div class="destaque-card">
-                            <i class="bi bi-award-fill"></i>
+                            <i class="bi bi-globe-americas-fill"></i>
                             <div class="destaque-conteudo">
-                                <h3 class="destaque-titulo">Reconhecimento Nacional</h3>
-                                <p class="destaque-texto">Classificada entre as melhores universidades do mundo e primeira da América Latina em 2017 pela Times Higher Education.</p>
+                                <h3 class="destaque-titulo">Reconhecimento Internacional</h3>
+                                <p class="destaque-texto">Está entre as melhores do mundo em áreas como Odontologia, Engenharia Elétrica e Linguística.</p>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                     <hr>
                         <ul>
                             <li><a href="#introducao">O que é</a></li>
-                            <li><a href="#destaques">Destaques Unicamp</a></li>
+                            <li><a href="#destaques">Destaques da Unicamp</a></li>
                             <li><a href="#como-funciona">Como Funciona a Unicamp</a></li>
                         </ul>
                 </div>
@@ -102,12 +102,12 @@
                         <h3>Conteúdo Relacionado</h3>
                     </div>
                     <hr>
-                    <h4>Como se inscrever na Fuvest</h4>
+                    <h4>Como se inscrever na Unicamp</h4>
                         <p>Passo a passo para fazer sua inscrição</p>
                         <div class="ler-mais ler-mais--unicamp"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
-                    <h4>Vestibular Fuvest</h4>
-                        <p>Tudo sobre o vestibular da Fuvest</p>
+                    <h4>Vestibular Unicamp</h4>
+                        <p>Tudo sobre o vestibular da Unicamp</p>
                         <div class="ler-mais ler-mais--unicamp"><a href="vestibular.php">Ler mais</a></div>
                 </div>
             </aside>

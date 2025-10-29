@@ -41,6 +41,48 @@
                         O QUE É UNESP
                     </h1>
                     <hr>
+                    <p>A UNESP (Universidade Estadual Paulista “Júlio de Mesquita Filho”) é uma das principais universidades públicas do Brasil. Criada em 1976, ela oferece ensino superior gratuito e de qualidade em diversas áreas do conhecimento.</p>
+                    <p>A universidade é reconhecida pela excelência acadêmica e pela contribuição para o desenvolvimento científico e tecnológico do país, formando profissionais qualificados e promovendo pesquisa e extensão em todo o estado de São Paulo.</p>
+                </section>
+
+                <section id="destaques">
+                    <div class="destaques destaques--unesp">
+                        <h2 class="destaques-titulo">Destaques da Unesp</h2>
+                        <div class="destaque-card">
+                            <i class="bi bi-book-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Ensino Público e Gratuito</h3>
+                                <p class="destaque-texto">Acesso a uma formação superior de qualidade sem custos de mensalidade.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-search"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Pesquisa e Inovação</h3>
+                                <p class="destaque-texto">Reconhecida pela forte atuação em pesquisas científicas  e tecnológicas que geram impacto social.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Diversidade de Cursos</h3>
+                                <p class="destaque-texto">Oferece graduações, pós-graduações e programas de extensão em diversas áreas do conhecimento.</p>
+                            </div>
+                        </div>
+                        <div class="destaque-card">
+                            <i class="bi bi-award-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Reconhecimento Internacional</h3>
+                                <p class="destaque-texto">Destaca-se entre as melhores universidades da América Latina, com parcerias acadêmicas em vários países.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="como-funciona">
+                    <h2 class="como-funciona-titulo">Como Funciona a Unesp</h2>
+                    <p class="como-funciona-texto">A UNESP possui campi em mais de 20 cidades do Estado de São Paulo, o que permite uma ampla oferta de cursos e oportunidades. O ingresso ocorre por meio do Vestibular UNESP, organizado anualmente pela Vunesp, composto por duas fases com provas objetivas e discursivas. <br> Além do ensino gratuito, a universidade oferece programas de bolsas, moradia estudantil e assistência socioeconômica, garantindo a permanência e o sucesso de seus estudantes.
+                    </p>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -51,9 +93,9 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#introducao">O que é Unesp</a></li>
+                            <li><a href="#destaques">Destaques da Unesp</a></li>
+                            <li><a href="#como-funciona">Como Funciona a Unesp</a></li>
                         </ul>
                 </div>
                 <div class="card">
