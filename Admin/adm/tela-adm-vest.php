@@ -109,7 +109,12 @@ while ($row = $result->fetch_assoc()) {
     <link rel="stylesheet" href="../../assets/estilos/style-modal-vest.css">
     <title>Vestibular | ADM</title>
     <style>
-       
+       main{
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+       }
+
     </style>
 </head>
 <body>
@@ -179,7 +184,11 @@ while ($row = $result->fetch_assoc()) {
                     <h2>Gerenciar Vestibulares</h2>
                     <p>Cadastre, edite ou remova informações sobre vestibulares</p>
                   </div>
+
                   <button class="btn-new abrir-modal" data-id=""><i class="fa-solid fa-plus"></i> Novo Vestibular</button>
+
+                  <!--<button class="btn-new abrir-modal" data-id=""><i class="fa-solid fa-plus"></i> Novo Vestibular</button>-->
+
                 </div>
 
                 <!-- Lista de Vestibulares -->

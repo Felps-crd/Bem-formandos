@@ -130,12 +130,9 @@ alert(data.msg); // mostra só a mensagem amigável
 
                 <div class="input">
 
-                    <input type="checkbox" id="termos" class="checkbox-personalizado" name="termos" required>
-
-                    <input type="checkbox" id="termos" name="termos" required>
-
-                    <label for="termos">Aceito os <a href="termos.html" target="_blank">Termos e Serviços</a></label>
-                </div>
+                  <input type="checkbox" id="termos" class="checkbox-personalizado" name="termos" required>
+                  <label for="termos">Aceito os <a href="#" onclick="abrirModal('modal-termos'); return false;">Termos e Serviços</a></label>
+            </div>
 
         </div>
 
@@ -163,6 +160,71 @@ alert(data.msg); // mostra só a mensagem amigável
     </form>
 </div>
 <!--FIM MODAL CADASTRO-->
+
+<!-- ===================== MODAL TERMOS DE USO ===================== -->
+<div id="modal-termos" class="modal-overlay" style="display: none; justify-content: center; align-items: center; z-index: 1001;">
+    <div class="modal-box" 
+         style="max-width: 700px; max-height: 90vh; overflow-y: auto; background: #fff; border-radius: 10px; padding: 20px; position: relative;">
+
+        <!-- Botão de fechar -->
+        <button type="button" class="close-modal" onclick="fecharModal('modal-termos')" 
+                style="position: absolute; top: 10px; right: 10px; font-size: 24px; border: none; background: none;">&times;</button>
+
+        <!-- Conteúdo do modal -->
+        <h2>TERMOS DE USO E POLÍTICA DE PRIVACIDADE</h2>
+        <p><strong>Última atualização:</strong> 11 de outubro de 2025</p>
+
+        <h3>1. ACEITAÇÃO DOS TERMOS</h3>
+        <p>Ao acessar e usar este site, voltado a facilitar pesquisas sobre vestibulares, você concorda com estes Termos de Uso e com a Política de Privacidade descrita abaixo. Se não concordar, não utilize o site.</p>
+
+        <h3>2. SOBRE O SITE</h3>
+        <p>O site tem como objetivo reunir informações públicas sobre vestibulares de diversas instituições de ensino, facilitando a pesquisa e o acesso dos usuários. As informações podem mudar nas fontes originais; fazemos o possível para manter tudo atualizado, mas não garantimos precisão total ou imediata.</p>
+
+        <h3>3. CADASTRO DE USUÁRIO</h3>
+        <p>Algumas funcionalidades exigem cadastro. Para criar uma conta pedimos apenas nome e e-mail. O usuário é responsável por manter as informações corretas e pela confidencialidade de suas credenciais de acesso.</p>
+
+        <h3>4. COLETA DE DADOS</h3>
+        <ul>
+            <li>Nome</li>
+            <li>E-mail</li>
+        </ul>
+        <p>Essas informações são fornecidas voluntariamente no momento do cadastro.</p>
+
+        <h3>5. USO DAS INFORMAÇÕES</h3>
+        <ul>
+            <li>Criar e manter sua conta;</li>
+            <li>Enviar comunicações relacionadas ao site (como atualizações e avisos);</li>
+            <li>Melhorar a experiência e o funcionamento da plataforma.</li>
+        </ul>
+        <p>Nós <em>não vendemos, trocamos ou repassamos seus dados pessoais a terceiros.</em></p>
+
+        <h3>6. ARMAZENAMENTO E SEGURANÇA</h3>
+        <p>Seus dados são armazenados de forma segura e acessados apenas por pessoas autorizadas. Adotamos medidas técnicas e administrativas para proteger contra acesso não autorizado, perda, alteração ou divulgação indevida. Contudo, nenhum sistema é 100% seguro.</p>
+
+        <h3>7. DIREITOS DO USUÁRIO</h3>
+        <p>Você pode, a qualquer momento:</p>
+        <ul>
+            <li>Corrigir informações incorretas;</li>
+            <li>Solicitar informações sobre como seus dados são utilizados.</li>
+        </ul>
+        <p>Para isso, envie um e-mail para: <strong>bem.formandos2025@gmail.com</strong></p>
+
+        <h3>8. RESPONSABILIDADE</h3>
+        <p>As informações sobre vestibulares são fornecidas apenas como referência. O site não se responsabiliza por decisões tomadas com base nessas informações, nem por eventuais erros, mudanças ou indisponibilidades causadas por fontes externas.</p>
+
+        <h3>9. PROPRIEDADE INTELECTUAL</h3>
+        <p>Todo conteúdo original do site (textos, layout, design e funcionalidades) é protegido por direitos autorais. Não é permitido copiar, reproduzir ou redistribuir qualquer parte sem autorização prévia, exceto quando indicado o contrário.</p>
+
+        <h3>10. ALTERAÇÕES NOS TERMOS E POLÍTICA</h3>
+        <p>Podemos atualizar estes Termos e esta Política de Privacidade a qualquer momento. As alterações entram em vigor assim que publicadas nesta página. Recomendamos que revise este conteúdo periodicamente.</p>
+
+        <h3>11. CONTATO</h3>
+        <p>Em caso de dúvidas, sugestões ou solicitações sobre estes Termos ou sobre a Política de Privacidade, entre em contato pelo e-mail: <strong>bem.formandos2025@gmail.com</strong></p>
+
+    </div>
+</div>
+<!-- ===================== FIM MODAL TERMOS DE USO ===================== -->
+
 
 
         <!-- inicio principal -->
