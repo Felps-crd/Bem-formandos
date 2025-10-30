@@ -52,14 +52,11 @@ while ($row = $result->fetch_assoc()) {
 </head>
 <style>
     main{
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-bottom: 50px;
-       }
-    .content-box{
         margin-left: 70px;
         margin-right: 70px;
-    }
+        margin-bottom: 30px;
+       }
+    
 </style>
 <body>
 <div class="container-principal">
