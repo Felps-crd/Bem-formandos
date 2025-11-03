@@ -2,8 +2,8 @@
 session_start();
 include_once('../../assets/php/conexao.php');
 
-if (!isset($_SESSION['adm_id'])) {
-    header("Location: login-adm.php");
+if (!isset($_SESSION['func_id'])) {
+    header("Location: login-func.php");
     exit;
 }
 
@@ -21,7 +21,7 @@ $eventos_post = $_POST['eventos'] ?? [];
 
 if ($vest_id <= 0) {
     $_SESSION['flash_error'] = "Vestibular inválido.";
-    header("Location: tela-adm-vest.php");
+    header("Location: tela-func.php");
     exit;
 }
 
@@ -112,7 +112,7 @@ try {
 
     $mysqli->commit();
     $_SESSION['flash_success'] = "Vestibular e eventos salvos com sucesso.";
-    header("Location: tela-adm-vest.php");
+    header("Location: tela-func.php");
     exit;
 
 } catch (Exception $e) {

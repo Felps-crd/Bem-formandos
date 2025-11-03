@@ -68,19 +68,23 @@ while ($row = $result->fetch_assoc()) {
         </div>
         <div class="icones-cabecalho">
             <a href="../adm.html"><span class="material-symbols-outlined">home</span></a>
+
             <div class="perfil-dropdown">
-                <span class="material-symbols-outlined" id="abre-perfil">person</span>
-                <div id="perfil">
-                    <h1 id="nome-perfil"><?php echo $_SESSION['adm_nome']; ?></h1>
-                    <p id="email-perfil"><?php echo $_SESSION['adm_email']; ?></p>
-                    <button type="button" id="btn-alterar-senha">Alterar senha</button>
-                    <div id="form-senha" style="display:none; text-align:center; margin-top:20px;">
-                        <input type="password" id="nova-senha" style="border: none; outline: none; font-size: 15px;" placeholder="Nova senha" required>
-                        <button type="button" id="salvar-senha">Salvar</button>
-                    </div>
-                    <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">Sair</button>
+                  <span class="material-symbols-outlined" id="abre-perfil">person</span>
+
+                  <div id="perfil">
+                      <div class="perfil-header">
+                          <span class="material-symbols-outlined">person</span>
+                          <div>
+                              <h4 id="nome-perfil"><?= $_SESSION['adm_nome']; ?></h4>
+                              <p id="email-perfil"><?= $_SESSION['adm_email']; ?></p>
+                          </div>
+                      </div>
+                      <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">
+                          Sair
+                      </button>
+                  </div>
                 </div>
-            </div>
         </div>
     </header>
 
@@ -206,6 +210,24 @@ while ($row = $result->fetch_assoc()) {
 </div>
 
 <script>
+    
+const abrePerfil = document.getElementById('abre-perfil');
+const perfilMenu = document.getElementById('perfil');
+
+abrePerfil.addEventListener('click', (e) => {
+    e.stopPropagation(); // não fecha ao clicar no ícone
+    perfilMenu.classList.toggle('aberto');
+});
+
+// Fecha ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!perfilMenu.contains(e.target) && e.target !== abrePerfil) {
+        perfilMenu.classList.remove('aberto');
+    }
+});
+
+
+//-------------------------------------//
 const overlay = document.getElementById('modal-funcionario');
 const formFunc = document.getElementById('form-func');
 const titleEl = document.getElementById('modal-title');

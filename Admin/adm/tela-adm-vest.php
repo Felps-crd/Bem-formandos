@@ -52,7 +52,7 @@ while ($row = $result->fetch_assoc()) {
             'vestibular_id' => $vest_id,
             'vestibular' => $row['vestibular'],
             'categoria_id' => $cat_id,
-            'categoria'  => $row['categoria'] ?? ',',
+            'categoria'  => $row['categoria'] ?? '',
             'taxa'       => $row['taxa'],
             'eventos'    => [],
             'informacoes' => [],
@@ -127,17 +127,25 @@ while ($row = $result->fetch_assoc()) {
             </div>
 
             <div class="icones-cabecalho">
-                <a href="../adm.html"><span class="material-symbols-outlined">home</span></a>
+                <a href="../adm.html"><span class="material-symbols-outlined" id="home">home</span></a>
 
                 <div class="perfil-dropdown">
                   <span class="material-symbols-outlined" id="abre-perfil">person</span>
 
-                    <div id="perfil">
-                      <h1 id="nome-perfil"><?php echo $_SESSION['adm_nome']; ?></h1>
-                      <p id="email-perfil"><?php echo $_SESSION['adm_email']; ?></p>
-                      <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">Sair</button>
-                    </div>
+                  <div id="perfil">
+                      <div class="perfil-header">
+                          <span class="material-symbols-outlined">person</span>
+                          <div>
+                              <h4 id="nome-perfil"><?= $_SESSION['adm_nome']; ?></h4>
+                              <p id="email-perfil"><?= $_SESSION['adm_email']; ?></p>
+                          </div>
+                      </div>
+                      <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">
+                          Sair
+                      </button>
+                  </div>
                 </div>
+
             </div>
         </header>
 
@@ -312,18 +320,23 @@ while ($row = $result->fetch_assoc()) {
 <script>
 
 const abrePerfil = document.getElementById('abre-perfil');
-  const perfil = document.getElementById('perfil');
+const perfilMenu = document.getElementById('perfil');
 
-  abrePerfil.addEventListener('click', () => {
-    perfil.classList.toggle('mostrar');
-  });
+abrePerfil.addEventListener('click', (e) => {
+    e.stopPropagation(); // não fecha ao clicar no ícone
+    perfilMenu.classList.toggle('aberto');
+});
 
-  // Fecha o menu se clicar fora dele
-  document.addEventListener('click', (event) => {
-    if (!event.target.closest('.perfil-dropdown')) {
-      perfil.classList.remove('mostrar');
+// Fecha ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!perfilMenu.contains(e.target) && e.target !== abrePerfil) {
+        perfilMenu.classList.remove('aberto');
     }
-  });
+});
+
+
+
+
 
 /* ======= Modal dinâmico - criar/editar eventos (envio via POST tradicional) ======= */
 

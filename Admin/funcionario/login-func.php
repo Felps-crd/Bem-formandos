@@ -1,3 +1,32 @@
+<?php
+session_start();
+include_once('../../assets/php/conexao.php');
+
+if(isset($_POST['submit'])){
+    $usuario = $_POST['func_name'];
+    $senha   = $_POST['func_senha'];
+
+    // Verifica se existe o admin
+    $stmt = $conexao->prepare("SELECT * FROM funcionarios WHERE usuario=? AND senha=? AND cargo='funcionario'");
+    $stmt->bind_param("ss", $usuario, $senha);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if($result->num_rows === 1){
+        $func = $result->fetch_assoc();
+        // cria variáveis de sessão para o admin logado
+        $_SESSION['func_id'] = $func['id'];
+        $_SESSION['func_nome'] = $func['nome'];
+        $_SESSION['func_email'] = $func['email'];
+        header("Location: tela-func.php"); // redireciona para a tela administrativa
+        exit;
+    } else {
+        echo "<script>alert('Usuário ou senha incorretos');</script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

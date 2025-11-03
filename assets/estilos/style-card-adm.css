@@ -15,75 +15,102 @@ body {
 .cards-rows {
   display: flex;
   justify-content: center;
-  gap: 278px;
-  margin-bottom: 25px;
+  gap: 40px; /* reduz gap exagerado e deixa mais responsivo */
+  flex-wrap: wrap; /* permite quebra de linha em telas menores */
+  margin-bottom: 30px;
 }
-  
+
 .card-cont {
-  background: #F8F8F8;
-  padding: 20px;
-  border-radius: 10px;
-  width: 407px;
-  height: 174px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  background: #fff; /* fundo mais limpo */
+  padding: 25px 20px; /* mais espaço interno */
+  border-radius: 16px; /* cantos mais arredondados */
+  width: 380px; /* ligeiramente menor para encaixe */
+  height: 180px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* sombra mais suave e moderna */
   position: relative;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-cont:hover {
+  transform: translateY(-4px); /* efeito hover leve */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .card-cont h3 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #141414;
+  font-weight: 600;
 }
 
 .card-cont .number {
   margin-left: 20px;
   font-size: 64px;
-  font-weight: bold;
+  font-weight: 700;
+  color: #2563eb; /* destaque colorido opcional */
 }
 
 .card-icon {
   position: absolute;
-  top: 23px;
-  right: 15px;
-  color: #141414;
-  font-size: 18px;
+  top: 20px;
+  right: 20px;
+  
+  font-size: 20px;
+  transition: color 0.2s, transform 0.2s;
+  
 }
+
+.card-icon:hover {
+  color: #3787D8;
+  transform: scale(1.2);
+}
+
 
 .tab-container {
   display: flex;
   justify-content: center;
   margin: 20px auto;
-  background: #F8F8F8; /* mais escuro que os tabs ativos */
-  border-radius: 10px;
-  padding: 5px;
-  gap: 6px;
-  font-size: 20px;
+  background: #F8F8F8; /* fundo neutro */
+  border-radius: 12px;
+  padding: 6px;
+  gap: 8px;
+  font-size: 18px;
+  width: 100%; /* ocupa horizontalmente */
+  max-width: 100%; /* garante que não ultrapasse a tela */
+  box-sizing: border-box;
 }
 
 /* Estilo base das abas */
 .tab {
+  flex: 1; /* cada aba ocupa espaço igual */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 0px 20px;
-  border-radius: 10px;
-  color: #1a1a1a;
+  gap: 8px;
+  padding: 10px 0; /* padding vertical para conforto */
+  border-radius: 12px;
+  color: #565656;
   text-decoration: none;
-  transition: 0.2s;
-  width: 100vh;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .tab.active {
   background: #ffffff;
-  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.345);
-
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: #202020;
 }
 
-.tab:not(.active):hover{
-  background: #efefeffe;
+.tab:not(.active):hover {
+  color: #656565;
+  background: #f3f4f6;
+  transform: translateY(-2px);
 }
+
 
 .content-box {
   background: #fff;
@@ -112,23 +139,27 @@ body {
 }
 
 .btn-new {
-  margin-right: 10px;
-  margin-bottom: 20px;
+  margin-right: 10px;         /* espaço à direita */
+  margin-bottom: 20px;        /* espaço abaixo */
+  padding: 12px 25px;         /* aumenta o padding geral para mais conforto */
   background: #3787D8;
   color: #fff;
   border: none;
-  padding-left: 20px;
-  border-radius: 6px;
+  border-radius: 8px;         /* borda mais arredondada */
   cursor: pointer;
   font-size: 18px;
-  display: flex;
+  font-weight: 600;           /* deixa o texto mais firme */
+  display: inline-flex;       /* flex interno para alinhar ícone e texto */
   align-items: center;
-  gap: 25px;
-  transition: 0.2s;
+  gap: 12px;                  /* espaço entre ícone e texto */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);  /* sombra suave */
+  transition: all 0.25s ease; /* transições suaves */
 }
 
 .btn-new:hover {
-  background: #1d4ed8;
+  background: #2f6bb3;        /* escurece no hover */
+  transform: translateY(-2px) scale(1.02); /* efeito de leve “levantada” */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .card {
@@ -136,65 +167,84 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 12px;
-  padding-top: 0;
+  border: 1px solid #ddd;       /* borda cinza clara */
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-color: #ccc; /* borda mais destacada no hover */
 }
 
 .card-left {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 10px;
+  gap: 14px;
 }
 
-
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: #fde68a;
+  background: linear-gradient(135deg, #fde68a, #fcd34d); /* gradiente sutil */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
   color: #ca8a04;
+  flex-shrink: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .info h3 {
   margin: 0;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 .info p {
-  margin: 2px 0;
+  margin: 2px 0 0;
   font-size: 13px;
   color: #555;
+  line-height: 1.3;
 }
+
 
 .card-right {
   display: flex;
   align-items: center;
-  gap: 10px;
-  width: 8%;
-  height: 8%;
-  margin-bottom: 8px;
+  gap: 12px;       /* aumenta o espaçamento entre os ícones */
 }
 
 .btn-icon {
-  background: none;
+  font-size: 18px;
+  background: #fff;            /* fundo branco limpo */
   border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 6px;
+  border-radius: 8px;          /* borda mais arredondada */
+  padding: 12px;                /* aumenta o padding para conforto */
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.25s ease;  /* transições suaves */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* sombra leve */
 }
 
 .btn-icon:hover {
   background: #f3f4f6;
+  transform: translateY(-2px) scale(1.1); /* efeito de leve “levantada” */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .btn-icon.delete {
@@ -202,7 +252,152 @@ body {
   border-color: #dc2626;
 }
 
+.btn-icon.delete:hover {
+  background: rgba(220, 38, 38, 0.1); /* hover vermelho suave */
+}
+
 .btn-icon.edit {
   color: #2563eb;
   border-color: #2563eb;
+}
+
+.btn-icon.edit:hover {
+  background: rgba(37, 99, 235, 0.1); /* hover azul suave */
+}
+
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+  .cards-rows {
+    gap: 30px;
+  }
+
+  .card-cont {
+    width: 320px;
+    height: 160px;
+  }
+
+  .card-cont h3 {
+    font-size: 18px;
+  }
+
+  .card-cont .number {
+    font-size: 56px;
+  }
+
+  .card-icon {
+    font-size: 18px;
+  }
+
+  .tab-container {
+    font-size: 16px;
+  }
+
+  .tab {
+    padding: 8px 0;
+  }
+
+  .btn-new {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 12px 16px;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .info h3 {
+    font-size: 16px;
+  }
+
+  .info p {
+    font-size: 12px;
+  }
+
+  .btn-icon {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* Celulares e telas pequenas */
+@media (max-width: 768px) {
+  .cards-rows {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-cont {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-cont h3 {
+    font-size: 16px;
+  }
+
+  .card-cont .number {
+    font-size: 48px;
+  }
+
+  .card-icon {
+    font-size: 16px;
+  }
+
+  .tab-container {
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  .tab {
+    padding: 8px 0;
+  }
+
+  .btn-new {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .card-left {
+    gap: 10px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .info h3 {
+    font-size: 15px;
+  }
+
+  .info p {
+    font-size: 12px;
+  }
+
+  .card-right {
+    margin-top: 12px;
+    gap: 10px;
+  }
+
+  .btn-icon {
+    padding: 10px;
+    font-size: 16px;
+  }
 }
