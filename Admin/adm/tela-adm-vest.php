@@ -110,8 +110,8 @@ while ($row = $result->fetch_assoc()) {
     <title>Vestibular | ADM</title>
     <style>
        main{
-        margin-left: 70px;
-        margin-right: 70px;
+        margin-left: 90px;
+        margin-right: 90px;
         margin-bottom: 30px;
        }
 
@@ -128,22 +128,16 @@ while ($row = $result->fetch_assoc()) {
 
             <div class="icones-cabecalho">
                 <a href="../adm.html"><span class="material-symbols-outlined">home</span></a>
+
                 <div class="perfil-dropdown">
-            <span class="material-symbols-outlined" id="abre-perfil">person</span>
+                  <span class="material-symbols-outlined" id="abre-perfil">person</span>
 
-            <div id="perfil">
-
-                <h1 id="nome-perfil"><?php echo $_SESSION['adm_nome']; ?></h1>
-                <p id="email-perfil"><?php echo $_SESSION['adm_email']; ?></p>
-                <button type="button" id="btn-alterar-senha">Alterar senha</button>
-                <div id="form-senha" style="display:none; text-align:center; margin-top:20px;">
-                    <input type="password" id="nova-senha" style="border: none; outline: none; font-size: 15px;" placeholder="Nova senha" required>
-                    <button type="button" id="salvar-senha">Salvar</button>
+                    <div id="perfil">
+                      <h1 id="nome-perfil"><?php echo $_SESSION['adm_nome']; ?></h1>
+                      <p id="email-perfil"><?php echo $_SESSION['adm_email']; ?></p>
+                      <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">Sair</button>
+                    </div>
                 </div>
-
-                <button type="button" class="btn-sair" onclick="window.location.href='logout.php'">Sair</button>
-            </div>
-        </div>
             </div>
         </header>
 
@@ -291,7 +285,7 @@ while ($row = $result->fetch_assoc()) {
 
 
 <!-- container dinâmico para eventos (adicionado no modal) -->
-<h2 class="modal-secao">Datas (geradas)</h2>
+<h2 class="modal-secao">Datas</h2>
 <div id="eventos-dinamicos"></div>
 <!-- fim container -->
 
@@ -316,6 +310,21 @@ while ($row = $result->fetch_assoc()) {
 
 
 <script>
+
+const abrePerfil = document.getElementById('abre-perfil');
+  const perfil = document.getElementById('perfil');
+
+  abrePerfil.addEventListener('click', () => {
+    perfil.classList.toggle('mostrar');
+  });
+
+  // Fecha o menu se clicar fora dele
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.perfil-dropdown')) {
+      perfil.classList.remove('mostrar');
+    }
+  });
+
 /* ======= Modal dinâmico - criar/editar eventos (envio via POST tradicional) ======= */
 
 const overlay = document.getElementById('modal-vestibular');

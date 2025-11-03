@@ -1,34 +1,64 @@
 <?php
-// calendario.php
-$host = 'localhost';
-$db   = 'formandos';
-$user = 'root'; // ajuste se o seu XAMPP tiver outro usuário
-$pass = '';     // ajuste se você configurou senha no XAMPP
-$charset = 'utf8mb4';
+include_once('../../assets/php/conexao.php');
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+// ID do vestibular ENEM
+$vestibular_id = 1;
+
+// Consulta dos eventos
+$sql = "SELECT titulo, data_inicio, data_fim 
+        FROM calendario 
+        WHERE vestibular_id = ? 
+        ORDER BY data_inicio ASC";
+
+$stmt = $conexao->prepare($sql);
+$stmt->bind_param("i", $vestibular_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$eventos = $result->fetch_all(MYSQLI_ASSOC);
+
+// Função de formatação de datas
+function formatar_datas($inicio, $fim) {
+    $inicioFormatado = date('d/m/Y', strtotime($inicio));
+    return $fim ? "$inicioFormatado - " . date('d/m/Y', strtotime($fim)) : $inicioFormatado;
+}
+
+// Estrutura fixa dos grupos
+$grupos = [
+    'Inscrições' => [
+        'Solicitação de isenção de taxa' => null,
+        'Período de inscrições' => null,
+        'Solicitação de atendimento especializado' => null,
+        'Tratamento pelo nome social' => null
+    ],
+    'Pagamento' => [
+        'Resultado da solicitação de isenção de taxa' => null,
+        'Recurso da isenção' => null,
+        'Pagamento da taxa de inscrição' => null
+    ],
+    'Cartão de Confirmação' => [
+        'Disponibilização do cartão' => null,
+        'Consulta de locais de prova' => null,
+        'Recurso de local de prova' => null
+    ],
+    'Aplicação das Provas' => [
+        '1° dia de provas' => null,
+        '2° dia de provas' => null
+    ]
 ];
 
-try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
-    die("Erro ao conectar ao banco de dados: " . $e->getMessage());
+// Distribui os eventos do banco nos grupos correspondentes
+foreach ($eventos as $e) {
+    foreach ($grupos as $grupoNome => &$subitens) {
+        foreach ($subitens as $titulo => &$valor) {
+            if (mb_strtolower($titulo, 'UTF-8') === mb_strtolower($e['titulo'], 'UTF-8')) {
+                $valor = $e;
+            }
+        }
+    }
 }
-
-// ID do ENEM (ajuste se for diferente)
-$vestibular_id = 2;
-
-try {
-    $stmt = $pdo->prepare("SELECT titulo, data_inicio, data_fim FROM calendario WHERE vestibular_id = ?");
-    $stmt->execute([$vestibular_id]);
-    $eventos = $stmt->fetchAll();
-} catch (\PDOException $e) {
-    die("Erro na consulta: " . $e->getMessage());
-}
+unset($subitens, $valor); // Boa prática
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -45,50 +75,86 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../../assets/imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
-<style>
-    .area-card {
+    <style>
+       /* === CARD DO GRUPO === */
+
+.area-card {
     background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1.8px solid #cce8d7;
+    border-left: 5px solid #00a859;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start; /* alinha tudo à esquerda */
+    text-align: left;
 }
 
+/* === CABEÇALHO DO BLOCO (ícone + título grande) === */
 .titulo-bloco {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
+    gap: 10px;    
 }
 
-.titulo-bloco h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #333;
-    margin-left: 8px;
+/* Linha abaixo do título, ocupando quase toda a largura do card */
+.titulo-bloco-linha {
+    height: 1.5px;
+    background-color:rgba(140, 140, 140, 0.64); /* cinza mais escuro */
+    width: calc(100% - 20px); /* largura total do card menos as margens */
+    border-radius: 2px;
+    margin-top: -15px; /* margem superior negativa para aproximar */
 }
 
 .titulo-bloco i {
     font-size: 1.5rem;
-    color: #008037;
+    color: #00a859;
+    background: #e6f6ec;
+    border: 2px solid #00a859;
+    border-radius: 6px;
+    padding: 5px;
 }
 
-.titulo-bloco .mes {
-    background-color: #25d366;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
+.titulo-bloco h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #00a859;
+    margin: 0;
+}
+
+/* === ITENS DE DATAS (abaixo do título principal) === */
+.itens-bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start; /* alinha tudo à esquerda */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .itens-bloco p {
     margin: 6px 0;
-    color: #333;
     font-size: 0.95rem;
+    color: #333;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e0e0e0; /* linha clara */
 }
-</style>
+
+.itens-bloco p:last-child {
+    border-bottom: none;
+}
+
+.itens-bloco strong {
+    font-weight: 600;
+    color: #000;
+}
+
+    </style>
+</head>
 <body>
 <div class="container-principal">
     <!-- Cabeçalho -->
@@ -110,92 +176,43 @@ try {
             <section id="introducao">
                 <h1 class="titulo titulo--enem"><i class="bi bi-calendar-fill"></i> CALENDÁRIO</h1>
                 <hr>
-                <p>Fique por dentro de todas as datas importantes do ENEM 2025. Aqui você encontra o cronograma completo com prazos de inscrição, bloqueio e aplicação das provas.</p>
+                <p>Fique por dentro de todas as datas importantes do ENEM 2025. Aqui você encontra o cronograma completo com prazos de inscrição, pagamento e aplicação das provas.</p>
             </section>
 
             <section id="cronograma">
-    <h2>Cronograma Completo Enem 2025</h2>
+    <h2>Cronograma Completo ENEM 2025</h2>
 
-    <!-- INSCRIÇÕES -->
-    <div class="area-card">
-        <div class="titulo-bloco">
-            <i class="bi bi-pencil-square"></i>
-            <h3>Inscrições</h3>
-            
-        </div>
-        <div class="itens-bloco">
-            <?php
-            foreach ($eventos as $e) {
-                if (stripos($e['titulo'], 'inscrição') !== false || stripos($e['titulo'], 'isenção') !== false || stripos($e['titulo'], 'atendimento especializado') !== false) {
-                    echo "<p><strong>{$e['titulo']}:</strong> " . date('d/m/Y', strtotime($e['data_inicio']));
-                    if (!empty($e['data_fim'])) echo " - " . date('d/m/Y', strtotime($e['data_fim']));
-                    echo "</p>";
-                }
-            }
-            ?>
-        </div>
-    </div>
+    <?php foreach ($grupos as $nome => $eventosGrupo): ?>
+        <div class="area-card">
+            <div class="titulo-bloco">
+                <?php if ($nome == 'Inscrições'): ?>
+                    <i class="bi bi-pencil-square"></i>
+                <?php elseif ($nome == 'Pagamento'): ?>
+                    <i class="bi bi-cash-stack"></i>
+                <?php elseif ($nome == 'Cartão de Confirmação'): ?>
+                    <i class="bi bi-credit-card-2-front-fill"></i>
+                <?php elseif ($nome == 'Aplicação das Provas'): ?>
+                    <i class="bi bi-journal-check"></i>
+                <?php endif; ?>
+                <h3><?= htmlspecialchars($nome) ?></h3>
+            </div>
 
-    <!-- PAGAMENTO -->
-    <div class="area-card">
-        <div class="titulo-bloco">
-            <i class="bi bi-cash-stack"></i>
-            <h3>Pagamento</h3>
-            
-        </div>
-        <div class="itens-bloco">
-            <?php
-            foreach ($eventos as $e) {
-                if (stripos($e['titulo'], 'pagamento') !== false || stripos($e['titulo'], 'recurso') !== false || stripos($e['titulo'], 'resultado da solicitação') !== false) {
-                    echo "<p><strong>{$e['titulo']}:</strong> " . date('d/m/Y', strtotime($e['data_inicio']));
-                    if (!empty($e['data_fim'])) echo " - " . date('d/m/Y', strtotime($e['data_fim']));
-                    echo "</p>";
-                }
-            }
-            ?>
-        </div>
-    </div>
+            <div class="titulo-bloco-linha"></div>
 
-    <!-- CARTÃO DE CONFIRMAÇÃO -->
-    <div class="area-card">
-        <div class="titulo-bloco">
-            <i class="bi bi-credit-card-2-front-fill"></i>
-            <h3>Cartão de Confirmação</h3>
-            
+            <div class="itens-bloco">
+                <?php foreach ($eventosGrupo as $titulo => $dados): ?>
+                    <?php if ($dados): ?>
+                        <p>
+                            <strong><?= htmlspecialchars($titulo) ?>:</strong>
+                            <?= formatar_datas($dados['data_inicio'], $dados['data_fim']) ?>
+                        </p>
+                    <?php else: ?>
+                        <p><strong><?= htmlspecialchars($titulo) ?>:</strong> <em>Data não cadastrada</em></p>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
-        <div class="itens-bloco">
-            <?php
-            foreach ($eventos as $e) {
-                if (stripos($e['titulo'], 'cartão') !== false || stripos($e['titulo'], 'local de prova') !== false) {
-                    echo "<p><strong>{$e['titulo']}:</strong> " . date('d/m/Y', strtotime($e['data_inicio']));
-                    if (!empty($e['data_fim'])) echo " - " . date('d/m/Y', strtotime($e['data_fim']));
-                    echo "</p>";
-                }
-            }
-            ?>
-        </div>
-    </div>
-
-    <!-- APLICAÇÃO DAS PROVAS -->
-    <div class="area-card">
-        <div class="titulo-bloco">
-            <i class="bi bi-journal-check"></i>
-            <h3>Aplicação das Provas</h3>
-            
-        </div>
-        <div class="itens-bloco">
-            <?php
-            foreach ($eventos as $e) {
-                if (stripos($e['titulo'], 'prova') !== false) {
-                    echo "<p><strong>{$e['titulo']}:</strong> " . date('d/m/Y', strtotime($e['data_inicio']));
-                    if (!empty($e['data_fim'])) echo " - " . date('d/m/Y', strtotime($e['data_fim']));
-                    echo "</p>";
-                }
-            }
-            ?>
-        </div>
-    </div>
-
+    <?php endforeach; ?>
 </section>
         </div>
 

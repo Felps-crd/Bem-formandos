@@ -52,8 +52,8 @@ while ($row = $result->fetch_assoc()) {
 </head>
 <style>
     main{
-        margin-left: 70px;
-        margin-right: 70px;
+        margin-left: 90px;
+        margin-right: 90px;
         margin-bottom: 30px;
        }
     
