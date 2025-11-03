@@ -107,6 +107,7 @@ while ($row = $result->fetch_assoc()) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../../assets/estilos/style-modal-vest.css">
+    <link rel="stylesheet" href="../../assets/estilos/style-modal-dinamico.css">
     <title>Vestibular | ADM</title>
     <style>
        main{
