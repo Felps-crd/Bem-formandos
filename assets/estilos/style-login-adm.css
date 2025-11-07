@@ -122,8 +122,8 @@ footer{
 }
 
 .box-login{
-  width: 951px;
-  height: 665px;
+  width: 910px;
+  height: 550px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.10);
   background: linear-gradient(180deg, #F8F8F8 0%, #F2F2F2 100%);

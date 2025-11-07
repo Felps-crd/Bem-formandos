@@ -54,6 +54,25 @@ if(isset($_POST['submit'])){
         <!-- fim cabeçalho -->
 
     <main>
+
+    <section class="box-login">
+            <div class="cabecalho-login">
+                <h1 class="titulo-login">Acesse sua conta</h1>
+                <hr>
+                <p class="paragrafo-login">Selecione seu tipo de perfil para continuar</p>
+            </div>
+            <div class="selecao-login">
+                    <a href="adm/login-adm.php" class="btn-opcao">
+                        <span class="icone-login"><i class="bi bi-person-fill-gear"></i></span>
+                        <span class="cargo-login">Administrador</span>
+                    </a>
+                    <a href="funcionario/login-func.php" class="btn-opcao">
+                        <span class="icone-login"><i class="bi bi-person-fill"></i></span>
+                        <span class="cargo-login">Funcionário</span>
+                    </a>
+                </div>
+            </div>
+        </section>
         
     <!--MODAL CADASTRO-->
        
