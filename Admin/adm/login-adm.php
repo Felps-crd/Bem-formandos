@@ -47,12 +47,8 @@ if(isset($_POST['submit'])){
             <div class="logo">
                 <a href="#" class="logo">
                 <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>Bem-Formandos</h1>
+                <h1>Bem Formandos</h1>
                 </a>
-            </div>
-
-            <div class="titulo">
-                <h1>Área de login</h1>
             </div>
         </header>
         <!-- fim cabeçalho -->
@@ -84,12 +80,11 @@ if(isset($_POST['submit'])){
                 <i class="bi bi-arrow-left-circle"></i>
             </a>
 
-            <h1 class="modal-title">LOGIN ADM</h1>
-
-            <span class="regua"></span>
+            <h1 class="modal-title">ADMINISTRADOR</h1>
 
         </div><!--Fim header modal-->
-
+        
+        <span class="regua"></span>
         <div class="modal-body">
             <div class="input-group">
                 <div class="input">

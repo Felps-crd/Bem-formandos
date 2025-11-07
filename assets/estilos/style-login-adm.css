@@ -13,6 +13,9 @@ body{
 
 main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .titulo{
@@ -50,7 +53,7 @@ header{
   padding: 15px 30px; 
 }
 
-header a{
+a{
   text-decoration: none;
 }
   
@@ -69,8 +72,9 @@ header a{
   color: #EFC84A;
   text-align: center;
   font-family: Gabarito;
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 2.25em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .btn-cadastro{
@@ -117,40 +121,87 @@ footer{
   padding: 10px;
 }
 
+.box-login{
+  width: 951px;
+  height: 665px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: linear-gradient(180deg, #F8F8F8 0%, #F2F2F2 100%);
+  box-shadow: -2px -2px 5px 0 rgba(158, 158, 158, 0.20), 2px 2px 5px 0 rgba(158, 158, 158, 0.20);
+}
+.cabecalho-login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 7% 10%;
+}
+.titulo-login{
+  color: #06C;
+  text-align: center;
+  font-family: Gabarito;
+  font-size: 3em;
+  font-weight: 700;
+}
+hr{
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right,transparent, #ccc,transparent);
+}
+.paragrafo-login{
+  color: #7C7C7C;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1em;
+  font-weight: 500;
+}
+
 .selecao-login {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;           /* espaçamento entre os botões */
-  height: 70vh;        /* ocupa quase a tela toda */
+  gap: 10%;           /* espaçamento entre os botões */
+        /* ocupa quase a tela toda */
+}
+
+.icone-login{
+  font-size: 80px;
+  width: 100px;
+  height: 100px;
+  background-color: #EFC84A;
+  border-radius: 50%;
+  text-align: center;
+  color: #1F2937;
+}
+.cargo-login{
+  color: #2F3847;
+  text-align: center;
+  font-family: Gabarito;
+  font-size: 2em;
+  font-weight: 500;
 }
 
 .btn-opcao {
-  width: 300px;
-  height: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 50px;
+  padding: 10px;
   align-items: center;
-  text-decoration: none;
-  
-  background: #EFC84A;
-  color: #033F7B;
-  font-size: 24px;
-  font-family: Gabarito, sans-serif;
-  font-weight: 600;
-  
-  border: 2px solid #033F7B;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  width: 259px;
+  height: 273px;
+  border-radius: 8px;
+  background: #F8F8F8;
+  box-shadow: -2px -2px 5px 0 rgba(124, 124, 124, 0.20), 2px 2px 5px 0 rgba(124, 124, 124, 0.20);
+  transition: 0.3s;
 }
 
 /* Efeito hover botao login*/
 .btn-opcao:hover {
-  background: #033F7B;
-  color: #EFC84A;
-  border-color: #EFC84A;
-  transform: 1s;
+ border: 1px solid #06C;
+ transform: scale(1.1);
+ transition: 0.3s;
 }
 
 @media (min-width: 1025px) {
@@ -203,6 +254,9 @@ footer{
       padding: 8px 16px;
       font-size: 18px;
   }
+  .box-login{
+    width: 800px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -250,9 +304,14 @@ footer{
       padding: 8px;
   }
 
+  .box-login{
+    width: 80%;
+    height: 500px;
+  }
+
   .selecao-login {
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
     height: auto;
     margin-top: 50px;
 }
@@ -261,6 +320,21 @@ footer{
     width: 100%;
     max-width: 250px;
     height: 70px;
-    font-size: 20px;
+    flex-direction: row;
+    gap: 20px;
+}
+.titulo-login{
+  font-size: 2em;
+}
+.paragrafo-login{
+  font-size: 0.8em;
+}
+.icone-login{
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+}
+.cargo-login{
+  font-size: 1.5em;
 }
 }

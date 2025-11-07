@@ -113,9 +113,9 @@ alert(data.msg); // mostra só a mensagem amigável
             </button>
 
             <h1 class="modal-title">CADASTRO</h1>
-            <span class="regua"></span>
+      
         </div><!--Fim header modal-->
-
+        <span class="regua"></span>
         <div class="modal-body">
             <div class="input-group">
 
@@ -276,16 +276,23 @@ alert(data.msg); // mostra só a mensagem amigável
         <!-- fim principal -->
 
         <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
+          <div class="conteudo-rodape">
+            <div class="contato-rodape">
+              <p class="titulo-secao-rodape">CONTATO</p>
+              <span class="contato"><i class="bi bi-envelope-at-fill"></i>bem.formandos2025@gmail.com</span>
             </div>
+            <hr>
+              <div class="text">
+                  <span>© 2025 Bem Formandos</span>
+              </div>
+          </div>
         </footer>
     </div>
 
     <script src="assets/Javascript/cad-user.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.4/dist/sweetalert2.all.min.js"></script>
 
-    <script>
+<script>
 
   function abrirModal(id) {
     const modal = document.getElementById(id);
