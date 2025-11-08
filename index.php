@@ -72,38 +72,34 @@ alert(data.msg); // mostra só a mensagem amigável
     <div class="container-principal">
         <!-- inicio cabeçalho -->
         <header>
-            <div class="logo">
-                <a href="#" class="logo">
-                <img src="assets/imagens/logo.png" alt="Ícone de formatura">
+    <div class="logo">
+        <a href="/Bem-formandos/index.php" class="logo">
+        <img src="/Bem-formandos/assets/imagens/logo.png" alt="Ícone de formatura">
 
-                <h1>BEM FORMANDOS</h1>
+        <h1>BEM FORMANDOS</h1>
 
-                </a>
-            </div>
+        </a>
+    </div>
 
-            <button class="btn-cadastro" data-modal="modal-cadastro">
-                Cadastre-se
-            </button>
-        </header>
-        <!-- fim cabeçalho -->
-
+    <button class="btn-cadastro" data-modal="modal-cadastro">
+        Cadastre-se
+    </button>
+</header>
         <!--MODAL CADASTRO-->
        
 
         <!--Aqui escurece o fundo-->
-    <div id="modal-cadastro" class="modal-overlay" 
-    style="display: none; position: fixed; top: 0; left: 0; 
-    width: 100%; height: 100%; background: hsla(0, 0.00%, 0.00%, 0.60); justify-content: center; align-items: center; z-index: 1000;">
+    <div id="modal-cadastro" class="modal-overlay">
         <!--Aqui escurece o fundo-->
 
         <!--Configuração das cores do funco da parte de cadastro-->
     <form id="form-cad-user" method="post" style=" padding-top: 20px;
-    justify-content: center;
-    justify-items: center;
-    width: 600px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #003366 0%, #0073E6 100%);;">
+        justify-content: center;
+        justify-items: center;
+        width: 600px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #003366 0%, #0073E6 100%);">
         <!--Configuração das cores do funco da parte de cadastro-->
 
         
@@ -225,8 +221,6 @@ alert(data.msg); // mostra só a mensagem amigável
 </div>
 <!-- ===================== FIM MODAL TERMOS DE USO ===================== -->
 
-
-
         <!-- inicio principal -->
         <main>
             <section class="intro">
@@ -275,24 +269,13 @@ alert(data.msg); // mostra só a mensagem amigável
         </main>
         <!-- fim principal -->
 
-        <footer class="rodape">
-          <div class="conteudo-rodape">
-            <div class="contato-rodape">
-              <p class="titulo-secao-rodape">CONTATO</p>
-              <span class="contato"><i class="bi bi-envelope-at-fill"></i>bem.formandos2025@gmail.com</span>
-            </div>
-            <hr>
-              <div class="text">
-                  <span>© 2025 Bem Formandos</span>
-              </div>
-          </div>
-        </footer>
+        <?php include_once("includes/footer.php"); ?>
     </div>
 
-    <script src="assets/Javascript/cad-user.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.4/dist/sweetalert2.all.min.js"></script>
-
-<script>
+     <script src="assets/Javascript/cad-user.js"></script>
+ <script>
 
   function abrirModal(id) {
     const modal = document.getElementById(id);
@@ -313,6 +296,5 @@ alert(data.msg); // mostra só a mensagem amigável
   });
 
 </script>
-
 </body>
 </html>

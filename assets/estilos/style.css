@@ -78,6 +78,21 @@ header a{
     font-size: 36px;
     font-weight: 600;
 }
+.btn-inicio{
+  font-size: 2.25em;
+  background-color: transparent;
+  border: none;
+  margin-right: 310px;
+}
+
+.btn-inicio i{
+  color: #E6BD3B;
+  transition: 0.5s;
+}
+.btn-inicio i:hover{
+  color: #00254b;
+  transition: 0.5s;
+}
 .btn-cadastro{
     width: 184px;
     height: 50px;
@@ -361,7 +376,7 @@ footer{
   padding-bottom: 30px;
   padding-left: 100px;
 }
-hr{
+.linha-rodape{
   width: 100%;
   border: 0;
   height: 1px;

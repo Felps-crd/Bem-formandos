@@ -19,18 +19,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-enem.php';?>
@@ -205,22 +194,18 @@
                         <h3>Conteúdo Relacionado</h3>
                     </div>
                     <hr>
-                    <h4>Como se inscrever no ENEM</h4>
+                    <h4>Como se inscrever no Enem</h4>
                         <p>Passo a passo para fazer sua inscrição</p>
                         <div class="ler-mais ler-mais--enem"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
-                    <h4>Redação ENEM</h4>
-                        <p>Tudo sobre a redação do ENEM</p>
+                    <h4>Calendário</h4>
+                        <p>Datas importantes do Enem</p>
                         <div class="ler-mais ler-mais--enem"><a href="redacao.php">Ler mais</a></div>
                 </div>
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

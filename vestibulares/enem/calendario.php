@@ -158,15 +158,7 @@ unset($subitens, $valor); // Boa prática
 <body>
 <div class="container-principal">
     <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-            </a>
-        </div>
-        <a href="#"><button class="btn-cadastro">Cadastre-se</button></a>
-    </header>
+     <?php include_once("../../includes/header.php"); ?>
 
     <!-- Conteúdo principal -->
     <main class="main-vestibulares">
@@ -180,40 +172,67 @@ unset($subitens, $valor); // Boa prática
             </section>
 
             <section id="cronograma">
-    <h2>Cronograma Completo ENEM 2025</h2>
+                <h2>Cronograma Completo ENEM 2025</h2>
 
-    <?php foreach ($grupos as $nome => $eventosGrupo): ?>
-        <div class="area-card">
-            <div class="titulo-bloco">
-                <?php if ($nome == 'Inscrições'): ?>
-                    <i class="bi bi-pencil-square"></i>
-                <?php elseif ($nome == 'Pagamento'): ?>
-                    <i class="bi bi-cash-stack"></i>
-                <?php elseif ($nome == 'Cartão de Confirmação'): ?>
-                    <i class="bi bi-credit-card-2-front-fill"></i>
-                <?php elseif ($nome == 'Aplicação das Provas'): ?>
-                    <i class="bi bi-journal-check"></i>
-                <?php endif; ?>
-                <h3><?= htmlspecialchars($nome) ?></h3>
-            </div>
+                <?php foreach ($grupos as $nome => $eventosGrupo): ?>
+                    <div class="area-card">
+                        <div class="titulo-bloco">
+                            <?php if ($nome == 'Inscrições'): ?>
+                                <i class="bi bi-pencil-square"></i>
+                            <?php elseif ($nome == 'Pagamento'): ?>
+                                <i class="bi bi-cash-stack"></i>
+                            <?php elseif ($nome == 'Cartão de Confirmação'): ?>
+                                <i class="bi bi-credit-card-2-front-fill"></i>
+                            <?php elseif ($nome == 'Aplicação das Provas'): ?>
+                                <i class="bi bi-journal-check"></i>
+                            <?php endif; ?>
+                            <h3><?= htmlspecialchars($nome) ?></h3>
+                        </div>
 
-            <div class="titulo-bloco-linha"></div>
+                        <div class="titulo-bloco-linha"></div>
 
-            <div class="itens-bloco">
-                <?php foreach ($eventosGrupo as $titulo => $dados): ?>
-                    <?php if ($dados): ?>
-                        <p>
-                            <strong><?= htmlspecialchars($titulo) ?>:</strong>
-                            <?= formatar_datas($dados['data_inicio'], $dados['data_fim']) ?>
-                        </p>
-                    <?php else: ?>
-                        <p><strong><?= htmlspecialchars($titulo) ?>:</strong> <em>Data não cadastrada</em></p>
-                    <?php endif; ?>
+                        <div class="itens-bloco">
+                            <?php foreach ($eventosGrupo as $titulo => $dados): ?>
+                                <?php if ($dados): ?>
+                                    <p>
+                                        <strong><?= htmlspecialchars($titulo) ?>:</strong>
+                                        <?= formatar_datas($dados['data_inicio'], $dados['data_fim']) ?>
+                                    </p>
+                                <?php else: ?>
+                                    <p><strong><?= htmlspecialchars($titulo) ?>:</strong> <em>Data não cadastrada</em></p>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
                 <?php endforeach; ?>
-            </div>
-        </div>
-    <?php endforeach; ?>
-</section>
+            </section>
+            <section id="infos-importantes">
+                <h2>Informações Importantes</h2>
+                <div class="area-cards area-cards--info">
+                    <div class="cards card--info">
+                        <div class="conteudo-card">
+                            <span class="icone-info"><i class="bi bi-geo-alt-fill"></i></span>
+                            <h3 class="titulo-info">Local de Prova</h3>
+                            <p class="texto-info">O local será divulgado no cartão de confirmação. Não é possível escolher o local de aplicação.</p>
+                        </div>
+                    </div>
+                    <div class="cards card--info">
+                         <div class="conteudo-card">
+                            <span class="icone-info"><i class="bi bi-person-vcard-fill"></i></span>
+                            <h3 class="titulo-info">Documentos</h3>
+                            <p class="texto-info">Leve documento original com foto. Não é aceito protocolo ou cópia, mesmo que autenticada.</p>
+                         </div>    
+                    </div>
+                    <div class="cards card--info">
+                         <div class="conteudo-card">
+                            <span class="icone-info"><i class="bi bi-phone-fill"></i></span>
+                            <h3 class="titulo-info">Eletrônicos</h3>
+                            <p class="texto-info">Aparelhos eletrônicos devem ser desligados e guardados no envelope lacrado fornecido.</p>
+                         </div>
+                    </div>
+                </div>
+
+            </section>                        
         </div>
 
         <!-- Painel lateral -->
@@ -226,7 +245,7 @@ unset($subitens, $valor); // Boa prática
                 <hr>
                 <ul>
                     <li><a href="#introducao">Cronograma Enem 2025</a></li>
-                    <li><a href="#">Informações Importantes</a></li>
+                    <li><a href="#infos-importantes">Informações Importantes</a></li>
                 </ul>
             </div>
             <div class="card">
@@ -246,11 +265,7 @@ unset($subitens, $valor); // Boa prática
         </aside>
     </main>
 
-    <footer class="rodape">
-        <div class="text">
-            <span>© 2025 Bem Formandos</span>
-        </div>
-    </footer>
+    <?php include_once("../../includes/footer.php"); ?>
 </div>
 
 <script src="../../assets/Javascript/sidebar.js"></script>

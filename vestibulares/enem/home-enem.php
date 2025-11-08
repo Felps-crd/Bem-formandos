@@ -19,15 +19,7 @@
     <div class="container-principal">
 
         <!-- Cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                    <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                    <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-            <a href="#"><button class="btn-cadastro">Cadastre-se</button></a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
 
         <!-- Conteúdo principal -->
         <main class="main-vestibulares">
@@ -130,11 +122,7 @@
         </main>
 
         <!-- Rodapé -->
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
 
     <script src="../../assets/Javascript/sidebar.js"></script>
