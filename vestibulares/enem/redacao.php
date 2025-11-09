@@ -198,8 +198,8 @@
                         <p>Passo a passo para fazer sua inscrição</p>
                         <div class="ler-mais ler-mais--enem"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
-                    <h4>Calendário</h4>
-                        <p>Datas importantes do Enem</p>
+                    <h4>Calendário Enem</h4>
+                        <p>Todas as datas importantes do processo</p>
                         <div class="ler-mais ler-mais--enem"><a href="redacao.php">Ler mais</a></div>
                 </div>
             </aside>
