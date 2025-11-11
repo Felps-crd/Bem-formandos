@@ -1,4 +1,41 @@
-<?php // vestibulares/enem/home-enem.php ?>
+<?php
+include_once("../../assets/php/conexao.php");
+
+$vestibular_id = 1; // ENEM
+
+// Busca taxa
+$taxa = null;
+if ($stmt = $conexao->prepare("SELECT taxa FROM vestibulares WHERE id = ?")) {
+    $stmt->bind_param("i", $vestibular_id);
+    $stmt->execute();
+    $res = $stmt->get_result();
+    if ($row = $res->fetch_assoc()) {
+        $taxa = number_format((float)$row['taxa'], 2, ',', '.');
+    }
+    $stmt->close();
+}
+
+// Busca período de inscrições no calendário (titulo contendo "inscr" / "inscrição")
+$periodo_inscricoes = null;
+if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHERE vestibular_id = ? AND (titulo LIKE ? OR titulo LIKE ?) ORDER BY data_inicio ASC LIMIT 1")) {
+    $like1 = '%inscr%';
+    $like2 = '%inscrição%';
+    $stmt->bind_param("iss", $vestibular_id, $like1, $like2);
+    $stmt->execute();
+    $res = $stmt->get_result();
+    if ($row = $res->fetch_assoc()) {
+        $inicio = $row['data_inicio'];
+        $fim = $row['data_fim'];
+        $format = function($d){ return $d ? date('d/m/Y', strtotime($d)) : ''; };
+        if ($inicio && $fim) {
+            $periodo_inscricoes = $format($inicio) .' - ' .$format($fim);
+        } elseif ($inicio) {
+            $periodo_inscricoes = $format($inicio);
+        }
+    }
+    $stmt->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,44 +70,56 @@
                     <hr>
                     <p>Aprenda como fazer sua inscrição no Enem de forma rápida e segura. Siga nosso guia passo a passo e não perca nenhum detalhe importante do processo.</p>
                 </section>
-                <div class="infos-importantes">
-                        <div class="conteudo-infos-importantes">
-                            <div class="header-infos-importantes">
-                                <i class="bi bi-info-circle-fill"></i>
-                                <strong class="titulo-infos-importantes">Informações Importantes</strong>
-                            </div>
-                            <p class="texto-infos-importantes"><strong class="destaque-texto-infos-importantes">Período de inscrições:</strong> 26/05 a 13/06/2025</p>
-                            <p class="texto-infos-importantes"><strong class="destaque-texto-infos-importantes">Taxa de inscrição:</strong> R$ 85,00</p>
-                            <p class="texto-infos-importantes"><strong class="destaque-texto-infos-importantes">Site oficial:</strong> <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem">enem.inep.gov.br</a></p>
+                <div class="infos-importantes infos-importantes--enem">
+                    <div class="conteudo-infos-importantes">
+                        <div class="header-infos-importantes header-infos-importantes--enem">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <strong class="titulo-infos-importantes titulo-infos-importantes--enem">Informações Importantes</strong>
                         </div>
+
+                        <p class="texto-infos-importantes texto-infos-importantes--enem">
+                            <strong class="destaque-texto-infos-importantes destaque-texto-infos-importantes--enem">Período de inscrições:</strong>
+                            <?= htmlspecialchars($periodo_inscricoes ?? 'A definir'); ?>
+                        </p>
+
+                        <p class="texto-infos-importantes texto-infos-importantes--enem">
+                            <strong class="destaque-texto-infos-importantes destaque-texto-infos-importantes--enem">Taxa de inscrição:</strong>
+                            R$ <?= htmlspecialchars($taxa ?? '0,00'); ?>
+                        </p>
+
+                        <p class="texto-infos-importantes texto-infos-importantes--enem">
+                            <strong class="destaque-texto-infos-importantes destaque-texto-infos-importantes--enem">Site oficial:</strong>
+                            <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem" target="_blank" rel="noopener">enem.inep.gov.br</a>
+                        </p>
+                    </div>
                 </div>
                 <section id="requisitos">
                     <h2>Requisitos para Inscrição</h2>
                     <div class="area-cards area-cards--requisitos">
                         <div class="cards card--requisito">
                             <div class="conteudo-card">
-                                <span class="icone-info"><i class="bi bi-person-vcard-fill"></i></span>
+                                <span class="icone-info icone-info--enem"><i class="bi bi-person-vcard-fill"></i></span>
                                 <h3 class="titulo-info">Documento de Identidade</h3>
                                 <p class="texto-info">CPF válido e documento oficial com foto.</p>
                             </div>
                         </div>
                         <div class="cards card--requisito">
                             <div class="conteudo-card">
-                                <span class="icone-info"><i class="bi bi-envelope-fill"></i></span>
+                                <span class="icone-info icone-info--enem"><i class="bi bi-envelope-fill"></i></span>
                                 <h3 class="titulo-info">E-mail Válido</h3>
                                 <p class="texto-info">E-mail ativo para receber confirmações e comunicados importantes.</p>
                             </div>
                         </div>
                         <div class="cards card--requisito">
                             <div class="conteudo-card">
-                                <span class="icone-info"><i class="bi bi-telephone-fill"></i></span>
+                                <span class="icone-info icone-info--enem"><i class="bi bi-telephone-fill"></i></span>
                                 <h3 class="titulo-info">Telefone</h3>
                                 <p class="texto-info">Número de telefone para contato em caso de necessidade</p>
                             </div>
                         </div>
                         <div class="cards card--requisito">
                             <div class="conteudo-card">
-                                <span class="icone-info"><i class="bi bi-credit-card-fill"></i></span>
+                                <span class="icone-info icone-info--enem"><i class="bi bi-credit-card-fill"></i></span>
                                 <h3 class="titulo-info">Forma de Pagamento</h3>
                                 <p class="texto-info">Cartão de crédito/débito ou boleto bancário para pagamento da taxa</p>
                             </div>
@@ -102,7 +151,7 @@
                             </div>
                             <p class="texto-card-passo">Informe seus dados pessoais com atenção</p>
                             <p class="texto-card-passo"><strong>Dados obrigatórios:</strong></p>
-                            <ul class="lista-dados --enem">
+                            <ul class="lista-dados">
                                 <li class="item-dados">Nome completo (conforme documento)</li>
                                 <li class="item-dados">CPF</li>
                                 <li class="item-dados">Data de nascimento</li>
@@ -117,7 +166,7 @@
                                 <h3 class="titulo-card-passo">Informe os Dados de Contato</h3>
                             </div>
                             <p class="texto-card-passo">Preencha suas informações de contato e endereço</p>
-                            <ul class="lista-dados --enem">
+                            <ul class="lista-dados">
                                 <li class="item-dados">E-mail: Use um e-mail que você acessa regularmente</li>
                                 <li class="item-dados">Telefone: Celular com DDD</li>
                                 <li class="item-dados">Endereço completo: CEP, rua, número, bairro, cidade e estado</li>
@@ -129,7 +178,7 @@
                                 <h3 class="titulo-card-passo">Dados Escolares</h3>
                             </div>
                             <p class="texto-card-passo">Informe sua situação escolar atual</p>
-                            <ul class="lista-dados --enem">
+                            <ul class="lista-dados">
                                 <li class="item-dados">Tipo de escola: Pública ou privada</li>
                                 <li class="item-dados">Situação: Já concluiu, está cursando ou vai concluir em 2025</li>
                             </ul>
@@ -141,7 +190,7 @@
                             </div>
                             <p class="texto-card-passo">Solicite atendimento especial se necessário</p>
                             <p class="texto-card-passo"><strong>Tipos de atendimentos disponíveis:</strong></p>
-                            <ul class="lista-dados --enem">
+                            <ul class="lista-dados">
                                 <li class="item-dados">Prova em Braille</li>
                                 <li class="item-dados">Prova com letra ampliada</li>
                                 <li class="item-dados">Intérprete de Libras</li>
@@ -150,10 +199,10 @@
                                 <li class="item-dados">Tempo adicional</li>
                                 <li class="item-dados">Sala de fácil acesso</li>
                             </ul>
-                            <div class="card-info">
+                            <div class="card-info card-info--enem">
                                 <div class="conteudo-card-info">
                                     <i class="bi bi-info-circle-fill"></i>
-                                    <p class="texto-card-info">Você precisará enviar a documentação comprobatória</p>
+                                    <p class="texto-card-info texto-card-info--enem">Você precisará enviar a documentação comprobatória</p>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +212,7 @@
                                 <h3 class="titulo-card-passo">Tratamento pelo nome social</h3>
                             </div>
                             <p class="texto-card-passo">Solicite o uso do nome social se desejar ser identificado dessa forma no exame.</p>
-                            <ul class="lista-dados --enem">
+                            <ul class="lista-dados">
                                 <li class="item-dados">Destinado a pessoas transgênero e travestis.</li>
                                 <li class="item-dados">É necessário anexar documento que comprove o uso do nome social</li>
                                 <li class="item-dados">O nome social será usado no Cartão de Confirmação e no dia da aplicação da prova.</li>
@@ -175,7 +224,7 @@
                                 <h3 class="titulo-card-passo">Língua Estrangeira</h3>
                             </div>
                             <p class="texto-card-passo">Escolha entre Inglês ou Espanhol</p>
-                            <ul class="lista-dados --enem">
+                            <ul class="lista-dados">
                                 <li class="item-dados">A escolha não pode ser alterada após a inscrição</li>
                                 <li class="item-dados">Considere sua afinidade com cada idioma</li>
                             </ul>
@@ -186,7 +235,7 @@
                                 <h3 class="titulo-card-passo">Questionário Socioeconômico</h3>
                             </div>
                             <p class="texto-card-passo">Responda as questões sobre sua situação socioeconômica</p>
-                            <ul class="lista-dados --enem">
+                            <ul class="lista-dados">
                                 <li class="item-dados">Informações sobre renda familiar</li>
                                 <li class="item-dados">Escolaridade dos pais</li>
                                 <li class="item-dados">Condições de moradia</li>
@@ -199,16 +248,16 @@
                                 <h3 class="titulo-card-passo">Revisão e Confirmação</h3>
                             </div>
                             <p class="texto-card-passo">Revise todos os dados antes de finalizar</p>
-                            <ul class="lista-dados --enem">
+                            <ul class="lista-dados">
                                 <li class="item-dados">Confira todos os dados pessoais</li>
                                 <li class="item-dados">Verifique o e-mail e telefone</li>
                                 <li class="item-dados">Confirme a língua estrangeira escolhida</li>
                                 <li class="item-dados">Revise as solicitações de atendimento especial e nome social</li>
                             </ul>
-                            <div class="card-info">
+                            <div class="card-info card-info--enem">
                                 <div class="conteudo-card-info">
                                     <i class="bi bi-exclamation-triangle-fill"></i>
-                                    <p class="texto-card-info">Após confirmar, alguns dados não poderão ser alterados</p>
+                                    <p class="texto-card-info texto-card-info--enem">Após confirmar, alguns dados não poderão ser alterados</p>
                                 </div>
                             </div>
                         </div>
@@ -219,15 +268,15 @@
                             </div>
                             <p class="texto-card-passo">Efetue o pagamento da taxa de inscrição</p>
                             <p class="texto-card-passo"><strong>Formas de pagamento:</strong></p>
-                            <ul class="lista-dados --enem">
-                                <li class="item-dados">Boleto bancário: Vencimento até 12/06/2025</li>
+                            <ul class="lista-dados">
+                                <li class="item-dados">Boleto bancário</li>
                                 <li class="item-dados">Cartão de crédito</li>
                                 <li class="item-dados">Pix</li>
                             </ul>
-                            <div class="card-info">
+                            <div class="card-info card-info--enem">
                                 <div class="conteudo-card-info">
                                     <i class="bi bi-lightbulb-fill"></i>
-                                    <p class="texto-card-info">Guarde o comprovante de pagamento</p>
+                                    <p class="texto-card-info texto-card-info--enem">Guarde o comprovante de pagamento</p>
                                 </div>
                             </div>
                         </div>

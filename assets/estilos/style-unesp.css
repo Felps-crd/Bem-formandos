@@ -24,3 +24,83 @@
 .destaques--unesp i{
     color: var(--cor-principal-unesp);
 }
+
+/* INSCRICAO */
+/* INFORMAÇÕES IMPORTANTES */
+.icone-info--unesp{
+  background-color: var(--cor-principal-unesp);
+}
+
+.infos-importantes--unesp{
+  background: #fffbe5;
+  border-left: 6px solid var(--cor-principal-unesp);
+  color: var(--cor-destaque-unesp);
+}
+.texto-infos-importantes--unesp{
+  color: var(--cor-destaque-unesp);
+}
+.destaque-texto-infos-importantes--unesp{
+  color: var(--cor-destaque-unesp);
+}
+.texto-infos-importantes--unesp a{
+  color: var(--cor-destaque-unesp);
+}
+
+/* PASSO A PASSO */
+
+.dot--unesp{ 
+  background-color: var(--cor-principal-unesp); 
+}
+
+.card-info--unesp{
+  border: 1px solid var(--cor-principal-unesp);
+   background: #fffbe5;
+}
+
+.card-info--unesp i{
+  color: var(--cor-destaque-unesp);
+}
+.texto-card-info--unesp{
+  color: var(--cor-destaque-unesp);
+}
+
+/* TAXA */
+.card-reducao-taxa{
+  border-radius: 10px;
+  border: 0.5px solid #BEBEBE;
+  margin-bottom: 20px;
+}
+
+.titulo-reducao-taxa{
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 30px 50px 15px;
+}
+.linha-reducao{
+  border: 1px solid rgba(30, 30, 30, 0.20);
+  width: 90%;
+  margin: auto;
+}
+.titulo-isencao{
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 20px 50px;
+}
+.subtitulo-isencao{
+  color: rgba(31, 41, 55, 0.80);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 8px 50px;
+}
+.texto-reducao{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1F2937;
+  padding: 8px;
+}
+.conteudo-reducao{
+  padding: 0px 50px 30px 50px;
+}

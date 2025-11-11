@@ -24,3 +24,43 @@
 .destaques--provao i{
     color: var(--cor-principal-provao);
 }
+
+/* INSCRICAO */
+
+/* INFORMAÇÕES IMPORTANTES */
+.icone-info--provao{
+  background-color: var(--cor-principal-provao);
+}
+
+.infos-importantes--provao{
+  background: #d6e4ff;
+  border-left: 6px solid var(--cor-principal-provao);
+  color: var(--cor-destaque-provao);
+}
+.texto-infos-importantes--provao{
+  color: var(--cor-destaque-provao);
+}
+.destaque-texto-infos-importantes--provao{
+  color: var(--cor-destaque-provao);
+}
+.texto-infos-importantes--provao a{
+  color: var(--cor-destaque-provao);
+}
+
+/* PASSO A PASSO */
+
+.dot--provao{ 
+  background-color: var(--cor-principal-provao); 
+}
+
+.card-info--provao{
+  border: 1px solid var(--cor-principal-provao);
+   background: #d6e4ff;
+}
+
+.card-info--provao i{
+  color: var(--cor-destaque-provao);
+}
+.texto-card-info--provao{
+  color: var(--cor-destaque-provao);
+}

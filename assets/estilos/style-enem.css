@@ -22,7 +22,6 @@
   border-left: 6px solid var(--cor-principal-enem);
   border-radius: 10px;
   padding: 18px 20px;
-  margin: 24px 40px;
   display: flex;
   align-items: flex-start;
   gap: 16px;
@@ -55,7 +54,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 40px 30px 70px 30px;
+    padding: 40px 30px 0px 30px;
 }
 
 .area-card {
@@ -101,10 +100,6 @@
 FIM HOME ENEM */
 
 /* REDACAO ENEM */
-#estrutura-redacao{
-  margin-top: 50px;
-}
-
 .passos-redacao p{
   color: rgba(30, 30, 30, 0.50);
   text-align: center;
@@ -117,11 +112,13 @@ FIM HOME ENEM */
 .passos-redacao{
   display: flex;
   align-items: center;
-  padding: 40px 10px 70px 10px;
+  padding: 40px 10px 0px 10px;
   justify-content: space-around;
 }
 
-.dot--enem{ background-color: var(--cor-principal-enem); }
+.dot--enem{ 
+  background-color: var(--cor-principal-enem); 
+}
 
 
 .card-estrutura{
@@ -157,7 +154,7 @@ FIM HOME ENEM */
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  padding: 40px 30px 70px 30px;
+  padding: 40px 30px 0px 30px;
 }
 
 .card-criterio p{
@@ -315,248 +312,48 @@ FIM HOME ENEM */
 /* FIM REDACAO ENEM */
 
 /* CALENDARIO ENEM */
-#cronograma{
-  margin-top: 50px;
-}
 
-.calendario {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  margin: 32px 0;
-  font-family: Inter;
-}
-
-.calendario-card {
-  background: var(--backgrond);
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  border: 2px solid var(--cor-borda);
-  padding: 28px 24px;
-  min-width: 320px;
-}
-
-.calendario-divisor {
-  border: none;
-  border-top: 1px solid var(--cor-borda);
-  margin: 10px 0;
-}
-
-.calendario-card-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.icone-card{
-  color: var(--backgrond);
-  background-color: var(--cor-principal-enem);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;              
-  align-items: center;        
-  justify-content: center;
-  font-size: 1.6rem;
-}
-
-.calendario-card-titulo {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--cor-titulo);
-}
-
-.calendario-card-mes {
-  margin-left: auto;
-  background: var(--cor-principal-enem);
-  color: var(--backgrond);
-  font-weight: 500;
-  border-radius: 10px;
-  padding: 4px 16px;
-  font-size: 1rem;
-}
-
-.calendario-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-size: 1rem;
-  padding: 1% 0%;
-}
-
-.calendario-item-label {
-  color: var(--cor-texto-primaria);
-  font-weight: 500;
-}
-
-.calendario-item-data {
-  color: var(--cor-texto-primaria);
-  font-weight: 700;
-  
-}
 
 /* INFORMAÇÕES IMPORTANTES */
-.area-cards{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 20px;
-}
-
-.cards{
-  border: 2px solid #E5E7EB;
-  border-radius: 10px;
-}
-.conteudo-card{
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-.icone-info{
-  width: 50px;
-  height: 50px;
-  font-size: 2em;
-  display: flex;
+.icone-info--enem{
   background-color: var(--cor-principal-enem);
-  color:#f8f8f8;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
 }
-.titulo-info{
-  font-size: 1.5em;
-  font-weight: 700;
-  font-family: Inter;
-}
-.texto-info{
-  text-align: center;
-  font-family: Inter;
-  font-size: 1em;
-  font-weight: 500;
-}
+
 /* FIM CALENDARIO */
 
 /* INSCRICAO */
-.infos-importantes{
+
+.infos-importantes--enem{
   background: var(--cor-secundaria-enem);
   border-left: 6px solid var(--cor-principal-enem);
-  border-radius: 10px;
-  padding: 18px 20px;
-  margin: 24px 200px;
-  display: flex;
+  color: var(--cor-destaque-enem);
+}
+.texto-infos-importantes--enem{
+  color: var(--cor-destaque-enem);
+}
+.destaque-texto-infos-importantes--enem{
+  color: var(--cor-destaque-enem);
+}
+.texto-infos-importantes--enem a{
+  color: var(--cor-destaque-enem);
+}
 
-}
-.conteudo-infos-importantes{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.header-infos-importantes{
-  display: flex;
-  gap: 15px;
-}
-.header-infos-importantes i{
-  font-size: 1.6em;
-  color: var(--cor-destaque-enem);
-}
-.titulo-infos-importantes{
-  color: var(--cor-destaque-enem);
-  font-family: Inter;
-  font-size: 1.5em;
-}
-.texto-infos-importantes{
-  font-family: Inter;
-  font-size: 1.10em;
-  font-weight: 500;
-  color: var(--cor-destaque-enem);
-  margin: 0;
-}
-.destaque-texto-infos-importantes{
-  color: var(--cor-destaque-enem);
-  text-align: justify;
-  font-family: Inter;
-  font-size: 1.10em;
-  font-weight: 700;
-}
-.texto-infos-importantes a{
-  color: var(--cor-destaque-enem);
-  font-family: Inter;
-  font-size: 1.10em;
-  font-weight: 600;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-skip-ink: auto;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
-}
 
 
 /* PASSO A PASSO */
 
-.card-passo{
-  border-radius: 10px;
-  border: 0.5px solid #E5E7EB;
-  padding: 30px;
-}
-.header-passo{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.titulo-card-passo{
-  font-family: Inter;
-  font-size: 1.25em;
-  font-weight: 700;
-}
-.texto-card-passo{
-  color: #757575;
-  font-family: Inter;
-  font-size: 1em;
-  font-weight: 500;
-  margin: 10px 0;
-  padding-left: 45px;
-}
-.texto-card-passo a{
-  color: #757575;
-  text-decoration-line: underline;
-}
-.lista-dados{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  color: #5B5B5B;
-  font-family: Inter;
-  font-size: 1em;
-  font-weight: 600;
-  padding-left: 50px;
+
+
+.card-info--enem{
+  border: 1px solid var(--cor-principal-enem);
+   background: #E6F4E8;
 }
 
-.card-info{
-  border-radius: 10px;
-  border: 1px solid var(--cor-principal-enem);
-  background: #E6F4E8;
-  margin: 20px 40px 0 40px;
-}
-.conteudo-card-info{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 10px;
-}
-.card-info i{
-  font-size: 1.25em;
+.card-info--enem i{
   color: var(--cor-destaque-enem);
 }
-.texto-card-info{
+.texto-card-info--enem{
   color: var(--cor-destaque-enem);
-  font-family: Inter;
-  font-size: 1em;
-  font-weight: 500;
 }
 /* CARD LATERAL DICAS */
 .lista-dicas{
@@ -574,30 +371,6 @@ FIM HOME ENEM */
   gap: 5px;
 }
 
-.solicita{
-  margin-left: 30px;
-}
-
-.titulo-isencao{
-  color: #1F2937;
-  font-family: Inter;
-  font-size: 1.25em;
-  font-weight: 700;
-  padding-bottom: 8px;
-}
-.lista-isencao{
-  color: #1F2937;
-  font-family: Inter;
-  font-size: 1em;
-  font-weight: 500;
-  margin-left: 20px;
-}
-.item-lista-isencao{
-  padding: 5px;
-}
-.linha-isencao{
-  margin: 25px 0;
-}
 
 /* SISU */
 .requisitos{
@@ -680,6 +453,10 @@ FIM HOME ENEM */
   text-align: center;
   padding: 20px;
   border-radius: 10px 10px 0 0;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 .titulo-card-tipo{
   color: #2F3847; 
@@ -687,11 +464,10 @@ FIM HOME ENEM */
   font-family: Inter;
   font-size: 1.40em;
   font-weight: 600;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
 }
 .texto-card-tipo{
   color: #2F3847;
-  text-align: center !important;
   font-family: Inter;
   font-size: 1em;
   font-weight: 500;
@@ -753,4 +529,34 @@ FIM HOME ENEM */
 }
 .card-aviso--prouni{
    grid-column: 1 / span 2;
+}
+
+/* FIES */
+.area-cards--pagamento{
+  margin: 0px 50px;
+}
+.destaques--enem i{
+  color: var(--cor-principal-enem);
+}
+
+.titulo-pagamento{
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.subtitulo-pagamento{
+  color: rgba(255, 255, 255, 0.699);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.texto-card-tipo--pagamento{
+  font-size: 1.15rem;
+  color: #5B5B5B;
+  font-family: Inter;
+  font-weight: 500;
+  
 }

@@ -43,7 +43,6 @@
                 </div>
 
                 <p>Qualquer pessoa que já terminou ou está terminando o ensino médio pode fazer o Enem. Quem ainda está estudando pode participar como "treineiro", só pra testar seus conhecimentos.</p>
-                <br>
 
                 <!-- Áreas de conhecimento -->
                 <section id="areas-conhecimento">

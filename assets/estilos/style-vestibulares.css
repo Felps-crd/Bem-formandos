@@ -54,7 +54,7 @@ h3{
     background: var(--background);
     padding: 50px 100px;
     margin-bottom: 32px;
-    gap: 40px;
+    gap: 80px;
 }
 
 .container-conteudo{
@@ -79,6 +79,180 @@ h3{
 }
 
 /* FIM estilos padrões todas páginas*/
+
+/* PAGINAS INSCRICAO */
+.infos-importantes{
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 0px 170px;
+  display: flex;
+}
+.conteudo-infos-importantes{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.header-infos-importantes{
+  display: flex;
+  gap: 15px;
+}
+.header-infos-importantes i{
+  font-size: 1.6em;
+}
+.titulo-infos-importantes{
+  font-family: Inter;
+  font-size: 1.5em;
+}
+.texto-infos-importantes{
+  font-family: Inter;
+  font-size: 1.10em;
+  font-weight: 500;
+  margin: 0;
+}
+.destaque-texto-infos-importantes{
+  font-family: Inter;
+  font-size: 1.10em;
+  font-weight: 700;
+}
+.texto-infos-importantes a{
+  font-family: Inter;
+  font-size: 1.10em;
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+/* CARDS REQUISITOS PARA INSCRICAO */
+.area-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.cards{
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+}
+.conteudo-card{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.icone-info{
+  width: 50px;
+  height: 50px;
+  font-size: 2em;
+  display: flex;
+  color:#f8f8f8;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.titulo-info{
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: Inter;
+}
+.texto-info{
+  text-align: center !important;
+  font-family: Inter;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+/* PASSO A PASSO INSCRICAO */
+.card-passo{
+  border-radius: 10px;
+  border: 0.5px solid #E5E7EB;
+  padding: 30px;
+}
+.header-passo{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.titulo-card-passo{
+  font-family: Inter;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+.texto-card-passo{
+  color: #757575;
+  font-family: Inter;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 10px 0;
+  padding-left: 45px;
+}
+.texto-card-passo a{
+  color: #757575;
+  text-decoration-line: underline;
+}
+.lista-dados{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #5B5B5B;
+  font-family: Inter;
+  font-size: 1em;
+  font-weight: 600;
+  padding-left: 50px;
+}
+
+.conteudo-card-info{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+.card-info{
+  border-radius: 10px;
+  margin: 20px 40px 0 40px;
+}
+
+.card-info i{
+  font-size: 1.25em;
+}
+.texto-card-info{
+  font-family: Inter;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+/* ISENCAO */
+
+.solicita{
+  margin-left: 30px;
+}
+
+.titulo-isencao{
+  color: #1F2937;
+  font-family: Inter;
+  font-size: 1.25em;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+.lista-isencao{
+  color: #1F2937;
+  font-family: Inter;
+  font-size: 1em;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.item-lista-isencao{
+  padding: 5px;
+}
+.linha-isencao{
+  margin: 25px 0;
+}
 
 /* PAINEL LATERAL ESQUERDO */
 h4{
@@ -175,7 +349,7 @@ h4{
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 40px 30px 70px 30px;
+  padding: 40px 30px 0px 30px;
 }
 
 .destaque-card{

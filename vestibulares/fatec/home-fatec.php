@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-fatec.php';?>
@@ -47,7 +36,7 @@
 
                 <section id="destaques">
                     <div class="destaques destaques--fatec"> 
-                        <h2 class="destaques-titulo">Destaques da Fuvest</h2>
+                        <h2 class="destaques-titulo">Destaques da Fatec</h2>
                         <div class="destaque-card">
                             <i class="bi bi-journal-bookmark-fill"></i>
                             <div class="destaque-conteudo">
@@ -121,11 +110,7 @@
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

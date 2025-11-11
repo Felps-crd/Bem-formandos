@@ -24,3 +24,44 @@
 .destaques--fuvest i{
     color: var(--cor-principal-fuvest);
 }
+
+
+/* INSCRICAO */
+
+/* INFORMAÇÕES IMPORTANTES */
+.icone-info--fuvest{
+  background-color: var(--cor-principal-fuvest);
+}
+
+.infos-importantes--fuvest{
+  background: #ffefd6;
+  border-left: 6px solid var(--cor-principal-fuvest);
+  color: var(--cor-destaque-fuvest);
+}
+.texto-infos-importantes--fuvest{
+  color: var(--cor-destaque-fuvest);
+}
+.destaque-texto-infos-importantes--fuvest{
+  color: var(--cor-destaque-fuvest);
+}
+.texto-infos-importantes--fuvest a{
+  color: var(--cor-destaque-fuvest);
+}
+
+/* PASSO A PASSO */
+
+.dot--fuvest{ 
+  background-color: var(--cor-principal-fuvest); 
+}
+
+.card-info--fuvest{
+  border: 1px solid var(--cor-principal-fuvest);
+   background: #ffe8bd;
+}
+
+.card-info--fuvest i{
+  color: var(--cor-destaque-fuvest);
+}
+.texto-card-info--fuvest{
+  color: var(--cor-destaque-fuvest);
+}

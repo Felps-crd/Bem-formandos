@@ -24,3 +24,43 @@
 .destaques--fatec i{
     color: var(--cor-principal-fatec);
 }
+
+/* INSCRICAO */
+
+/* INFORMAÇÕES IMPORTANTES */
+.icone-info--fatec{
+  background-color: var(--cor-principal-fatec);
+}
+
+.infos-importantes--fatec{
+  background: #ffe1e1;
+  border-left: 6px solid var(--cor-principal-fatec);
+  color: var(--cor-destaque-fatec);
+}
+.texto-infos-importantes--fatec{
+  color: var(--cor-destaque-fatec);
+}
+.destaque-texto-infos-importantes--fatec{
+  color: var(--cor-destaque-fatec);
+}
+.texto-infos-importantes--fatec a{
+  color: var(--cor-destaque-fatec);
+}
+
+/* PASSO A PASSO */
+
+.dot--fatec{ 
+  background-color: var(--cor-principal-fatec); 
+}
+
+.card-info--fatec{
+  border: 1px solid var(--cor-principal-fatec);
+   background: #ffe1e1;
+}
+
+.card-info--fatec i{
+  color: var(--cor-destaque-fatec);
+}
+.texto-card-info--fatec{
+  color: var(--cor-destaque-fatec);
+}

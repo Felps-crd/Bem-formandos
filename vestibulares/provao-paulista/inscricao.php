@@ -1,3 +1,30 @@
+<?php
+include_once("../../assets/php/conexao.php");
+
+$vestibular_id = 1; // ENEM --- TROCAR POR PROVAO!!
+
+
+// Busca período de inscrições no calendário (titulo contendo "inscr" / "inscrição")
+$periodo_inscricoes = null;
+if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHERE vestibular_id = ? AND (titulo LIKE ? OR titulo LIKE ?) ORDER BY data_inicio ASC LIMIT 1")) {
+    $like1 = '%inscr%';
+    $like2 = '%inscrição%';
+    $stmt->bind_param("iss", $vestibular_id, $like1, $like2);
+    $stmt->execute();
+    $res = $stmt->get_result();
+    if ($row = $res->fetch_assoc()) {
+        $inicio = $row['data_inicio'];
+        $fim = $row['data_fim'];
+        $format = function($d){ return $d ? date('d/m/Y', strtotime($d)) : ''; };
+        if ($inicio && $fim) {
+            $periodo_inscricoes = $format($inicio) .' - ' .$format($fim);
+        } elseif ($inicio) {
+            $periodo_inscricoes = $format($inicio);
+        }
+    }
+    $stmt->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,18 +45,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-provao.php';?>
@@ -41,7 +57,102 @@
                         COMO SE INSCREVER
                     </h1>
                     <hr>
+                    <p>Guia completo sobre o processo de inscrição automática e manual</p>
+                </section>
+                <div class="infos-importantes infos-importantes--provao">
+                    <div class="conteudo-infos-importantes">
+                        <div class="header-infos-importantes header-infos-importantes--provao">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <strong class="titulo-infos-importantes titulo-infos-importantes--provao">Informações Importantes</strong>
+                        </div>
 
+                        <p class="texto-infos-importantes texto-infos-importantes--provao">
+                            <strong class="destaque-texto-infos-importantes destaque-texto-infos-importantes--provao">Período de inscrições:</strong>
+                            <?= htmlspecialchars($periodo_inscricoes ?? 'A definir'); ?>
+                        </p>
+
+                        <p class="texto-infos-importantes texto-infos-importantes--provao">
+                            <strong class="destaque-texto-infos-importantes destaque-texto-infos-importantes--provao">Site oficial:</strong>
+                            <a href="https://www.vunesp.com.br/SEED2503" target="_blank" rel="noopener">www.vunesp.com.br</a>
+                        </p>
+                    </div>
+                </div>
+                <section id="tipo-inscricao">
+                        <p>O processo de inscrição no Provão Paulista Seriado é dividido em duas modalidades: inscrição automática para estudantes de determinadas redes de ensino e inscrição manual para outros grupos.</p>
+                        <p>Todos os candidatos, independentemente do tipo de inscrição, precisarão escolher seus cursos no portal da Vunesp.</p>
+                        <div class="area-card-inscricao">
+                            <div class="card-inscricao">
+                                
+                            </div>
+                        </div>
+                </section>
+                <section id="passo-a-passo">
+                    <h2>Passo a Passo da Inscrição</h2>
+                    <div class="area-cards">
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--provao">1</span>
+                                <h3 class="titulo-card-passo">Acesso ao Portal</h3>
+                            </div>
+                            <p class="texto-card-passo">Acesse: <strong><a class="link-provao" href="https://www.vunesp.com.br/SEED2503">www.vunesp.com.br</a></strong></p>
+                            <p class="texto-card-passo">Clique em "Inscrição"</p>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--provao">2</span>
+                                <h3 class="titulo-card-passo">Preencha os Dados Pessoais</h3>
+                            </div>
+                            <p class="texto-card-passo">Informe seus dados pessoais com atenção</p>
+                            <p class="texto-card-passo"><strong>Dados obrigatórios:</strong></p>
+                            <ul class="lista-dados">
+                                <li class="item-dados">Nome completo (conforme documento)</li>
+                                <li class="item-dados">CPF</li>
+                                <li class="item-dados">Data de nascimento</li>
+                                <li class="item-dados">E-mail</li>
+                                <li class="item-dados">Telefone</li>
+                            </ul>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--provao">3</span>
+                                <h3 class="titulo-card-passo">Informações Educacionais</h3>
+                            </div>
+                            <p class="texto-card-passo">Dados de escolaridade</p>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--provao">4</span>
+                                <h3 class="titulo-card-passo">Escolha do Polo</h3>
+                            </div>
+                            <p class="texto-card-passo">Selecione local da prova</p>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--provao">5</span>
+                                <h3 class="titulo-card-passo">Solicite Participação Específica</h3>
+                            </div>
+                            <p class="texto-card-passo">Se necessário, solicite recursos de atendimento especial</p>
+                            <ul class="lista-dados">
+                                <li class="item-dados">Acessibilidade</li>
+                                <li class="item-dados">Nome Social</li>
+                                <li class="item-dados">Lactantes</li>
+                            </ul>
+                            <div class="card-info card-info--provao">
+                                <div class="conteudo-card-info">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                    <p class="texto-card-info texto-card-info--provao">Você precisará enviar a documentação comprobatória</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--provao">6</span>
+                                <h3 class="titulo-card-passo">Revise e Confirme os Dados</h3>
+                            </div>
+                            <p class="texto-card-passo">Confira todas as informações antes de prosseguir.</p>
+                            <p class="texto-card-passo">Anote seu número de inscrição</p>
+                        </div>
+                </section>
             </div>
             <aside class="painel-lateral">
                 <div class="card">
@@ -73,11 +184,7 @@
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

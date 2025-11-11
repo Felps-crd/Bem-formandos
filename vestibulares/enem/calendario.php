@@ -168,11 +168,11 @@ unset($subitens, $valor); // Boa prática
             <section id="introducao">
                 <h1 class="titulo titulo--enem"><i class="bi bi-calendar-fill"></i> CALENDÁRIO</h1>
                 <hr>
-                <p>Fique por dentro de todas as datas importantes do ENEM 2025. Aqui você encontra o cronograma completo com prazos de inscrição, pagamento e aplicação das provas.</p>
+                <p>Fique por dentro de todas as datas importantes do Enem. Aqui você encontra o cronograma completo com prazos de inscrição, pagamento e aplicação das provas.</p>
             </section>
 
             <section id="cronograma">
-                <h2>Cronograma Completo ENEM 2025</h2>
+                <h2>Cronograma Completo Enem <?php echo date('Y');?></h2>
 
                 <?php foreach ($grupos as $nome => $eventosGrupo): ?>
                     <div class="area-card">
@@ -211,21 +211,21 @@ unset($subitens, $valor); // Boa prática
                 <div class="area-cards area-cards--info">
                     <div class="cards card--info">
                         <div class="conteudo-card">
-                            <span class="icone-info"><i class="bi bi-geo-alt-fill"></i></span>
+                            <span class="icone-info icone-info--enem"><i class="bi bi-geo-alt-fill"></i></span>
                             <h3 class="titulo-info">Local de Prova</h3>
                             <p class="texto-info">O local será divulgado no cartão de confirmação. Não é possível escolher o local de aplicação.</p>
                         </div>
                     </div>
                     <div class="cards card--info">
                          <div class="conteudo-card">
-                            <span class="icone-info"><i class="bi bi-person-vcard-fill"></i></span>
+                            <span class="icone-info icone-info--enem"><i class="bi bi-person-vcard-fill"></i></span>
                             <h3 class="titulo-info">Documentos</h3>
                             <p class="texto-info">Leve documento original com foto. Não é aceito protocolo ou cópia, mesmo que autenticada.</p>
                          </div>    
                     </div>
                     <div class="cards card--info">
                          <div class="conteudo-card">
-                            <span class="icone-info"><i class="bi bi-phone-fill"></i></span>
+                            <span class="icone-info icone-info--enem"><i class="bi bi-phone-fill"></i></span>
                             <h3 class="titulo-info">Eletrônicos</h3>
                             <p class="texto-info">Aparelhos eletrônicos devem ser desligados e guardados no envelope lacrado fornecido.</p>
                          </div>
@@ -244,7 +244,7 @@ unset($subitens, $valor); // Boa prática
                 </div>
                 <hr>
                 <ul>
-                    <li><a href="#introducao">Cronograma Enem 2025</a></li>
+                    <li><a href="#introducao">Cronograma Enem <?php echo date('Y');?></a></li>
                     <li><a href="#infos-importantes">Informações Importantes</a></li>
                 </ul>
             </div>

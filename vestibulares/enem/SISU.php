@@ -36,39 +36,39 @@
                 <section id="explicacao-sisu">
                     <h2>O que é Sisu?</h2>
                     <p>O Sistema de Seleção Unificada (SISU) é um sistema informatizado do Ministério da Educação (MEC) por meio do qual instituições públicas de ensino superior oferecem vagas para candidatos participantes do Enem.</p>
-                    <div class="area-cards area-cards--requisitos">
-                        <div class="cards">
-                            <div class="conteudo-card">
-                                <span class="icone-info"><i class="bi bi-mortarboard-fill"></i></span>
-                                <h3 class="titulo-info">Universidades Públicas</h3>
-                                <p class="texto-info">Acesso a mais de 120 instituições públicas de ensino superior em todo o Brasil</p>
+                    <div class="destaques destaques--enem">
+                        <div class="destaque-card">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Universidades Públicas</h3>
+                                <p class="destaque-texto">Acesso a mais de 120 instituições públicas de ensino superior em todo o Brasil</p>
                             </div>
                         </div>
-                        <div class="cards">
-                            <div class="conteudo-card">
-                                <span class="icone-info"><i class="bi bi-sort-numeric-up-alt"></i></span>
-                                <h3 class="titulo-info">Notas de Corte</h3>
-                                <p class="texto-info">Sistema transparente baseado na nota do ENEM e concorrência em tempo real</p>
+                        <div class="destaque-card">
+                            <i class="bi bi-sort-numeric-up-alt"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Notas de Corte</h3>
+                                <p class="destaque-texto">Sistema transparente baseado na nota do ENEM e concorrência em tempo real</p>
                             </div>
                         </div>
-                        <div class="cards">
-                            <div class="conteudo-card">
-                                <span class="icone-info"><i class="bi bi-people-fill"></i></span>
-                                <h3 class="titulo-info">Cotas Sociais</h3>
-                                <p class="texto-info">Reserva de vagas para estudantes de escolas públicas, negros, pardos e indígenas</p>
+                        <div class="destaque-card">
+                            <i class="bi bi-people-fill"></i>
+                            <div class="destaque-conteudo">
+                                <h3 class="destaque-titulo">Cotas Sociais</h3>
+                                <p class="destaque-texto">Reserva de vagas para estudantes de escolas públicas, negros, pardos e indígenas</p>
                             </div>
                         </div>
-                        <div class="cards">
-                            <div class="conteudo-card">
-                                <span class="icone-info"><i class="bi bi-phone-fill"></i></span>
-                                <h3 class="titulo-info">Acesso Digital</h3>
-                                <p class="texto-info">Inscrições e acompanhamento totalmente online, disponível 24 horas por dia</p>
+                        <div class="destaque-card">
+                            <i class="bi bi-phone-fill"></i>
+                            <div class="destaque-conteudod">
+                                <h3 class="destaque-titulo">Acesso Digital</h3>
+                                <p class="destaque-texto">Inscrições e acompanhamento totalmente online, disponível 24 horas por dia</p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section id="como-funciona">
-                    <h2>Como Funciona o Sisu?</h2>
+                    <h2>Como Funciona o Sisu</h2>
                     <div class="area-cards">
                         <div class="card-passo">
                             <div class="header-passo">
