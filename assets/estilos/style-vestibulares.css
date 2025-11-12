@@ -400,6 +400,72 @@ h4{
   gap: 3px;
 }
 
+/* PAGINA VESTIBULAR */
+/* FORMATO PROVA */
+.cards-prova{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.card-prova{
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.conteudo-cards-prova{
+  padding: 50px 50px 20px 50px;
+}
+.titulo-prova{
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+.subtitulo-prova{
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.texto-prova{
+  font-size: 21px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.lista-infos-prova{
+  color: #2F3847;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 20px;
+}
+.item-lista-infos-prova{
+  padding: 3px;
+}
+
+/* MODALIDADE INGRESSO */
+.box-cards-ingresso{
+  display: flex;
+  gap: 20px;
+}
+.card-ingresso{
+  border-radius: 10px;
+  border: 0.7px solid rgba(0, 0, 0, 0.25);
+}
+.titulo-ingresso{
+  text-align: center !important;
+  font-family: Gabarito;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 30px 10px 5px 10px;
+}
+.texto-ingresso{
+  color: var(--cor-texto-terciaria);
+  font-size: 1rem;
+  text-align: center !important;
+  padding: 5px 20px 30px 20px;
+}
+
 /* VARIAVEIS CSS */
 :root{
   --background: #fff;

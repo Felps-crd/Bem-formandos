@@ -64,3 +64,8 @@
 .texto-card-info--fatec{
   color: var(--cor-destaque-fatec);
 }
+
+/* COMO FUNCIONA O VESTIBULAR */
+.titulo-prova--fatec{
+  color: var(--cor-principal-fatec);
+}

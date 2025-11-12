@@ -126,6 +126,140 @@ if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHER
                         </div>
                     </div>
                 </section>
+                <section id="passo-a-passo">
+                    <h2>Passo a Passo da Inscrição</h2>
+                    <div class="area-cards">
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--unicamp">1</span>
+                                <h3 class="titulo-card-passo">Acesse o Site Oficial</h3>
+                            </div>
+                            <p class="texto-card-passo">Entre no site oficial da unicamp: <strong><a class="link-unicamp" href="https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026">www.comvest.unicamp.br</a></strong></p>
+                            <p class="texto-card-passo">Acesse a página de Inscrição</p>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--unicamp">2</span>
+                                <h3 class="titulo-card-passo">Cadastro de Candidato</h3>
+                            </div>
+                            <p class="texto-card-passo">Crie uma conta no sistema de inscrições</p>
+                            <p class="texto-card-passo">Informe os dados solicitados e crie uma senha segura para acessar o sistema</p>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--unicamp">3</span>
+                                <h3 class="titulo-card-passo">Preencha os Dados Pessoais</h3>
+                            </div>
+                            <p class="texto-card-passo">Informe seus dados pessoais com atenção</p>
+                            <p class="texto-card-passo"><strong>Dados obrigatórios:</strong></p>
+                            <ul class="lista-dados">
+                                <li class="item-dados">Nome completo (conforme documento)</li>
+                                <li class="item-dados">CPF</li>
+                                <li class="item-dados">Data de nascimento</li>
+                                <li class="item-dados">Informações escolares</li>
+                                <li class="item-dados">Estado civil</li>
+                                <li class="item-dados">Cor/raça</li>
+                            </ul>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--unicamp">4</span>
+                                <h3 class="titulo-card-passo">Escolha os Cursos</h3>
+                            </div>
+                            <p class="texto-card-passo">Selecione até 2 opções de curso da mesma área de conhecimento</p>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--unicamp">5</span>
+                                <h3 class="titulo-card-passo">Solicite Participação Específica</h3>
+                            </div>
+                            <p class="texto-card-passo">Se necessário, solicite recursos de acessibilidade</p>
+                            <ul class="lista-dados">
+                                <li class="item-dados">Tempo adicional</li>
+                                <li class="item-dados">Prova ampliada</li>
+                                <li class="item-dados">Intérprete de Libras</li>
+                                <li class="item-dados">Ledor</li>
+                                <li class="item-dados">Sala especial</li>
+                                <li class="item-dados">Outros recursos</li>
+                            </ul>
+                            <div class="card-info card-info--unicamp">
+                                <div class="conteudo-card-info">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                    <p class="texto-card-info texto-card-info--unicamp">Você precisará enviar a documentação comprobatória</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--unicamp">6</span>
+                                <h3 class="titulo-card-passo">Revise e Confirme os Dados</h3>
+                            </div>
+                            <p class="texto-card-passo">Confira todas as informações antes de prosseguir.</p>
+                            <p class="texto-card-passo">Corrija se necessário e confirme para continuar.</p>
+                            <div class="card-info card-info--unicamp">
+                                <div class="conteudo-card-info">
+                                    <i class="bi bi-exclamation-triangle-fill"></i>
+                                    <p class="texto-card-info texto-card-info--unicamp">Após confirmar, alguns dados não poderão ser alterados</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--unicamp">7</span>
+                                <h3 class="titulo-card-passo">Questionário Socioeconômico</h3>
+                            </div>
+                            <p class="texto-card-passo">Responda as questões sobre sua situação socioeconômica</p>
+                            <ul class="lista-dados">
+                                <li class="item-dados">Informações sobre renda familiar</li>
+                                <li class="item-dados">Escolaridade dos pais</li>
+                                <li class="item-dados">Condições de moradia</li>
+                                <li class="item-dados">Acesso a bens e serviços</li>
+                            </ul>
+                        </div>
+                        <div class="card-passo">
+                            <div class="header-passo">
+                                <span class="dot dot--unicamp">8</span>
+                                <h3 class="titulo-card-passo">Pagamento da Taxa</h3>
+                            </div>
+                            <p class="texto-card-passo">Efetue o pagamento da taxa de inscrição</p>
+                            <p class="texto-card-passo"><strong>Formas de pagamento:</strong></p>
+                            <ul class="lista-dados">
+                                <li class="item-dados">Boleto bancário</li>
+                                <li class="item-dados">Cartão de crédito</li>
+                            </ul>
+                            <p class="texto-card-passo"> A inscrição será confirmada somente após a compensação do pagamento.</p>
+                            <div class="card-info card-info--unicamp">
+                                <div class="conteudo-card-info">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                    <p class="texto-card-info texto-card-info--unicamp">Guarde o comprovante de pagamento</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="isencao">
+                    <h2>Isenção da Taxa de Inscrição</h2>
+                    <div class="solicita">
+                        <h3 class="titulo-isencao">Quem tem Direito à Isenção?</h3>
+                        <ul class="lista-isencao">
+                            <li class="item-lista-isencao">Candidatos com renda familiar per capita de até 1,5 salário mínimo que cursaram integralmente o ensino médio em escolas públicas</li>
+                            <li class="item-lista-isencao">Funcionários da Universidade Unicamp e Funcamp</li>
+                            <li class="item-lista-isencao">Candidatos aos cursos noturnos de Licenciatura ou Tecnologia</li>
+                            <li class="item-lista-isencao">Estudantes bolsistas de escolas particulares</li>
+                        </ul>
+                    </div>
+                    <hr class="linha-isencao">
+
+                    <div class="solicita">
+                        <h3 class="titulo-isencao">Como Solicitar?</h3>
+                        <ol class="lista-isencao">
+                            <li class="item-lista-isencao">Acesse o site oficial da Comvest no período específico</li>
+                            <li class="item-lista-isencao">Preencha os dados solicitados</li>
+                            <li class="item-lista-isencao">Envie a documentação necessária</li>
+                            <li class="item-lista-isencao">Aguarde o resultado da análise</li>
+                        </ol>
+                    </div>
+                </section> 
 
             </div>
             <aside class="painel-lateral">
@@ -136,9 +270,9 @@ if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHER
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#requisitos">Requisitos</a></li>
+                            <li><a href="#passo-a-passo">Passo a Passo</a></li>
+                            <li><a href="#isencao">Isenção de Taxa</a></li>
                         </ul>
                 </div>
                 <div class="card">
@@ -147,12 +281,12 @@ if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHER
                         <h3>Conteúdo Relacionado</h3>
                     </div>
                     <hr>
-                    <h4>Como se inscrever na unicamp</h4>
-                        <p>Passo a passo para fazer sua inscrição</p>
-                        <div class="ler-mais ler-mais--unicamp"><a href="inscricao.php">Ler mais</a></div>
+                    <h4>Calendário Unicamp</h4>
+                        <p>Todas as datas importantes do processo</p>
+                        <div class="ler-mais ler-mais--unicamp"><a href="calendario.php">Ler mais</a></div>
                         <hr>
-                    <h4>Vestibular unicamp</h4>
-                        <p>Tudo sobre o vestibular da unicamp</p>
+                    <h4>Vestibular Unicamp</h4>
+                        <p>Tudo sobre o vestibular da Unicamp</p>
                         <div class="ler-mais ler-mais--unicamp"><a href="vestibular.php">Ler mais</a></div>
                 </div>
             </aside>

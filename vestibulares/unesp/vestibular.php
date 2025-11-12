@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-unesp.php';?>
@@ -41,6 +30,57 @@
                         COMO FUNCIONA O VESTIBULAR
                     </h1>
                     <hr>
+                    <p>O Vestibular da UNESP é o principal meio de ingresso para os cursos de graduação da Universidade Estadual Paulista, uma das mais prestigiadas instituições de ensino superior do Brasil. O processo seletivo é composto por duas fases que avaliam conhecimentos gerais e capacidade de argumentação dos candidatos.</p><br>
+                    <p>Conheça as etapas e áreas cobradas para se preparar melhor.</p>
+                </section>
+                <section id="formato-prova">
+                    <h2>Formato da Prova</h2>
+                    <div class="cards-prova">
+                        <div class="card-prova">
+                            <div class="conteudo-cards-prova">
+                                <h3 class="titulo-prova titulo-prova--unesp">Primeira Fase</h3>
+                                <h4 class="subtitulo-prova">Prova de Conhecimentos Gerais:</h4>
+                                <p class="texto-prova">90 questões de múltipla escolha, abrangendo todas as disciplinas do Ensino Médio</p>
+                                <ul class="lista-infos-prova">
+                                    <li class="item-lista-infos-prova">Duração: até 5 horas</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-prova">
+                            <div class="conteudo-cards-prova">
+                                <h3 class="titulo-prova titulo-prova--unesp">Segunda Fase</h3>
+                                <h4 class="subtitulo-prova">Primeiro Dia</h4>
+                                <ul class="lista-infos-prova">
+                                    <li class="item-lista-infos-prova">24 questões discursivas das áreas de Ciências Humanas e Sociais Aplicadas; Ciências da Natureza e suas tecnologias e Matemática e suas tecnologias</li>
+                                    <li class="item-lista-infos-prova">Duração: até 5 horas</li>
+                                </ul>
+                                <h4 class="subtitulo-prova">Segundo Dia</h4>
+                                <ul class="lista-infos-prova">
+                                    <li class="item-lista-infos-prova">12 questões discursivas de Linguagens e suas tecnologias</li>
+                                    <li class="item-lista-infos-prova">Redação</li>
+                                    <li class="item-lista-infos-prova">Duração: até 5 horas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="modalidades-ingresso">
+                    <h2>Modalidades de Ingresso</h2>
+                    <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Sistema Universal (SU)</p>
+                            <p class="texto-ingresso">Todas as pessoas candidatas concorrem às vagas gerais</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Sistema de Reserva de Vagas para Educação Básica Pública (SRVEBP)</p>
+                            <p class="texto-ingresso">Vagas reservadas para estudantes de escola pública</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">SRVEBP + PPI</p>
+                            <p class="texto-ingresso">Pessoas Pretas, Pardas e Indígenas de escola pública</p>
+                        </div>
+                    </div>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -73,11 +113,7 @@
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

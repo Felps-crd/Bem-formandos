@@ -65,3 +65,49 @@
 .texto-card-info--fuvest{
   color: var(--cor-destaque-fuvest);
 }
+
+/* COMO FUNCIONA O VESTIBULAR */
+/* FORMATO DE PROVA */
+.titulo-prova--fuvest{
+  color: var(--cor-principal-fuvest);
+}
+/* SIMULADO */
+.titulo-como-funciona{
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 20px 20px 0px 20px;
+}
+.lista-como-funciona{
+  color: #5B5B5B;
+  font-size: 1.2rem;
+  font-family: Inter;
+  padding: 20px;
+  margin-left: 30px;
+}
+.item-lista-como-funciona{
+  padding: 3px;
+}
+
+/* OBRAS LITERARIAS */
+.card-obras{
+  border-radius: 10px;
+  border: 1px solid rgba(65, 65, 65, 0.15);
+}
+.header-card-obras{
+  display: flex;
+  gap: 10px;
+  padding: 30px 30px 10px 30px;
+  align-items: end;
+}
+.lista-obras{
+  color: #2F3847;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0px 50px 20px 50px;
+}
+.titulo-obra{
+  font-weight: 700;
+}
+.obra{
+  padding: 10px;
+}

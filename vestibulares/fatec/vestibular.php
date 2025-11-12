@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-fatec.php';?>
@@ -41,6 +30,32 @@
                         COMO FUNCIONA O VESTIBULAR
                     </h1>
                     <hr>
+                    <p>O Vestibular da Fatec é o principal meio de ingresso para os cursos de graduação tecnológica oferecidos pela instituição O processo seletivo é composto por uma prova objetiva, com questões de múltipla escolha que abrangem diversas áreas do conhecimento, e por uma redação, que avalia a capacidade de argumentação e expressão escrita do candidato.</p><br>
+                    <p>Conheça as etapas e áreas cobradas para se preparar melhor.</p>
+                </section>
+                <section id="formato-prova">
+                    <h2>Formato da Prova</h2>
+                    <div class="cards-prova">
+                        <div class="card-prova">
+                            <div class="conteudo-cards-prova">
+                                <h3 class="titulo-prova titulo-prova--fatec">Fase Única</h3>
+                                <h4 class="subtitulo-prova">Questões Objetivas:</h4>
+                                <p class="texto-prova">54 questões de múltipla escolha, abrangendo diversas áreas do conhecimento.</p>
+                                <ul class="lista-infos-prova">
+                                    <li class="item-lista-infos-prova">Linguaguens e Códigos</li>
+                                    <li class="item-lista-infos-prova">Ciências Humanas</li>
+                                    <li class="item-lista-infos-prova">Ciências da Natureza</li>
+                                    <li class="item-lista-infos-prova">Matemática</li>
+                                    <li class="item-lista-infos-prova">Raciocínio Lógico</li>
+                                </ul>
+                                <h4 class="subtitulo-prova">Redação:</h4>
+                                <p class="texto-prova">Uma proposta de redação para avaliar a capacidade de argumentação e expressão escrita.</p>
+                            </div>
+                        </div>
+                        <p>É fundamental que o candidato se prepare bem para todas as áreas, pois o desempenho em cada uma delas contribui para a nota final. A redação também tem peso significativo e pode ser um diferencial na classificação.</p>
+                    </div>
+                </section>
+                
 
             </div>
             <aside class="painel-lateral">
@@ -51,9 +66,7 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#formato-prova">Formato de Prova</a></li>
                         </ul>
                 </div>
                 <div class="card">
@@ -66,18 +79,14 @@
                         <p>Passo a passo para fazer sua inscrição</p>
                         <div class="ler-mais ler-mais--fatec"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
-                    <h4>Vestibular Fatec</h4>
-                        <p>Tudo sobre o vestibular da Fatec</p>
+                    <h4>Calendário Fatec</h4>
+                        <p>Todas as datas importantes do processo</p>
                         <div class="ler-mais ler-mais--fatec"><a href="vestibular.php">Ler mais</a></div>
                 </div>
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>
