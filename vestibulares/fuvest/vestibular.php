@@ -69,6 +69,31 @@
                         </div>
                     </div>
                 </section>
+                <section id="habilidades-especificas">
+                    <h2>Provas de Competências Específicas</h2>
+                    <p>As Provas de Competências Específicas são exames práticos ou teórico-práticos que testam as competências artísticas, criativas ou técnicas do candidato. Elas acontecem após a primeira fase do vestibular e sua nota compõe a média final do candidato junto com as notas da primeira e segunda fase.</p>
+                    <h3 class="subtitulo-secao">Cursos que exigem:</h3>
+                    <div class="cursos-habilidades">
+                        <div class="curso">
+                            <i class="bi bi-palette-fill"></i>
+                            <p class="nome-curso">Artes Visuais</p>
+                        </div>
+                        <div class="curso">
+                            <i class="bi bi-person-walking"></i>
+                            <p class="nome-curso">Artes Cênicas</p>
+                        </div>
+                        <div class="curso">
+                            <i class="bi bi-music-note"></i>
+                            <p class="nome-curso">Música</p>
+                        </div>
+                    </div>
+                    <h3 class="subtitulo-secao">Como funciona a avaliação</h3>
+                    <p>Cada curso tem um formato específico de prova, mas todas valem de 0 a 100 pontos. Existe uma pontuação mínima que o candidato precisa atingir para não ser desclassificado.</p>
+                    <div class="aviso-provas">
+                        <p class="titulo-aviso-provas">Importante</p>
+                        <p class="texto-aviso-provas">Se você pretende prestar um desses cursos, consulte o Manual do Candidato para saber exatamente o que será cobrado, quais materiais levar e como se preparar adequadamente para a prova de habilidades.</p>
+                    </div>
+                </section>
                 <section id="modalidades-ingresso">
                     <h2>Modalidades de Ingresso</h2>
                     <div class="box-cards-ingresso">
@@ -141,6 +166,7 @@
                     <hr>
                         <ul>
                             <li><a href="#formato-prova">Formato de Prova</a></li>
+                            <li><a href="#habilidades-especificas">Competências Específicas</a></li>
                             <li><a href="#modalidades-ingresso">Modalidades de Ingresso</a></li>
                             <li><a href="#simulado">Simulado</a></li>
                             <li><a href="#obras-literarias">Obras Literárias</a></li>

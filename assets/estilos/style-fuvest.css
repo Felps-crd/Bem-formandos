@@ -88,6 +88,17 @@
   padding: 3px;
 }
 
+.curso i{
+  color: var(--cor-principal-fuvest);
+}
+
+.aviso-provas{
+  border: 1px solid var(--cor-principal-fuvest);
+}
+.titulo-aviso-provas{
+  color: var(--cor-principal-fuvest);
+}
+
 /* OBRAS LITERARIAS */
 .card-obras{
   border-radius: 10px;

@@ -32,7 +32,7 @@
 }
 
 .infos-importantes--unesp{
-  background: #fffbe5;
+  background: #fffdf0;
   border-left: 6px solid var(--cor-principal-unesp);
   color: var(--cor-destaque-unesp);
 }
@@ -103,4 +103,20 @@
 }
 .conteudo-reducao{
   padding: 0px 50px 30px 50px;
+}
+
+/* COMO FUNCIONA O VESTIBULAR */
+.titulo-prova--unesp{
+  color: var(--cor-destaque-unesp);
+}
+
+.curso i{
+  color: var(--cor-destaque-unesp);
+}
+
+.aviso-provas{
+  border: 1px solid var(--cor-destaque-unesp);
+}
+.titulo-aviso-provas{
+  color: var(--cor-destaque-unesp);
 }

@@ -64,6 +64,43 @@
                         </div>
                     </div>
                 </section>
+                <section id="habilidades-especificas">
+                    <h2>Provas de Habilidades Específicas</h2>
+                    <p>As Provas de Habilidades Específicas são exames práticos ou teórico-práticos que testam as competências artísticas, criativas ou técnicas do candidato. Elas acontecem após a primeira fase do vestibular e sua nota compõe a média final do candidato junto com as notas da primeira e segunda fase.</p>
+                    <h3 class="subtitulo-secao">Cursos que exigem:</h3>
+                    <div class="cursos-habilidades">
+                        <div class="curso">
+                            <i class="bi bi-building-fill"></i>
+                            <p class="nome-curso">Arquitetura e Urbanismo</p>
+                        </div>
+                        <div class="curso">
+                            <i class="bi bi-palette-fill"></i>
+                            <p class="nome-curso">Artes Visuais</p>
+                        </div>
+                        <div class="curso">
+                            <i class="bi bi-stars"></i>
+                            <p class="nome-curso">Arte Teatro</p>
+                        </div>
+                        <div class="curso">
+                            <i class="bi bi-person-walking"></i>
+                            <p class="nome-curso">Artes Cênicas</p>
+                        </div>
+                        <div class="curso">
+                            <i class="bi bi-vector-pen"></i>
+                            <p class="nome-curso">Design</p>
+                        </div>
+                        <div class="curso">
+                            <i class="bi bi-music-note"></i>
+                            <p class="nome-curso">Música</p>
+                        </div>
+                    </div>
+                    <h3 class="subtitulo-secao">Como funciona a avaliação</h3>
+                    <p>Cada curso tem um formato específico de prova, mas todas valem de 0 a 100 pontos. Existe uma pontuação mínima que o candidato precisa atingir para não ser desclassificado.</p>
+                    <div class="aviso-provas">
+                        <p class="titulo-aviso-provas">Importante</p>
+                        <p class="texto-aviso-provas">Se você pretende prestar um desses cursos, consulte o Manual do Candidato para saber exatamente o que será cobrado, quais materiais levar e como se preparar adequadamente para a prova de habilidades.</p>
+                    </div>
+                </section>
                 <section id="modalidades-ingresso">
                     <h2>Modalidades de Ingresso</h2>
                     <div class="box-cards-ingresso">
@@ -91,9 +128,9 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#formato-prova">Formato da Prova</a></li>
+                            <li><a href="#habilidades-especificas">Habilidades Específicas</a></li>
+                            <li><a href="#modalidades-ingresso">Modalidades de Ingresso</a></li>
                         </ul>
                 </div>
                 <div class="card">
@@ -106,8 +143,8 @@
                         <p>Passo a passo para fazer sua inscrição</p>
                         <div class="ler-mais ler-mais--unesp"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
-                    <h4>Vestibular Unesp</h4>
-                        <p>Tudo sobre o vestibular da Unesp</p>
+                    <h4>Calendário Unesp</h4>
+                        <p>Todas as datas importantes do processo</p>
                         <div class="ler-mais ler-mais--unesp"><a href="vestibular.php">Ler mais</a></div>
                 </div>
             </aside>

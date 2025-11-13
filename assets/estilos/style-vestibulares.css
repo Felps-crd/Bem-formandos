@@ -23,7 +23,7 @@ p{
 }
 h1{
   color: var(--cor-titulo);
-  font-size: 41px;
+  font-size: 2.625rem;
   font-family: Inter;
   font-weight: 700;
   text-transform: uppercase;
@@ -32,7 +32,7 @@ h1{
 }
 h2{
   color: var(--cor-titulo);
-  font-size: 24px;
+  font-size: 1.625rem;
   font-family: Inter;
   font-weight: 700;
   padding-bottom: 30px;
@@ -443,6 +443,50 @@ h4{
   padding: 3px;
 }
 
+/* HABILIDADES ESPECIFICAS */
+.subtitulo-secao{
+  color: #2F3847;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 35px 20px 30px 20px;
+}
+.cursos-habilidades{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0px 20px 20px 30px;
+}
+.curso{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.curso i{
+  font-size: 1.35rem;
+}
+.curso p{
+  font-weight: 600;
+  font-size: 1.375rem;
+}
+.aviso-provas{
+  border-radius: 10px;
+  margin: 20px 100px;
+  padding: 20px;
+}
+.titulo-aviso-provas{
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.texto-aviso-provas{
+  color: var(--cor-texto-secundaria);
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px;
+}
+
 /* MODALIDADE INGRESSO */
 .box-cards-ingresso{
   display: flex;
@@ -450,17 +494,21 @@ h4{
 }
 .card-ingresso{
   border-radius: 10px;
-  border: 0.7px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--cor-borda-secundaria);
+  display: flex;        
+  flex-direction: column;
+  flex: 1;             
+  justify-content: space-around;
 }
 .titulo-ingresso{
   text-align: center !important;
   font-family: Gabarito;
   font-size: 1.25rem;
   font-weight: 600;
-  padding: 30px 10px 5px 10px;
+  padding: 30px 20px 5px 20px;
 }
 .texto-ingresso{
-  color: var(--cor-texto-terciaria);
+  color: var(--cor-texto-secundaria);
   font-size: 1rem;
   text-align: center !important;
   padding: 5px 20px 30px 20px;
@@ -474,6 +522,7 @@ h4{
   --cor-texto-secundaria: #434B59;
   --cor-texto-terciaria: #8B8B8B;
   --cor-borda: #E5E7EB;
+  --cor-borda-secundaria: #BABABA;
 
 }
 

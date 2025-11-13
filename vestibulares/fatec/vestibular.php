@@ -55,7 +55,25 @@
                         <p>É fundamental que o candidato se prepare bem para todas as áreas, pois o desempenho em cada uma delas contribui para a nota final. A redação também tem peso significativo e pode ser um diferencial na classificação.</p>
                     </div>
                 </section>
-                
+                <section id="pontuacao">
+                    <h2>Pontuação Acrescida</h2>
+                    <p>O Sistema de Pontuação Acrescida é uma política de inclusão implementada pelo Centro Paula Souza (CPS) que concede bônus de pontos à nota final do exame do vestibular das Fatecs.</p>
+                    <p>Este sistema beneficia mais de 80% dos aprovados no vestibular, reconhecendo e valorizando a trajetória educacional e características sociais dos candidatos.</p>
+                     <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">3%</p>
+                            <p class="texto-ingresso">Para candidatos que se autodeclaram como afrodescendentes (pretos, pardos ou indígenas).</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">10%</p>
+                            <p class="texto-ingresso">Para quem cursou integralmente o Ensino Médio em escola pública.</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">13%</p>
+                            <p class="texto-ingresso">Para candidatos que atendem aos dois critérios simultaneamente.</p>
+                        </div>
+                    </div>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -67,6 +85,7 @@
                     <hr>
                         <ul>
                             <li><a href="#formato-prova">Formato de Prova</a></li>
+                            <li><a href="#pontuacao">Pontuação Acrescida</a></li>
                         </ul>
                 </div>
                 <div class="card">

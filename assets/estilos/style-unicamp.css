@@ -33,7 +33,7 @@
 }
 
 .infos-importantes--unicamp{
-  background: #efe0ff;
+  background: #eee2fc;
   border-left: 6px solid var(--cor-principal-unicamp);
   color: var(--cor-destaque-unicamp);
 }
@@ -63,4 +63,20 @@
 }
 .texto-card-info--unicamp{
   color: var(--cor-destaque-unicamp);
+}
+
+/* COMO FUNCIONA O VESTIBULAR */
+.titulo-prova--unicamp{
+  color: var(--cor-principal-unicamp);
+}
+
+.curso i{
+  color: var(--cor-principal-unicamp);
+}
+
+.aviso-provas{
+  border: 1px solid var(--cor-principal-unicamp);
+}
+.titulo-aviso-provas{
+  color: var(--cor-principal-unicamp);
 }

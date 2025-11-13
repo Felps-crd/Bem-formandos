@@ -33,7 +33,7 @@
 }
 
 .infos-importantes--fatec{
-  background: #ffe1e1;
+  background: #ffecec;
   border-left: 6px solid var(--cor-principal-fatec);
   color: var(--cor-destaque-fatec);
 }
@@ -68,4 +68,8 @@
 /* COMO FUNCIONA O VESTIBULAR */
 .titulo-prova--fatec{
   color: var(--cor-principal-fatec);
+}
+
+.box-cards-ingresso{
+  margin-top: 50px;
 }

@@ -64,3 +64,49 @@
 .texto-card-info--provao{
   color: var(--cor-destaque-provao);
 }
+
+/* TIPOS DE INSCRICAO */
+.area-cards-inscricao{
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.card-inscricao{
+  display: flex;
+  flex: 1 1 280px;
+  flex-direction: column;
+  border-radius: 13px;
+  border: 1px solid var(--cor-principal-provao);
+  background: #F8F8F8;
+  box-shadow: 2px 2px 4px 0 rgba(157, 157, 157, 0.25);
+}
+.header-inscricao{
+  border-radius: 10px 10px 0 0;
+  background: var(--cor-principal-provao);
+  padding: 10px;
+}
+.tipo-inscricao{
+  color: #FFF;
+  text-align: center !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.texto-inscricao{
+  text-align: center !important;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 20px;
+}
+.lista-inscricao{
+  color: #2F3847;
+  font-family: Inter;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0px 40px 20px 40px;
+  margin-left: 10px;
+}
+.item-lista-inscricao{
+  padding: 5px;
+}

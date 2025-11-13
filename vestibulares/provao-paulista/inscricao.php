@@ -57,7 +57,7 @@ if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHER
                         COMO SE INSCREVER
                     </h1>
                     <hr>
-                    <p>Guia completo sobre o processo de inscrição automática e manual</p>
+                    <p>Guia completo sobre o processo de inscrição automática e manual.</p>
                 </section>
                 <div class="infos-importantes infos-importantes--provao">
                     <div class="conteudo-infos-importantes">
@@ -78,11 +78,33 @@ if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHER
                     </div>
                 </div>
                 <section id="tipo-inscricao">
+                    <h2>Modalidades de Inscrição</h2>
                         <p>O processo de inscrição no Provão Paulista Seriado é dividido em duas modalidades: inscrição automática para estudantes de determinadas redes de ensino e inscrição manual para outros grupos.</p>
                         <p>Todos os candidatos, independentemente do tipo de inscrição, precisarão escolher seus cursos no portal da Vunesp.</p>
-                        <div class="area-card-inscricao">
+                        <div class="area-cards-inscricao">
                             <div class="card-inscricao">
-                                
+                                <div class="header-inscricao">
+                                    <p class="tipo-inscricao">Automática</p>
+                                </div>
+                                <p class="texto-inscricao">Inscrição realizada automaticamente pela Secretaria da Educação</p>
+                                <ul class="lista-inscricao">
+                                    <li class="item-lista-inscricao">Estudantes da rede estadual de São Paulo</li>
+                                    <li class="item-lista-inscricao">Escolas Técnicas</li>
+                                    <li class="item-lista-inscricao">Escolas conveniadas com USP, Unicamp e Unesp</li>
+                                </ul>
+                            </div>
+                            <div class="card-inscricao">
+                                <div class="header-inscricao">
+                                    <p class="tipo-inscricao">Manual</p>
+                                </div>
+                                <p class="texto-inscricao">Necessário se inscrever manualmente no site da Vunesp no período específico</p>
+                                <ul class="lista-inscricao">
+                                    <li class="item-lista-inscricao">Estudantes da modalidade EJA - Ensino Médio</li>
+                                    <li class="item-lista-inscricao">Estudantes de redes municipais do estado de São Paulo</li>
+                                    <li class="item-lista-inscricao">Redes estaduais e municipais de outros estados do Brasil</li>
+                                    <li class="item-lista-inscricao">Estudantes de instituições federais de ensino</li>
+                                    <li class="item-lista-inscricao">Candidatos que perderam alguma edição da prova anterior</li>
+                                </ul>
                             </div>
                         </div>
                 </section>
@@ -162,9 +184,8 @@ if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHER
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#tipo-inscricao">Modalidades de Inscrição</a></li>
+                            <li><a href="#passo-a-passo">Passo a Passo</a></li>
                         </ul>
                 </div>
                 <div class="card">
@@ -173,8 +194,8 @@ if ($stmt = $conexao->prepare("SELECT data_inicio, data_fim FROM calendario WHER
                         <h3>Conteúdo Relacionado</h3>
                     </div>
                     <hr>
-                    <h4>Como se inscrever no Provão Paulista</h4>
-                        <p>Passo a passo para fazer sua inscrição</p>
+                    <h4>Calendário Provão Paulista</h4>
+                        <p>Todas as datas importantes do processo</p>
                         <div class="ler-mais ler-mais--provao"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
                     <h4>Vestibular Provão Paulista</h4>

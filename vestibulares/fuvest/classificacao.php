@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-fuvest.php';?>
@@ -41,6 +30,42 @@
                         SISTEMA DE CLASSIFICAÇÃO
                     </h1>
                     <hr>
+                    <p>O sistema de classificação do Vestibular Fuvest é baseado no desempenho dos candidatos nas duas fases do processo seletivo.</p> 
+                    <p>A nota final é calculada através de uma média ponderada, com pesos específicos para cada curso, e os candidatos são classificados em ordem decrescente por modalidade.</p>
+                </section>
+                <section id="etapas">
+                    <h2>Etapas da Classificação</h2>
+                    <div class="cards-etapas">
+                        <div class="etapa">
+                            <div class="header-etapa">
+                                <span class="dot dot--fuvest">1</span>
+                                <h3 class="titulo-card-passo">Primeira Fase</h3>
+                                <h4 class="subtitulo-card-etapa">Classificação inicial baseada na prova objetiva</h4>
+                            </div>
+                            <p class="texto-card-etapa">90 questões objetivas (1 ponto cada)</p>
+                            <p class="texto-card-etapa">Nota mínima: 27 acertos (30%)</p>
+                            <p class="texto-card-etapa">Convocação: 4x o número de vagas por modalidade</p>
+                            <p class="texto-card-etapa">Critério: maior número de acertos</p>
+                        </div>
+                        <div class="etapa">
+                            <div class="header-etapa">
+                                <span class="dot dot--fuvest">2</span>
+                                <h3 class="titulo-card-passo">Segunda Fase</h3>
+                                <h4 class="subtitulo-card-etapa">Avaliação discursiva e redação</h4>
+                            </div>
+                            <p class="texto-card-etapa">Dia 1: Português (10 questões) + Redação (150 pontos) </p>
+                            <p class="texto-card-etapa">Dia 2: Disciplinas específicas (12 questões - 100 pontos)</p>
+                            <p class="texto-card-etapa">Eliminação: nota zero na redação ou errar todas as questões</p>
+                        </div>
+                        <div class="etapa">
+                            <div class="header-etapa">
+                                <span class="dot dot--fuvest">3</span>
+                                <h3 class="titulo-card-passo">Classificação Final</h3>
+                                <h4 class="subtitulo-card-etapa">Cálculo da nota final ponderada</h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>   
 
             </div>
             <aside class="painel-lateral">
@@ -73,11 +98,7 @@
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>
