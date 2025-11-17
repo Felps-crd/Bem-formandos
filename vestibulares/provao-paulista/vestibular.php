@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-provao.php';?>
@@ -41,6 +30,58 @@
                         COMO FUNCIONA O VESTIBULAR
                     </h1>
                     <hr>
+                    <p>A prova é seriada, ou seja, você realiza uma avaliação ao final de cada ano do Ensino Médio (1ª, 2ª e 3ª série). A nota final é composta pelo desempenho nas três etapas, com pesos crescentes que valorizam o aprendizado contínuo.</p>
+                </section>
+                <section id="formato-prova">
+                    <h2>Formato da Prova</h2>
+                    <div class="cards-prova">
+                        <div class="card-prova">
+                            <div class="conteudo-cards-prova">
+                                <div class="dia">
+                                    <h3 class="titulo-prova titulo-prova--provao">Primeiro Dia</h3>
+                                <ul class="lista-infos-prova">
+                                    <li class="item-lista-infos-prova">24 questões de Linguagens e suas Tecnologias</li>
+                                    <li class="item-lista-infos-prova">24 questões de Ciências da Natureza</li>
+                                    <li class="item-lista-infos-prova">1 Redação (apenas 3ª série)</li>
+                                </ul>
+                                </div>
+                                <div class="dia">
+                                    <h3 class="titulo-prova titulo-prova--provao">Segundo Dia</h3>
+                                <ul class="lista-infos-prova">
+                                    <li class="item-lista-infos-prova">18 questões de Matemática e suas Tecnologias</li>
+                                    <li class="item-lista-infos-prova">24 questões de Ciências Humanas</li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="peso-nota">
+                    <h2>Peso da Nota por Série</h2>
+                    <p>Por ser um processo seriado, as notas conquistadas ao longo dos anos têm pesos crescentes.</p>
+                    <div class="cards-peso">
+                        <div class="card-peso">
+                            <div class="conteudo-cards-peso">
+                                <p class="serie">1ª Série</p> <span class="peso">15%</span>
+                            </div>
+                        </div>
+                        <div class="card-peso">
+                            <div class="conteudo-cards-peso">
+                                <p class="serie">2ª Série</p> <span class="peso">25%</span>
+                            </div>
+                        </div>
+                        <div class="card-peso">
+                            <div class="conteudo-cards-peso">
+                                <p class="serie">3ª Série</p> <span class="peso">40%</span>
+                            </div>
+                        </div>
+                        <div class="card-peso">
+                            <div class="conteudo-cards-peso">
+                                <p class="serie">Redação (Apenas 3ª Série)</p> <span class="peso">20%</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -51,9 +92,8 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#formato-prova">Formato da Prova</a></li>
+                            <li><a href="#peso-nota">Peso por Série</a></li>
                         </ul>
                 </div>
                 <div class="card">
@@ -66,18 +106,14 @@
                         <p>Passo a passo para fazer sua inscrição</p>
                         <div class="ler-mais ler-mais--provao"><a href="inscricao.php">Ler mais</a></div>
                         <hr>
-                    <h4>Vestibular Provão Paulista</h4>
-                        <p>Tudo sobre o vestibular do Provão Paulista</p>
+                    <h4>Calendário Provão Paulista</h4>
+                        <p>Todas as datas importantes do processo</p>
                         <div class="ler-mais ler-mais--provao"><a href="vestibular.php">Ler mais</a></div>
                 </div>
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

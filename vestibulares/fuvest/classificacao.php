@@ -31,7 +31,24 @@
                     </h1>
                     <hr>
                     <p>O sistema de classificação do Vestibular Fuvest é baseado no desempenho dos candidatos nas duas fases do processo seletivo.</p> 
-                    <p>A nota final é calculada através de uma média ponderada, com pesos específicos para cada curso, e os candidatos são classificados em ordem decrescente por modalidade.</p>
+                    <p>A nota final é calculada através de uma média ponderada e os candidatos são classificados em ordem decrescente por modalidade.</p>
+                </section>
+                <section id="modalidades-ingresso">
+                    <h2>Tipos de Vagas</h2>
+                    <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Ampla Concorrência (AC)</p>
+                            <p class="texto-ingresso">Todas as pessoas candidatas concorrem às vagas gerais</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Escola Pública (EP)</p>
+                            <p class="texto-ingresso">Vagas reservadas para estudantes de escola pública</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">PPI</p>
+                            <p class="texto-ingresso">Pessoas Pretas, Pardas e Indígenas de escola pública</p>
+                        </div>
+                    </div>
                 </section>
                 <section id="etapas">
                     <h2>Etapas da Classificação</h2>
@@ -40,8 +57,8 @@
                             <div class="header-etapa">
                                 <span class="dot dot--fuvest">1</span>
                                 <h3 class="titulo-card-passo">Primeira Fase</h3>
-                                <h4 class="subtitulo-card-etapa">Classificação inicial baseada na prova objetiva</h4>
                             </div>
+                            <h4 class="subtitulo-card-etapa">Classificação inicial baseada na prova objetiva</h4>
                             <p class="texto-card-etapa">90 questões objetivas (1 ponto cada)</p>
                             <p class="texto-card-etapa">Nota mínima: 27 acertos (30%)</p>
                             <p class="texto-card-etapa">Convocação: 4x o número de vagas por modalidade</p>
@@ -51,8 +68,8 @@
                             <div class="header-etapa">
                                 <span class="dot dot--fuvest">2</span>
                                 <h3 class="titulo-card-passo">Segunda Fase</h3>
-                                <h4 class="subtitulo-card-etapa">Avaliação discursiva e redação</h4>
                             </div>
+                            <h4 class="subtitulo-card-etapa">Avaliação discursiva e redação</h4>
                             <p class="texto-card-etapa">Dia 1: Português (10 questões) + Redação (150 pontos) </p>
                             <p class="texto-card-etapa">Dia 2: Disciplinas específicas (12 questões - 100 pontos)</p>
                             <p class="texto-card-etapa">Eliminação: nota zero na redação ou errar todas as questões</p>
@@ -61,7 +78,40 @@
                             <div class="header-etapa">
                                 <span class="dot dot--fuvest">3</span>
                                 <h3 class="titulo-card-passo">Classificação Final</h3>
-                                <h4 class="subtitulo-card-etapa">Cálculo da nota final ponderada</h4>
+                            </div>
+                            <h4 class="subtitulo-card-etapa">Cálculo da nota final ponderada</h4>
+                            <div class="formulas">
+                                <div class="formula">
+                                    <p class="titulo-calculo"> Sem prova de Competências Específicas</p>
+                                    <div class="calculo">
+                                        NF = (F1 + D1 + D2) &divide 3
+                                    </div>
+                                </div>
+                                <div class="formula">
+                                    <p class="titulo-calculo">Com prova de Competências Específicas</p>
+                                    <div class="calculo">
+                                        NF = (F1 + D1 + D2 ) + (2 &times CE) &divide 5
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="legenda">
+                                <p class="legenda-formulas"><strong>NF:</strong> Nota Final</p>
+                                <p class="legenda-formulas"><strong>F1:</strong> Nota da 1ª Fase</p>
+                                <p class="legenda-formulas"><strong>D1:</strong> Nota do 1º dia da 2ª fase</p>
+                                <p class="legenda-formulas"><strong>D2:</strong> Nota do 2º dia da 2ª fase</p>
+                                <p class="legenda-formulas"><strong>CE:</strong> Nota das Competências Específicas</p>
+                            </div>
+                            <hr class="linha-classificacao">
+                            <div class="desempate">
+                                <p>Critérios de Desempate</p>
+                                <ol class="lista-criterios">
+                                    <li class="criterio">Maior nota na 2ª fase</li>
+                                    <li class="criterio">Maior nota na redação</li>
+                                    <li class="criterio">Maior nota nas questões discursivas de português</li>
+                                    <li class="criterio">Maior nota nas questões específicas do curso</li>
+                                    <li class="criterio">Maior nota na 1ª fase</li>
+                                    <li class="criterio">Maior idade</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -76,9 +126,8 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#modalidades-ingresso">Tipos de Vagas</a></li>
+                            <li><a href="#etapas">Etapas da Classificação</a></li>
                         </ul>
                 </div>
                 <div class="card">

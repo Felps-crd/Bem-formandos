@@ -40,7 +40,7 @@
                             <div class="conteudo-cards-prova">
                                 <h3 class="titulo-prova titulo-prova--fatec">Fase Única</h3>
                                 <h4 class="subtitulo-prova">Questões Objetivas:</h4>
-                                <p class="texto-prova">54 questões de múltipla escolha, abrangendo diversas áreas do conhecimento.</p>
+                                <p class="texto-prova">60 questões de múltipla escolha, abrangendo diversas áreas do conhecimento.</p>
                                 <ul class="lista-infos-prova">
                                     <li class="item-lista-infos-prova">Linguaguens e Códigos</li>
                                     <li class="item-lista-infos-prova">Ciências Humanas</li>

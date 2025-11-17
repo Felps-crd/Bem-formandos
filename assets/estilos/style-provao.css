@@ -55,7 +55,6 @@
 
 .card-info--provao{
   border: 1px solid var(--cor-principal-provao);
-   background: #d6e4ff;
 }
 
 .card-info--provao i{
@@ -109,4 +108,66 @@
 }
 .item-lista-inscricao{
   padding: 5px;
+}
+
+/* COMO FUNCIONA O VESTIBULAR */
+/* FORMATO DE PROVA */
+.conteudo-cards-prova{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.titulo-prova--provao{
+  color: var(--cor-principal-provao);
+}
+.materia{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--cor-principal-provao);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #d6e4ff;
+}
+.materia p{
+  font-weight: 600;
+  font-size: 1rem;
+}
+.questoes{
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #F8F8F8;
+  color: var(--cor-destaque-provao);
+  font-family: Inter;
+  border-radius: 10px;
+  padding: 5px;
+}
+.dia{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cards-peso{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-peso{
+  border: 1px solid #BABABA;
+  border-radius: 10px;
+}
+.conteudo-cards-peso{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items:center;
+}
+.serie{
+  font-weight: 500;
+}
+.peso{
+  font-family: Inter;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cor-destaque-provao);
 }

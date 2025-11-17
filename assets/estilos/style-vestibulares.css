@@ -486,6 +486,10 @@ h4{
   font-weight: 500;
   padding: 5px;
 }
+.texto-aviso-provas a{
+  color: var(--cor-texto-secundaria);
+  text-decoration: underline;
+}
 
 /* MODALIDADE INGRESSO */
 .box-cards-ingresso{
@@ -514,6 +518,100 @@ h4{
   padding: 5px 20px 30px 20px;
 }
 
+/* SISTEMA DE CLASSIFICAÇÃO */
+
+.cards-etapas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.etapa{
+  border-radius: 10px;
+  border: 2px solid var(--cor-borda);
+  background: var(--background);
+}
+.etapa:nth-child(3) {
+  grid-column: 1 / -1;
+}
+.header-etapa{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 20px 20px 3px 20px;
+}
+.subtitulo-card-etapa{
+  font-family: Inter;
+  color: var(--cor-texto-terciaria);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0px 50px 20px 75px;
+}
+.texto-card-etapa{
+  color: var(--cor-texto-secundaria);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0px 30px 25px 75px;
+  text-align: left !important;
+}
+
+.formulas{
+  display: flex;
+  justify-content: space-around;
+}
+.formula{
+  border: 3px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.titulo-calculo{
+  font-size: 1rem;
+}
+.calculo{
+  font-size: 1.25rem;
+  font-family: Inter;
+  font-weight: 600;
+  color: var(--cor-texto-secundaria);
+  margin-top: 10px;
+}
+.legenda{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column; 
+  gap: 20px;
+  padding: 40px;
+}
+.legenda-formulas{
+  font-size: 1rem;
+}
+.linha-classificacao{
+  margin: 25px 10px;
+  background: var(--cor-borda);
+  height: 1px;
+  border: 0;
+}
+.desempate{
+  margin-left: 30px;
+}
+.desempate p{
+  font-size: 1.25rem;
+  color: var(--cor-texto-secundaria);
+  font-weight: 500;
+}
+.lista-criterios{
+  display: grid;
+  grid-template-columns: 1fr 1fr;     
+  grid-template-rows: repeat(3, auto);  
+  grid-auto-flow: column;                
+  gap: 20px;
+  padding: 20px 20px 30px 30px;
+}
+.criterio{
+  font-family: Inter;
+  font-size: 1rem;
+  color: var(--cor-texto-primaria);
+}
 /* VARIAVEIS CSS */
 :root{
   --background: #fff;
@@ -524,44 +622,4 @@ h4{
   --cor-borda: #E5E7EB;
   --cor-borda-secundaria: #BABABA;
 
-}
-
-
-
-
-.menu-lateral.fatec {
-  --bg-color: #D65B5B;
-  --hover-color: #a73a3ade;
-  --text-color: #862929;
-  --text-color: #703232;
-
-}
-.container-conteudo.fatec{
-  --cor-titulo: #D65B5B;
-}
-.menu-lateral.fuvest {
-  --bg-color: #E99117;
-  --hover-color: #AB680B;
-  --text-color: #6D4104;
-}
-.container-conteudo.fuvest{
-  --cor-titulo: #E99117;
-}
-
-.menu-lateral.unicamp {
-  --bg-color: #BE87E8;
-  --hover-color: #8E3FCB;
-  --text-color: #612D88;
-}
-.container-conteudo.unicamp{
-  --cor-titulo: #BE87E8;
-}
-
-.menu-lateral.unesp {
-  --bg-color: #EFC84A;
-  --hover-color: #C19B1F;
-  --text-color: #8B6F14;
-}
-.container-conteudo.unesp{
-  --cor-titulo: #EFC84A;
 }

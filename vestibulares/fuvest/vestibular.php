@@ -95,7 +95,7 @@
                     </div>
                 </section>
                 <section id="modalidades-ingresso">
-                    <h2>Modalidades de Ingresso</h2>
+                    <h2>Tipos de Vagas</h2>
                     <div class="box-cards-ingresso">
                         <div class="card-ingresso">
                             <p class="titulo-ingresso">Ampla Concorrência (AC)</p>
@@ -123,6 +123,20 @@
                             <li class="item-lista-como-funciona">Correção detalhada com gabarito comentado</li>
                             <li class="item-lista-como-funciona">Relatório de desempenho individual por área</li>
                         </ul>
+                    </div>
+                    <div class="aviso-provas">
+                        <p class="texto-aviso-provas">
+                            <strong>Período de inscrições:</strong>
+                             25/09 - 07/10/2025
+                        </p>
+                        <p class="texto-aviso-provas">
+                            <strong>Taxa de inscrição:</strong>
+                            R$ 50,00
+                        </p>
+                        <p class="texto-aviso-provas">
+                            <strong>Site oficial:</strong>
+                            <a href="https://www.fuvest.br" target="_blank" rel="noopener">www.fuvest.br</a>
+                        </p>
                     </div>
                 </section>
                 <section id="obras-literarias">
@@ -167,7 +181,7 @@
                         <ul>
                             <li><a href="#formato-prova">Formato de Prova</a></li>
                             <li><a href="#habilidades-especificas">Competências Específicas</a></li>
-                            <li><a href="#modalidades-ingresso">Modalidades de Ingresso</a></li>
+                            <li><a href="#modalidades-ingresso">Tipos de Vagas</a></li>
                             <li><a href="#simulado">Simulado</a></li>
                             <li><a href="#obras-literarias">Obras Literárias</a></li>
                         </ul>
