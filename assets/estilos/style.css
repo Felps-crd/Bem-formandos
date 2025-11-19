@@ -79,10 +79,10 @@ header a{
     font-weight: 600;
 }
 .btn-inicio{
-  font-size: 2.25em;
+  font-size: 2.7em;
   background-color: transparent;
   border: none;
-  margin-right: 310px;
+  margin-right: 60px;
 }
 
 .btn-inicio i{
@@ -92,6 +92,7 @@ header a{
 .btn-inicio i:hover{
   color: #00254b;
   transition: 0.5s;
+  font-size: 0.95em;
 }
 .btn-cadastro{
     width: 184px;

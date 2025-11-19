@@ -233,10 +233,7 @@ while ($row = $result->fetch_assoc()) {
                     <i class="fa-regular fa-pen-to-square"></i>
                 </button>
 
-                <button class="btn-icon delete" 
-                    onclick="if(confirm('Excluir?')) location.href='excluir_vestibular.php?id=<?= $dados['vestibular_id'] ?>'">
-                    <i class="fa-regular fa-trash-can"></i>
-                </button>
+                
             </div>
         </div>
     <?php endforeach; ?>

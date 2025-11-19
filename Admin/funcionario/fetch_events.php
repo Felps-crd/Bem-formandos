@@ -5,7 +5,7 @@ include_once('../../assets/php/conexao.php');
 
 header('Content-Type: application/json; charset=utf-8');
 
-if (!isset($_SESSION['adm_id'])) {
+if (!isset($_SESSION['func_id'])) {
     http_response_code(401);
     echo json_encode(['error' => 'unauthorized']);
     exit;

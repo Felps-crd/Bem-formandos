@@ -124,7 +124,7 @@ alert(data.msg); // mostra só a mensagem amigável
                     <input type="email" name="user_email" id="user_email" placeholder="E-mail" required>
                 </div>
 
-                <div class="input">
+                <div class="input-checkbox">
 
                   <input type="checkbox" id="termos" class="checkbox-personalizado" name="termos" required>
                   <label for="termos">Aceito os <a href="#" onclick="abrirModal('modal-termos'); return false;">Termos e Serviços</a></label>
