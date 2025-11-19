@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-fatec.php';?>
@@ -41,7 +30,68 @@
                         SISTEMA DE CLASSIFICAÇÃO
                     </h1>
                     <hr>
-
+                    <p>O sistema de classificação é baseado na pontuação total obtida pelo candidato na prova objetiva e na redação. A nota de corte varia a cada semestre e curso, dependendo da demanda e do desempenho geral dos candidatos.</p>
+               </section>
+               <section id="pontuacao">
+                    <h2>Pontuação Acrescida</h2>
+                    <p>A Fatec oferece um sistema de pontuação acrescida para candidatos que se enquadram em determinados critérios de inclusão social.</p>
+                     <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">3%</p>
+                            <p class="texto-ingresso">Para candidatos que se autodeclaram como afrodescendentes (pretos, pardos ou indígenas).</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">10%</p>
+                            <p class="texto-ingresso">Para quem cursou integralmente o Ensino Médio em escola pública.</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">13%</p>
+                            <p class="texto-ingresso">Para candidatos que atendem aos dois critérios simultaneamente.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="calculo">
+                    <h2>Cálculo da Nota Final</h2>
+                    <div class="formulas">
+                                <div class="formula">
+                                    <p class="titulo-calculo">Nota Final</p>
+                                    <div class="calculo">
+                                        NF = [ (8 &times ((4 &times (100 &times NPC &divide 60)) + ENEM) &divide 5 ) + (2 &times R) ] &divide 10
+                                    </div>
+                                </div>
+                                <div class="formula">
+                                    <p class="titulo-calculo">Nota Final do Candidato</p>
+                                    <div class="calculo">
+                                        NFC = NF &times multiplicador
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="legenda">
+                                <p class="legenda-formulas"><strong>NF:</strong> Nota Final</p>
+                                <p class="legenda-formulas"><strong>NPC:</strong> Número de acertos na prova objetiva</p>
+                                <p class="legenda-formulas"><strong>ENEM:</strong> Nota do Enem, para os candidatos que optaram por usá-la</p>
+                                <p class="legenda-formulas"><strong>R:</strong> Nota da Redação</p>
+                                <p class="legenda-formulas"><strong>NFC:</strong> Nota Final do Candidato</p>
+                                <p class="legenda-formulas"><strong>multiplicador:</strong> Pontuação acrescida</p>
+                            </div>
+                            <hr class="linha-classificacao">
+                            <div class="desempate">
+                                <p>Critérios de Desempate</p>
+                                <ol class="lista-criterios lista-criterios--fatec">
+                                    <li class="criterio">Maior nota em Matemática</li>
+                                    <li class="criterio">Maior nota em Português</li>
+                                    <li class="criterio">Maior nota em Física</li>
+                                    <li class="criterio">Maior nota em Biologia</li>
+                                    <li class="criterio">Maior nota em Química</li>
+                                    <li class="criterio">Maior nota em História</li>
+                                    <li class="criterio">Maior nota em Geografia</li>
+                                    <li class="criterio">Maior nota em Inglês</li>
+                                    <li class="criterio">Maior nota na Redação</li>
+                                    <li class="criterio">Maior idade</li>
+                                    <li class="criterio">Sorteio</li>
+                                </ol>
+                            </div>
+                </section>
             </div>
             <aside class="painel-lateral">
                 <div class="card">
@@ -51,9 +101,8 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#pontuacao">Pontuação Acrescida</a></li>
+                            <li><a href="#calculo">Cálculo da Nota Final</a></li>
                         </ul>
                 </div>
                 <div class="card">
@@ -73,11 +122,7 @@
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

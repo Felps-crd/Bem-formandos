@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-provao.php';?>
@@ -41,6 +30,22 @@
                         SISTEMA DE CLASSIFICAÇÃO
                     </h1>
                     <hr>
+                    <p>O sistema de classificação do Provão Paulista Seriado é baseado em grupos de candidatos e distribuição de vagas por cotas. Cada instituição de ensino superior participante segue as mesmas diretrizes gerais.</p>
+                </section>
+                <section>
+                    <h2>Grupos de Candidatos</h2>
+                    <p>Os candidatos são divididos em grupos conforme sua origem educacional, e as vagas são distribuídas de forma a garantir oportunidades equitativas para diferentes contextos.</p>
+                    <div class="container-tabs">
+                        <div class="tabs">
+                            <div class="tabs-principal">
+                                <div class="active-tab"></div>
+                                <div class="tabs-tab">Grupo A</div>
+                                <div class="tabs-tab">Grupo B</div>
+                                <div class="tabs-tab">Grupo C</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -73,11 +78,7 @@
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

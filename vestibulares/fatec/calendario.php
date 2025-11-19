@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-fatec.php';?>
@@ -41,6 +30,8 @@
                         CALENDÁRIO
                     </h1>
                     <hr>
+                    <p>O processo seletivo da FATEC acontece semestralmente, com inscrições abertas para ingresso no 1º e 2º semestres. Confira abaixo o cronograma completo com todas as datas importantes.</p>
+               </section>
 
             </div>
             <aside class="painel-lateral">
@@ -73,11 +64,7 @@
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

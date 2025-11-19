@@ -4,7 +4,6 @@ $menu_items = [
      'vestibular.php' => ['label' => 'Vestibular', 'icon' => 'bi bi-file-text-fill'],
      'calendario.php'=> ['label' => 'Calendário','icon' => 'bi bi-calendar-fill'],
      'inscricao.php' => ['label' => 'Inscrição', 'icon' => 'bi bi-person-check-fill'],
-     'cursos.php' => ['label' => 'Cursos Oferecidos', 'icon' => 'bi bi-clipboard-fill'], 
      'classificacao.php'=>['label' => 'Sistema de Classificação', 'icon' => 'bi bi-award-fill']
 ];
 $current = basename($_SERVER['PHP_SELF']);

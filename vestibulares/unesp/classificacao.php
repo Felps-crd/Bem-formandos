@@ -18,18 +18,7 @@
 <body>
     <div class="container-principal">
         <!-- inicio cabeçalho -->
-        <header>
-            <div class="logo">
-                <a href="../../index.php" class="logo">
-                <img src="../../assets/imagens/logo.png" alt="Ícone de formatura">
-                <h1>BEM FORMANDOS</h1>
-                </a>
-            </div>
-
-            <a href="#">
-            <button class="btn-cadastro">Cadastre-se</button>
-            </a>
-        </header>
+        <?php include_once("../../includes/header.php"); ?>
         <!-- fim cabeçalho -->
         <main class="main-vestibulares">
             <?php include __DIR__ . '/sidebar-unesp.php';?>
@@ -41,7 +30,92 @@
                         SISTEMA DE CLASSIFICAÇÃO
                     </h1>
                     <hr>
-
+                    <p>O sistema de classificação do Vestibular UNESP é baseado no desempenho dos candidatos nas duas fases do processo seletivo.</p>
+                    <p>A nota final é calculada através de uma média ponderada e os candidatos são classificados em ordem decrescente por modalidade.</p>
+                </section>
+                <section id="modalidades-ingresso">
+                    <h2>Tipos de Vagas</h2>
+                    <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Sistema Universal (SU)</p>
+                            <p class="texto-ingresso">Todas as pessoas candidatas concorrem às vagas gerais</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">SRVEBP</p>
+                            <p class="texto-ingresso">Vagas reservadas para estudantes de escola pública</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">PPI</p>
+                            <p class="texto-ingresso">Pessoas Pretas, Pardas e Indígenas de escola pública</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="etapas">
+                    <h2>Etapas da Classificação</h2>
+                    <div class="cards-etapas">
+                        <div class="etapa">
+                            <div class="header-etapa">
+                                <span class="dot dot--unesp">1</span>
+                                <h3 class="titulo-card-passo">Primeira Fase</h3>
+                            </div>
+                            <h4 class="subtitulo-card-etapa">Classificação inicial baseada na prova objetiva</h4>
+                            <p class="texto-card-etapa">90 questões objetivas</p>
+                            <p class="texto-card-etapa">Nota mínima: 20 pontos</p>
+                            <p class="texto-card-etapa">Nota máxima: 100 pontos</p>
+                            <p class="texto-card-etapa">Para o candidato que prestou o Enem em 2025, o desempenho da parte objetiva desse exame poderá ser aproveitado na nota</p>
+                           
+                        </div>
+                        <div class="etapa">
+                            <div class="header-etapa">
+                                <span class="dot dot--unesp">2</span>
+                                <h3 class="titulo-card-passo">Segunda Fase</h3>
+                            </div>
+                            <h4 class="subtitulo-card-etapa">Avaliação discursiva e redação</h4>
+                            <p class="texto-card-etapa">Questões discursivas: 1,50 - 2,00. Nota máxima: 72.</p>
+                            <p class="texto-card-etapa"> Redação: 0 a 28 pontos.</p>
+                            <p class="texto-card-etapa">Nota máxima: 100 pontos.</p>
+                            <p class="texto-card-etapa">Eliminação: nota zero na redação ou errar todas as questões.</p>
+                        </div>
+                        <div class="etapa">
+                            <div class="header-etapa">
+                                <span class="dot dot--unesp">3</span>
+                                <h3 class="titulo-card-passo">Classificação Final</h3>
+                            </div>
+                            <h4 class="subtitulo-card-etapa">A nota final será a média aritmética simples das notas de todas as provas</h4>
+                            <div class="formulas">
+                                <div class="formula">
+                                    <p class="titulo-calculo"> Sem prova de Habilidades Específicas</p>
+                                    <div class="calculo">
+                                        NF = (F1 + F2) &divide 2
+                                    </div>
+                                </div>
+                                <div class="formula">
+                                    <p class="titulo-calculo">Com prova de Habilidades Específicas</p>
+                                    <div class="calculo">
+                                        NF = (F1 + F2 + NH) &divide 3
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="legenda">
+                                <p class="legenda-formulas"><strong>NF:</strong> Nota Final</p>
+                                <p class="legenda-formulas"><strong>F1:</strong> Nota da 1ª Fase</p>
+                                <p class="legenda-formulas"><strong>F2:</strong> Nota da 2ª fase</p>
+                                <p class="legenda-formulas"><strong>NH:</strong> Nota das Habilidades Específicas</p>
+                            </div>
+                            <hr class="linha-classificacao">
+                            <div class="desempate">
+                                <p>Critérios de Desempate</p>
+                                <ol class="lista-criterios">
+                                    <li class="criterio">Maior nota na 2ª fase</li>
+                                    <li class="criterio">Maior nota na Redação</li>
+                                    <li class="criterio">Maior nota nos componentes Ciências da Natureza e Matemática da Prova de Conhecimentos Específicos, para candidatos dos cursos das áreas de Exatas ou Biológicas</li>
+                                    <li class="criterio">Maior nota no componente Ciências Humanas e Sociais Aplicadas da Prova de Conhecimentos Específicos, para candidatos dos cursos da área de Humanas</li>
+                                    <li class="criterio">Maior idade</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
             <aside class="painel-lateral">
                 <div class="card">
@@ -51,9 +125,8 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
-                            <li><a href="#">#</a></li>
+                            <li><a href="#modalidades-ingresso">Tipos de Vagas</a></li>
+                            <li><a href="#etapas">Etapas da Classificação</a></li>
                         </ul>
                 </div>
                 <div class="card">
@@ -73,11 +146,7 @@
             </aside>
         </main>
 
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
     </div>
     
       <script src="../../assets/Javascript/sidebar.js"></script>

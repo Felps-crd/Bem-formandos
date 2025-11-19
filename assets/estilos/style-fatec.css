@@ -72,3 +72,12 @@
 .box-cards-ingresso{
   margin-top: 50px;
 }
+
+/* SISTEMA DE CLASSIFICACAO */
+.lista-criterios--fatec{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;        /* 3 colunas */
+  grid-template-rows: repeat(4, auto);   /* 4 linhas por coluna */
+  grid-auto-flow: column;
+  gap: 20px;
+}

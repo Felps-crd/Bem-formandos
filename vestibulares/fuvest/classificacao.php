@@ -106,9 +106,6 @@
                                 <p>Critérios de Desempate</p>
                                 <ol class="lista-criterios">
                                     <li class="criterio">Maior nota na 2ª fase</li>
-                                    <li class="criterio">Maior nota na redação</li>
-                                    <li class="criterio">Maior nota nas questões discursivas de português</li>
-                                    <li class="criterio">Maior nota nas questões específicas do curso</li>
                                     <li class="criterio">Maior nota na 1ª fase</li>
                                     <li class="criterio">Maior idade</li>
                                 </ol>
