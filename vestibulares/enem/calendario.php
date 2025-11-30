@@ -206,6 +206,7 @@ unset($subitens, $valor); // Boa prática
                     </div>
                 <?php endforeach; ?>
             </section>
+            
             <section id="infos-importantes">
                 <h2>Informações Importantes</h2>
                 <div class="area-cards area-cards--info">
