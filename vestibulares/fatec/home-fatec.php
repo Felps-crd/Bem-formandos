@@ -79,6 +79,19 @@
                     <p>Graças à forte conexão com o setor produtivo, os alunos encontram excelentes oportunidades de inserção profissional logo após a graduação.</p>
                     </p>
                 </section>
+                <section id="modalidades-ingresso">
+                    <h2>Formas de Ingresso na Fatec</h2>
+                    <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Vestibular Fatec</p>
+                            <p class="texto-ingresso">Vestibular principal da Fatec, aberto a todos os candidatos</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Provão Paulista</p>
+                            <p class="texto-ingresso">Acesso pela nota acumulada nas provas seriadas do Estado de São Paulo</p>
+                        </div>
+                    </div>
+                </section>
             </div>
             <aside class="painel-lateral">
                 <div class="card">
@@ -88,9 +101,10 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#introducao">O que é Fatec</a></li>
-                            <li><a href="#destaques">Destaques da Fatec</a></li>
-                            <li><a href="#como-funciona">Como Funciona a Fatec</a></li>
+                            <li><a href="#introducao">O que é</a></li>
+                            <li><a href="#destaques">Destaques</a></li>
+                            <li><a href="#como-funciona">Como Funciona</a></li>
+                            <li><a href="#modalidades-ingresso">Formas de Ingresso</a></li>
                         </ul>
                 </div>
                 <div class="card">

@@ -72,6 +72,27 @@
                     <p class="como-funciona-texto">A UNESP possui campi em mais de 20 cidades do Estado de São Paulo, o que permite uma ampla oferta de cursos e oportunidades. O ingresso ocorre por meio do Vestibular UNESP, organizado anualmente pela Vunesp, composto por duas fases com provas objetivas e discursivas. <br> Além do ensino gratuito, a universidade oferece programas de bolsas, moradia estudantil e assistência socioeconômica, garantindo a permanência e o sucesso de seus estudantes.
                     </p>
                 </section>
+                <section id="modalidades-ingresso">
+                    <h2>Formas de Ingresso na Unesp</h2>
+                    <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Vestibular Unesp</p>
+                            <p class="texto-ingresso">Vestibular principal da Unesp, aberto a todos os candidatos</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Enem Unesp</p>
+                            <p class="texto-ingresso">Ingresso usando a nota do Enem em seleção própria da Unesp</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Provão Paulista</p>
+                            <p class="texto-ingresso">Acesso pela nota acumulada nas provas seriadas do Estado de São Paulo</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Olimpíadas</p>
+                            <p class="texto-ingresso">Vagas para medalhistas em olimpíadas científicas reconhecidas</p>
+                        </div>
+                    </div>
+                </section>
 
             </div>
             <aside class="painel-lateral">
@@ -82,9 +103,10 @@
                     </div>
                     <hr>
                         <ul>
-                            <li><a href="#introducao">O que é Unesp</a></li>
-                            <li><a href="#destaques">Destaques da Unesp</a></li>
-                            <li><a href="#como-funciona">Como Funciona a Unesp</a></li>
+                            <li><a href="#introducao">O que é</a></li>
+                            <li><a href="#destaques">Destaques</a></li>
+                            <li><a href="#como-funciona">Como Funciona</a></li>
+                            <li><a href="#modalidades-ingresso">Formas de Ingresso</a></li>
                         </ul>
                 </div>
                 <div class="card">

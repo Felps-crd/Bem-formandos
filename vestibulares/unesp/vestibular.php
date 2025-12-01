@@ -102,7 +102,7 @@
                     </div>
                 </section>
                 <section id="modalidades-ingresso">
-                    <h2>Modalidades de Ingresso</h2>
+                    <h2>Tipos de Vagas</h2>
                     <div class="box-cards-ingresso">
                         <div class="card-ingresso">
                             <p class="titulo-ingresso">Sistema Universal (SU)</p>
@@ -130,7 +130,7 @@
                         <ul>
                             <li><a href="#formato-prova">Formato da Prova</a></li>
                             <li><a href="#habilidades-especificas">Habilidades Específicas</a></li>
-                            <li><a href="#modalidades-ingresso">Modalidades de Ingresso</a></li>
+                            <li><a href="#modalidades-ingresso">Tipos de Vagas</a></li>
                         </ul>
                 </div>
                 <div class="card">

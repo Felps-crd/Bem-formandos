@@ -174,39 +174,192 @@
 
 /* SISTEMA DE CLASSIFICACAO */
 .container-tabs{
+  margin: 10px 80px;
+}
+.tabs-buttons{
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d8d8d8;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.tab-btn{
+  border: none;
+  text-align: center;
+  font-size: 1.20rem;
+  font-family: Inter;
+  font-weight: 600;
+  background: none;
+  padding: 15px 70px;
+  border-radius: 10px;
+  margin: 5px;
+  transition: 0.2s;
+}
+.tab-btn:hover{
+  background-color: #eeeeee;
+  transition: 0.2s;
+   box-shadow: 2px 2px 15px rgba(36, 36, 36, 0.178);
+}
+.tab-btn.active{
+  background-color: var(--cor-principal-provao);
+  color: #FFF;
+  transition: 0.2s;
+  box-shadow: 2px 2px 15px rgba(36, 36, 36, 0.178);
+}
+.content{
+  display: none;
+}
+.content.active{
+  display: flex;
+  flex-direction: column;
+}
+.tabs-content .content{
+  border: 2px solid var(--cor-principal-provao);
+  border-radius: 10px;
+  padding: 30px 50px;
+  background-color: #e6f2ff;
+}
+.titulo-grupo{
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 1.40rem;
+}
+.texto-grupo{
+  font-size: 1.25rem;
+  margin: 15px 0;
+  color: #1f2937;
+}
+.requisitos-grupo{
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
+.titulo-requisitos{
+  font-family: Inter;
+  font-size: 1.20rem;
+  font-weight: 700;
+}
+.lista-requisitos{
+  color: #2F3847;
+  font-family: Inter;
+  font-size: 1.10rem;
+  font-weight: 600;
+  margin-left: 10px;
+  list-style: none;
+}
+.item-lista-requisitos{
+  padding: 8px;
+}
+
+/* UNIVERSIDADES PARTICIPANTES */
+#faculdades{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.faculdade{
+  border: 1px solid #BABABA;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+.header-faculdade {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 8px 16px;
   align-items: center;
 }
-.tabs{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-  background-color: #dadada;
-  border-radius: 10px;
-}
-.tabs .tabs-principal{
-  display: flex;
-  flex-wrap: wrap;
-  width: max-content;
-  max-width: 100%;
-  gap: 50px;
-  position: relative;
-}
-.tabs .tabs-tab{
- padding: .7rem 2rem;
- font-size: 1.25rem;
- font-family: Inter;
- cursor: pointer;
- font-weight: 600;
- color: #1f2937;
-}
-.tabs .active-tab{
-  background-color: #FFF;
-  position: absolute;
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
-  z-index: -1;
 
+.icone-faculdade {
+  grid-row: 1 / 3;    
+  grid-column: 1;
+  font-size: 1.5rem;
+  color: #E99117;
+}
+
+.titulo-faculdade {
+  grid-column: 2;
+  grid-row: 1;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.subtitulo-faculdade {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 1rem;
+  color: #666;
+}
+
+.num-vagas {
+  grid-column: 3;
+  grid-row: 1 / 3;    
+  text-align: right;
+  font-weight: 700;
+  font-family: Inter, sans-serif;
+  font-size: 1.25rem;
+  background-color: #fdaa3446;
+  padding: 10px;
+  border-radius: 10px;
+  color: #E99117;
+}
+
+.descricao-faculdade{
+  font-size: 1.25rem;
+  padding: 20px 40px;
+}
+.nota-corte-faculdade{
+  display: flex;
+  gap: 20px;
+  padding: 10px 40px;
+}
+.nota-corte-faculdade h4{
+  font-family: Inter;
+  font-weight: 500;
+}
+.nota-corte-faculdade p{
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.icone-faculdade--unicamp{
+  color: #BE87E8;
+}
+.num-vagas--unicamp{
+  color: #BE87E8;
+  background-color: #e6cafc83;
+}
+.icone-faculdade--unesp{
+  color: #fdc610;
+}
+.num-vagas--unesp{
+  color: #f3bd0a;
+  background-color: #fcf2d0;
+}
+.icone-faculdade--univesp{
+  color: #0066CC;
+}
+.num-vagas--univesp{
+  color: #0066CC;
+  background-color: #b4d9ff;
+}
+.icone-faculdade--fatec{
+  color: #D65B5B;
+}
+.num-vagas--fatec{
+  color: #D65B5B;
+  background-color: #ffafafb0;
+}
+.titulo-infos{
+  font-family: Inter;
+  font-size: 1.40rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.informacoes{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }

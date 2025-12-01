@@ -79,6 +79,27 @@
                         </ul>
                     </p>
                 </section>
+                <section id="modalidades-ingresso">
+                    <h2>Formas de Ingresso na USP</h2>
+                    <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Fuvest</p>
+                            <p class="texto-ingresso">Vestibular principal da USP, aberto a todos os candidatos</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Enem USP</p>
+                            <p class="texto-ingresso">Ingresso usando a nota do Enem em seleção própria da USP</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Provão Paulista</p>
+                            <p class="texto-ingresso">Acesso pela nota acumulada nas provas seriadas do Estado de São Paulo</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Olimpíadas</p>
+                            <p class="texto-ingresso">Vagas para medalhistas em olimpíadas científicas reconhecidas</p>
+                        </div>
+                    </div>
+                </section>
             </div>
             <aside class="painel-lateral">
                 <div class="card">
@@ -91,6 +112,7 @@
                             <li><a href="#introducao">O que é Fuvest</a></li>
                             <li><a href="#destaques">Destaques da Fuvest</a></li>
                             <li><a href="#como-funciona">Como Funciona a USP</a></li>
+                            <li><a href="#modalidades-ingresso">Formas de Ingresso na USP</a></li>
                         </ul>
                 </div>
                 <div class="card">

@@ -69,7 +69,32 @@
                 <section id="como-funciona">
                     <h2 class="como-funciona-titulo">Como Funciona a Unicamp</h2>
                     <p class="como-funciona-texto">O principal campus ocupa 3,5 quilômetros quadrados e está localizado no distrito de Barão Geraldo, em Campinas. A universidade também tem campi em Limeira, Piracicaba e Paulínia. O ingresso ocorre por meio do Vestibular Unicamp, organizado pela COMVEST, composto por duas fases com provas objetivas e discursivas. Além do ensino gratuito, oferece programas de bolsas, moradia estudantil e assistência socioeconômica.</p>
-                </section>    
+                </section>
+                <section id="modalidades-ingresso">
+                    <h2>Formas de Ingresso na Unicamp</h2>
+                    <div class="box-cards-ingresso">
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Vestibular Unicamp</p>
+                            <p class="texto-ingresso">Vestibular principal da Unicamp, aberto a todos os candidatos</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Enem Unicamp</p>
+                            <p class="texto-ingresso">Ingresso usando a nota do Enem em seleção própria da Unicamp</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Provão Paulista</p>
+                            <p class="texto-ingresso">Acesso pela nota acumulada nas provas seriadas do Estado de São Paulo</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Vestibular Indígena</p>
+                            <p class="texto-ingresso">Processo seletivo específico para candidatos indígenas de todo o Brasil.</p>
+                        </div>
+                        <div class="card-ingresso">
+                            <p class="titulo-ingresso">Olimpíadas</p>
+                            <p class="texto-ingresso">Vagas para medalhistas em olimpíadas científicas reconhecidas</p>
+                        </div>
+                    </div>
+                </section>   
 
             </div>
             <aside class="painel-lateral">
@@ -81,8 +106,9 @@
                     <hr>
                         <ul>
                             <li><a href="#introducao">O que é</a></li>
-                            <li><a href="#destaques">Destaques da Unicamp</a></li>
-                            <li><a href="#como-funciona">Como Funciona a Unicamp</a></li>
+                            <li><a href="#destaques">Destaques</a></li>
+                            <li><a href="#como-funciona">Como Funciona</a></li>
+                            <li><a href="#modalidades-ingresso">Formas de Ingresso</a></li>
                         </ul>
                 </div>
                 <div class="card">
