@@ -125,6 +125,13 @@ while ($row = $result->fetch_assoc()) {
     </style>
 </head>
 <body>
+<?php if(isset($_SESSION['msg_vest'])): ?>
+  <script>
+    alert("<?= $_SESSION['msg_vest'] ?>");
+  </script>
+<?php unset($_SESSION['msg_vest']); endif; ?>
+
+
     <div class="container-principal">
         <!-- Cabeçalho -->
         <header>
