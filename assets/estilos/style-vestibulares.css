@@ -638,10 +638,6 @@ h4{
     gap: 60px;
   }
 
-  .painel-lateral {
-    display: none;
-  }
-
   .infos-importantes {
     margin: 0px 100px;
   }
@@ -731,10 +727,13 @@ h4{
     margin: 0px 15px;
     flex-direction: column;
   }
+  .conteudo-infos-importantes{
+    gap: 15px;
+  }
 
   .header-infos-importantes {
-    flex-direction: column;
     gap: 10px;
+    font-size: .75rem;
   }
 
   .texto-infos-importantes, .destaque-texto-infos-importantes {
@@ -761,8 +760,13 @@ h4{
     padding: 20px;
   }
 
+  .dot{
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1rem;
+  }
+
   .header-passo {
-    flex-direction: column;
     gap: 8px;
   }
 
@@ -889,6 +893,12 @@ h4{
   .texto-card-etapa {
     padding: 0px 15px 20px 15px;
     text-align: center !important;
+  }
+  .card-info{
+    font-size: .8rem;
+  }
+    .conteudo-card-info p{
+      text-align: left;
   }
 
   .formulas {

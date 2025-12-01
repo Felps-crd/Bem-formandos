@@ -151,6 +151,7 @@ unset($subitens, $valor); // Boa prática
 .itens-bloco strong {
     font-weight: 600;
     color: #000;
+    margin-right: 5px;
 }
 
     </style>

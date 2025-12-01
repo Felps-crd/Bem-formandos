@@ -27,22 +27,18 @@ $grupos = [
     'Inscrições' => [
         'Solicitação de isenção de taxa' => null,
         'Período de inscrições' => null,
-        'Solicitação de atendimento especializado' => null,
-        'Tratamento pelo nome social' => null
+        'Inscrição de candidatos  com a isenção e redução de taxa' => null,
     ],
     'Pagamento' => [
         'Resultado da solicitação de isenção de taxa' => null,
         'Recurso da isenção' => null,
         'Pagamento da taxa de inscrição' => null
     ],
-    'Cartão de Confirmação' => [
-        'Disponibilização do cartão' => null,
-        'Consulta de locais de prova' => null,
-        'Recurso de local de prova' => null
+    'Local de Prova' => [
+        'Divulgação dos locais de prova' => null
     ],
     'Aplicação das Provas' => [
-        '1° dia de provas' => null,
-        '2° dia de provas' => null
+        'Data da Prova' => null
     ]
 ];
 
@@ -185,8 +181,8 @@ unset($subitens, $valor); // Boa prática
                                 <i class="bi bi-pencil-square"></i>
                             <?php elseif ($nome == 'Pagamento'): ?>
                                 <i class="bi bi-cash-stack"></i>
-                            <?php elseif ($nome == 'Cartão de Confirmação'): ?>
-                                <i class="bi bi-credit-card-2-front-fill"></i>
+                            <?php elseif ($nome == 'Local de Prova'): ?>
+                                <i class="bi bi-geo-alt"></i>
                             <?php elseif ($nome == 'Aplicação das Provas'): ?>
                                 <i class="bi bi-journal-check"></i>
                             <?php endif; ?>
