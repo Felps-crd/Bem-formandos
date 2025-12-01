@@ -146,7 +146,7 @@ try {
             $mail->Body = "
                 <h3>Olá, {$u['usuario']}!</h3>
                 <p>O vestibular <strong>$nome</strong> foi atualizado.</p>
-                <p>Acesse o site para conferir as novas datas e informações.</p>
+                <p>Acesse o site <strong>bemformandos.com</strong> para conferir as novas datas e informações.</p>
                 <hr>
                 <p style='font-size: 13px; color: #555'>Equipe <strong>Bem Formandos</strong></p>
             ";
