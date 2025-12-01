@@ -5,9 +5,13 @@ body {
   background-color: #D9DEE0;
 }
 
+main{
+  padding-top: 80px;
+}
+
 .page-title {
   text-align: center;
-  margin-bottom: 26px;
+  margin-bottom: 2rem;
   color: #025BB3;
   font-size: 40px;
 }

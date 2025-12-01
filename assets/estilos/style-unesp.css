@@ -119,3 +119,201 @@
 .titulo-aviso-provas{
   color: var(--cor-destaque-unesp);
 }
+
+
+/* MOBILE: compactar espaçamentos, empilhar cards, aumentar áreas de toque */
+@media (max-width: 600px) {
+  body { font-size: 14px; }
+
+  /* Cards de redução de taxa */
+  .card-reducao-taxa {
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 0;
+  }
+
+  .titulo-reducao-taxa {
+    font-size: 1.1rem;
+    padding: 18px 16px 10px;
+  }
+
+  .linha-reducao {
+    width: 95%;
+    margin: 8px auto;
+  }
+
+  .titulo-isencao {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+
+  .subtitulo-isencao {
+    font-size: 0.8rem;
+    padding: 6px 16px;
+  }
+
+  .conteudo-reducao {
+    padding: 0 16px 18px 16px;
+  }
+
+  .texto-reducao {
+    font-size: 0.95rem;
+    padding: 6px 4px;
+  }
+
+  /* Títulos e ícones */
+  .titulo-prova--unesp { font-size: 1.15rem; }
+  .curso i { font-size: 1.6rem; }
+
+  /* Cards de aviso */
+  .aviso-provas {
+    border: 1px solid var(--cor-destaque-unesp);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .titulo-aviso-provas {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  /* Card info */
+  .card-info--unesp {
+    width: 100%;
+    padding: 14px;
+  }
+
+
+  .painel-lateral .card ul li {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  body { font-size: 15px; }
+
+  /* Cards de redução de taxa */
+  .card-reducao-taxa {
+    border-radius: 10px;
+    margin-bottom: 18px;
+  }
+
+  .titulo-reducao-taxa {
+    font-size: 1.2rem;
+    padding: 24px 40px 12px;
+  }
+
+  .linha-reducao {
+    width: 92%;
+    margin: 10px auto;
+  }
+
+  .titulo-isencao {
+    font-size: 0.98rem;
+    padding: 16px 40px;
+  }
+
+  .subtitulo-isencao {
+    font-size: 0.88rem;
+    padding: 8px 40px;
+  }
+
+  .conteudo-reducao {
+    padding: 0 40px 24px 40px;
+  }
+
+  .texto-reducao {
+    font-size: 0.98rem;
+    padding: 8px 6px;
+  }
+
+  /* Títulos */
+  .titulo-prova--unesp { font-size: 1.3rem; }
+  .curso i { font-size: 1.8rem; }
+
+  /* Avisos */
+  .aviso-provas {
+    border-radius: 10px;
+    padding: 16px 24px;
+  }
+
+  .titulo-aviso-provas { font-size: 1.2rem; }
+
+  /* Cards info */
+  .card-info--unesp {
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* Painel lateral */
+  .painel-lateral .card ul li {
+    padding: 12px 14px;
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1201px) {
+  body { font-size: 16px; }
+
+  /* Cards de redução de taxa: espaçamento original */
+  .card-reducao-taxa {
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .titulo-reducao-taxa {
+    font-size: 1.25rem;
+    padding: 30px 50px 15px;
+  }
+
+  .linha-reducao {
+    width: 90%;
+    margin: auto;
+  }
+
+  .titulo-isencao {
+    font-size: 1rem;
+    padding: 20px 50px;
+  }
+
+  .subtitulo-isencao {
+    font-size: 0.875rem;
+    padding: 8px 50px;
+  }
+
+  .conteudo-reducao {
+    padding: 0 50px 30px 50px;
+  }
+
+  .texto-reducao {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  /* Títulos */
+  .titulo-prova--unesp { font-size: 1.4rem; }
+  .curso i { font-size: 2rem; }
+
+  /* Avisos */
+  .aviso-provas {
+    border-radius: 12px;
+    padding: 20px 30px;
+  }
+
+  .titulo-aviso-provas { font-size: 1.3rem; }
+
+  
+  .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+}
+
+
+/* Ajustes para dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+  .card-reducao-taxa, .card-info--unesp, .aviso-provas {
+    -webkit-tap-highlight-color: rgba(0,0,0,0.03);
+  }
+  .painel-lateral .card ul li { padding: 14px 16px; }
+}

@@ -363,3 +363,181 @@
   flex-direction: column;
   gap: 30px;
 }
+
+
+/* MOBILE: compactar espaçamentos, empilhar cards, aumentar áreas de toque */
+@media (max-width: 600px) {
+  body { font-size: 14px; }
+
+  /* Cards de inscrição em coluna única */
+  .area-cards-inscricao {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .card-inscricao { flex: 1 1 100%; }
+  .tipo-inscricao { font-size: 2rem; }
+  .texto-inscricao { padding: 14px; font-size: 0.95rem; }
+  .lista-inscricao { padding: 0 20px 16px 20px; margin-left: 0; font-size: 0.9rem; }
+
+  /* Provas e matérias empilhadas */
+  .conteudo-cards-prova { gap: 16px; }
+  .materia { flex-direction: column; gap: 8px; padding: 12px; }
+  .materia p { font-size: 0.95rem; }
+  .questoes { font-size: 0.9rem; padding: 4px 8px; }
+
+  /* Cards de peso */
+  .cards-peso { margin: 12px; gap: 8px; }
+  .conteudo-cards-peso { flex-direction: column; align-items: flex-start; padding: 14px; gap: 8px; }
+  .peso { font-size: 1.5rem; }
+
+  /* Tabs: layout móvel */
+  .container-tabs { margin: 10px; }
+  .tabs-buttons {
+    flex-direction: column;
+    margin: 12px 0;
+    background-color: transparent;
+  }
+  .tab-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 4px 0;
+    font-size: 1rem;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+  }
+  .tab-btn.active {
+    background-color: var(--cor-principal-provao);
+    color: #fff;
+  }
+  .tabs-content .content {
+    padding: 18px 16px;
+    border-radius: 8px;
+  }
+  .titulo-grupo { font-size: 1.15rem; }
+  .texto-grupo { font-size: 1rem; }
+  .requisitos-grupo { padding: 14px; margin: 12px 0; }
+  .titulo-requisitos { font-size: 1rem; }
+  .lista-requisitos { font-size: 0.95rem; margin-left: 0; }
+
+  /* Faculdades */
+  #faculdades { gap: 16px; }
+  .faculdade { padding: 14px 16px; border-radius: 8px; }
+  .header-faculdade {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 6px 10px;
+  }
+  .icone-faculdade {
+    grid-row: 1 / 2;
+    grid-column: 1;
+    font-size: 1.3rem;
+  }
+  .titulo-faculdade {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    font-size: 1.2rem;
+  }
+  .subtitulo-faculdade {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    font-size: 0.9rem;
+  }
+  .num-vagas {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    text-align: left;
+    font-size: 1rem;
+    padding: 8px;
+    margin-top: 8px;
+  }
+  .descricao-faculdade { font-size: 1rem; padding: 12px 12px; }
+  .nota-corte-faculdade {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .nota-corte-faculdade h4, .nota-corte-faculdade p { font-size: 0.9rem; }
+
+}
+
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  body { font-size: 15px; }
+
+  /* Cards de inscrição em 2 colunas ou conforme espaço */
+  .area-cards-inscricao {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 36px;
+  }
+  .card-inscricao { flex: 1 1 calc(50% - 9px); min-width: 220px; }
+  .tipo-inscricao { font-size: 2.2rem; }
+  .texto-inscricao { padding: 16px; font-size: 0.98rem; }
+  .lista-inscricao { padding: 0 28px 16px 28px; font-size: 0.95rem; }
+
+  /* Provas */
+  .conteudo-cards-prova { gap: 22px; }
+  .materia { padding: 14px; }
+  .materia p { font-size: 0.98rem; }
+
+  /* Cards de peso */
+  .cards-peso { margin: 16px; }
+  .conteudo-cards-peso { flex-direction: row; padding: 16px; gap: 12px; }
+  .peso { font-size: 1.6rem; }
+
+  /* Tabs: melhor espaçamento */
+  .container-tabs { margin: 10px 40px; }
+  .tabs-buttons { margin: 16px 0; }
+  .tab-btn { padding: 12px 50px; font-size: 1.1rem; }
+  .tabs-content .content { padding: 24px 40px; }
+  .titulo-grupo { font-size: 1.3rem; }
+  .texto-grupo { font-size: 1.15rem; }
+  .requisitos-grupo { padding: 16px; margin: 16px; }
+
+  /* Faculdades */
+  #faculdades { gap: 20px; }
+  .faculdade { padding: 18px 24px; }
+  .header-faculdade { gap: 10px 16px; }
+  .titulo-faculdade { font-size: 1.4rem; }
+  .subtitulo-faculdade { font-size: 0.95rem; }
+  .num-vagas { font-size: 1.2rem; }
+  .descricao-faculdade { font-size: 1.15rem; padding: 16px 24px; }
+  .nota-corte-faculdade { gap: 16px; padding: 12px 24px; }
+}
+
+
+@media (min-width: 1201px) {
+  body { font-size: 16px; }
+
+  /* Cards de inscrição: mantém flex row original */
+  .area-cards-inscricao { gap: 24px; margin-top: 50px; }
+  .card-inscricao { flex: 1 1 280px; }
+
+  /* Tabs: container centralizado */
+  .container-tabs { margin: 10px 80px; }
+  .tabs-buttons { margin: 20px 0; }
+  .tab-btn { padding: 15px 70px; font-size: 1.2rem; }
+  .tabs-content .content { padding: 30px 50px; }
+  .titulo-grupo { font-size: 1.4rem; }
+  .texto-grupo { font-size: 1.25rem; }
+  .requisitos-grupo { padding: 20px; margin: 20px; }
+
+  
+  #faculdades { gap: 30px; }
+  .faculdade { padding: 20px 30px; }
+  .descricao-faculdade { font-size: 1.25rem; padding: 20px 40px; }
+  .nota-corte-faculdade { gap: 20px; padding: 10px 40px; }
+
+  .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+}
+
+/* Ajustes para dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+  .tab-btn, .card-inscricao, .faculdade {
+    -webkit-tap-highlight-color: rgba(0,0,0,0.03);
+  }
+  .painel-lateral .card ul li { padding: 14px 16px; }
+}

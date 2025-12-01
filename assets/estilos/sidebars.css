@@ -229,3 +229,38 @@
 .sidebar--provao .sidebar__title{
   white-space: normal;
 }
+
+/* RESPONSIVIDADE SIDEBAR PARA NAVBAR */
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    top: 92px; /* Altura do header principal */
+    padding: 8px 15px;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 10px;
+    z-index: 900;
+  }
+  .sidebar__menu-btn{
+    display: none;
+  }
+  .sidebar__title{
+    font-size: 1.20rem;
+  }
+  .sidebar__header {
+    padding: 12px 4px 10px;
+  }
+
+  .sidebar__list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .sidebar__item a {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

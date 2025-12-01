@@ -1,7 +1,7 @@
 <?php
 include_once("../../assets/php/conexao.php");
 
-$vestibular_id = 1; // ENEM --- TROCAR POR FUVEST!!
+$vestibular_id = 2; // FUVEST
 
 // Busca taxa
 $taxa = null;

@@ -1,8 +1,8 @@
 <?php
 include_once('../../assets/php/conexao.php');
 
-// ID do vestibular ENEM
-$vestibular_id = 1;
+// ID do vestibular UNICAMP
+$vestibular_id = 3;
 
 // Consulta dos eventos
 $sql = "SELECT titulo, data_inicio, data_fim 

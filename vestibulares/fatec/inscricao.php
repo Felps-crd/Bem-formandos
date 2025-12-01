@@ -1,7 +1,7 @@
 <?php
 include_once("../../assets/php/conexao.php");
 
-$vestibular_id = 1; // ENEM --- TROCAR POR FATEC!!
+$vestibular_id = 4; // FATEC
 
 // Busca taxa
 $taxa = null;

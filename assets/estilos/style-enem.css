@@ -559,3 +559,71 @@ FIM HOME ENEM */
   font-weight: 500;
   
 }
+
+@media (max-width: 900px) {
+  /* fontes e espaçamentos mais compactos */
+  .dica-importante { width: 100%; padding: 14px; gap: 12px; }
+  .dica-importante p { font-size: 15px; }
+  .dica-importante i { font-size: 1.6rem; }
+
+  .areas-provas { padding: 24px 16px 0 16px; gap: 18px; }
+  .area-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+    gap: 12px;
+    width: 100%;
+  }
+  .area-card i { font-size: 2rem; }
+
+  .card-criterio { width: 100%; height: auto; padding: 16px; }
+  .card-criterio p { font-size: 14px; }
+
+  .cards-erros-dicas {
+    flex-direction: column;
+    padding: 24px 16px 40px 16px;
+    gap: 18px;
+  }
+  .erros, .dicas { width: 100%; }
+
+
+  /* grid -> coluna única */
+  .area-cards-tipo, .area-cards--bolsas { grid-template-columns: 1fr; gap: 16px; padding-top: 20px; }
+  .card-lei, .card-cota, .card-tipo { width: 100%; }
+
+  .passos-redacao { flex-direction: column; gap: 16px; padding: 24px 12px 0 12px; }
+
+  /* dimensões/typography */
+  .titulo-card-tipo { font-size: 1.15rem; }
+  .texto-card-tipo, .lista-card, .texto-requisito { font-size: 0.95rem; }
+}
+
+/* Tablet intermediário */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .dica-importante { width: 90%; padding: 16px; }
+  .areas-provas { padding: 30px 20px 0 20px; }
+  .area-card { padding: 22px; gap: 18px; }
+  .card-criterio { width: 420px; }
+  .area-cards-tipo { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .area-cards--bolsas { grid-template-columns: 1fr 1fr; gap: 18px; padding-top: 24px; }
+  .cards-erros-dicas { gap: 10px; padding: 30px 20px 50px 20px; }
+}
+
+/* Pequenas melhorias para telas muito pequenas */
+@media (max-width: 420px) {
+  .dica-importante p { font-size: 14px; }
+  .area-card h3 { font-size: 1.05rem; }
+  .numero-criterio { width: 48px; height: 48px; font-size: 24px; }
+  .area-card, .card-criterio { padding: 12px; }
+  .titulo-pagamento { font-size: 1.25rem; }
+  .valor-bolsa { font-size: 32px; }
+}
+
+
+/* Ajustes de toque / acessibilidade (botões, áreas clicáveis maiores) */
+@media (hover: none) and (pointer: coarse) {
+  .area-card, .card-tipo, .card-criterio, .card-aviso {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.05);
+  }
+}

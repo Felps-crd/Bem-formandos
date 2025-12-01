@@ -1,7 +1,7 @@
 <?php
 include_once("../../assets/php/conexao.php");
 
-$vestibular_id = 1; // ENEM --- TROCAR POR PROVAO!!
+$vestibular_id = 6; // PROVAO
 
 
 // Busca período de inscrições no calendário (titulo contendo "inscr" / "inscrição")

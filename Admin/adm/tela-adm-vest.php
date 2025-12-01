@@ -138,7 +138,7 @@ while ($row = $result->fetch_assoc()) {
                 <a href="../adm.html"><span class="material-symbols-outlined" id="home">home</span></a>
 
                 <div class="perfil-dropdown">
-                  <span class="material-symbols-outlined" id="abre-perfil">person</span>
+                  <span class="material-symbols-outlined" id="abre-perfil">manage_accounts</span>
 
                   <div id="perfil">
                       <div class="perfil-header">
@@ -271,11 +271,7 @@ while ($row = $result->fetch_assoc()) {
 
 
         <!--Footer-->
-        <footer class="rodape">
-            <div class="text">
-                <span>© 2025 Bem Formandos</span>
-            </div>
-        </footer>
+        <?php include_once("../../includes/footer.php"); ?>
 
     </div>
 

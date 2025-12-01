@@ -49,7 +49,7 @@
                             <p class="texto-ingresso">Bonificação de 60% para candidatos que atendem a três ou mais critérios.</p>
                         </div>
                     </div>
-                    <div class="card-info card-info--unicamp">
+                    <div class="card-info card-info--clas-unicamp">
                                 <div class="conteudo-card-info">
                                     <i class="bi bi-info-circle-fill"></i>
                                     <p class="texto-card-info texto-card-info--unicamp"><strong>Critérios do PAAIS:</strong> A bonificação é concedida a candidatos que atendem a critérios de renda familiar, raça/etnia, deficiência, e outras condições de vulnerabilidade social.<br><strong>Documentação Obrigatória</strong></p>

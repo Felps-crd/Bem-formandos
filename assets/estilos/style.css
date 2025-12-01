@@ -436,6 +436,10 @@ footer{
     margin-right: 20px;
   }
 
+  .btn-inicio {
+    margin-right: 20px;
+  }
+
   .icones-cabecalho {
     gap: 20px;
     margin-right: 20px;
@@ -443,21 +447,45 @@ footer{
 }
 
 /* Para celulares */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .container-principal {
+    padding-top: 100px; /* Ajustado para a nova altura do header */
+  }
+
+  .container-conteudo {
+    height: auto; /* Permite que o conteúdo defina a altura */
+    overflow: visible;
+  }
+
   header {
     flex-direction: column;
     height: auto;
     padding: 10px 10px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .logo {
     margin-left: 0;
     margin-bottom: 10px;
+    flex-direction: row;
+    text-align: center;
   }
 
   .logo h1 {
     font-size: 24px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-inicio {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    font-size: 2em;
   }
 
   .btn-cadastro {
@@ -465,12 +493,58 @@ footer{
     height: 40px;
     font-size: 16px;
     margin: 0 0 10px 0;
+    padding: 5px 10px;
   }
 
-  .icones-cabecalho {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 15px;
-    margin-right: 0;
+  .intro {
+    padding: 40px 0;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .intro-title {
+    font-size: 32px;
+  }
+
+  .intro-text p {
+    font-size: 16px;
+  }
+
+  .img-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .imagem-principal {
+    width: 150px;
+    height: 150px;
+    font-size: 60px;
+  }
+
+  .elemento {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vestibulares {
+    padding: 60px 0;
+  }
+
+  .botoes-vestibulares {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .conteudo-rodape {
+    padding: 20px;
+  }
+
+  .contato-rodape {
+    padding-left: 0;
+    align-items: center;
   }
 }

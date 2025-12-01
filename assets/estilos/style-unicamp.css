@@ -60,6 +60,12 @@
 .card-info--unicamp i{
   color: var(--cor-destaque-unicamp);
 }
+.card-info--clas-unicamp i{
+  color: var(--cor-destaque-unicamp);
+}
+.card-info--clas-unicamp {
+  border: 1px solid var(--cor-principal-unicamp);
+}
 .texto-card-info--unicamp{
   color: var(--cor-destaque-unicamp);
 }
@@ -85,4 +91,202 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
   grid-auto-flow: column; 
+}
+
+
+/* MOBILE: compactar espaçamentos, empilhar cards, aumentar áreas de toque */
+@media (max-width: 600px) {
+  body { font-size: 14px; }
+
+  /* Grid de legenda: coluna única */
+  .legenda {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 12px;
+    padding: 10px 12px;
+  }
+
+  /* Títulos e ícones */
+  .titulo-prova--unicamp { 
+    font-size: 1.15rem; 
+    margin-bottom: 12px;
+  }
+  .curso i { font-size: 1.6rem; }
+
+  /* Cards de aviso */
+  .aviso-provas {
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+  }
+
+  .titulo-aviso-provas {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  /* Card info */
+  .card-info--clas-unicamp {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin: 0 !important;
+  }
+
+  .texto-card-info--unicamp {
+    font-size: 0.95rem;
+  }
+
+  /* Informações importantes */
+  .infos-importantes--unicamp {
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 0px 170px;
+  }
+
+  .texto-infos-importantes--unicamp {
+    font-size: 0.95rem;
+  }
+
+  .destaque-texto-infos-importantes--unicamp {
+    font-weight: 700;
+  }
+
+
+  .painel-lateral .card ul li {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  body { font-size: 15px; }
+
+  /* Grid de legenda: 2 colunas */
+  .legenda {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    gap: 16px;
+    padding: 10px 18px;
+  }
+
+  /* Títulos e ícones */
+  .titulo-prova--unicamp { 
+    font-size: 1.3rem; 
+    margin-bottom: 16px;
+  }
+  .curso i { font-size: 1.8rem; }
+
+  /* Cards de aviso */
+  .aviso-provas {
+    border-radius: 10px;
+    padding: 16px 24px;
+    margin: 16px 0;
+  }
+
+  .titulo-aviso-provas {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  /* Card info */
+  .card-info--clas-unicamp {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin: 0 !important;
+  }
+
+  .texto-card-info--unicamp {
+    font-size: 1rem;
+  }
+
+  /* Informações importantes */
+  .infos-importantes--unicamp {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .texto-infos-importantes--unicamp {
+    font-size: 1rem;
+  }
+
+  /* Painel lateral */
+  .painel-lateral .card ul li {
+    padding: 12px 14px;
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1201px) {
+  body { font-size: 16px; }
+
+  /* Grid de legenda: mantém layout original */
+  .legenda {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+    gap: 20px;
+  }
+
+  /* Títulos e ícones */
+  .titulo-prova--unicamp { 
+    font-size: 1.4rem; 
+    margin-bottom: 20px;
+  }
+  .curso i { font-size: 2rem; }
+
+  /* Cards de aviso */
+  .aviso-provas {
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin: 20px 0;
+  }
+
+  .titulo-aviso-provas {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  /* Card info */
+  .card-info--clas-unicamp {
+    padding: 18px 24px;
+    border-radius: 12px;
+     margin: 0 !important;
+  }
+
+  .texto-card-info--unicamp {
+    font-size: 1.1rem;
+  }
+
+  /* Informações importantes */
+  .infos-importantes--unicamp {
+    border-radius: 12px;
+    padding: 18px 24px;
+  }
+
+  .texto-infos-importantes--unicamp {
+    font-size: 1.1rem;
+  }
+
+  .destaque-texto-infos-importantes--unicamp {
+    font-size: 1.15rem;
+  }
+
+ 
+  .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+}
+
+
+/* Ajustes para dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+  .card-info--clas-unicamp, .aviso-provas, .infos-importantes--unicamp {
+    -webkit-tap-highlight-color: rgba(0,0,0,0.03);
+  }
+  .painel-lateral .card ul li { padding: 14px 16px; }
 }

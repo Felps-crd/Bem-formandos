@@ -600,6 +600,7 @@ h4{
   font-size: 1.25rem;
   color: var(--cor-texto-secundaria);
   font-weight: 500;
+  padding-bottom: 20px;
 }
 .lista-criterios{
   display: flex;
@@ -622,4 +623,471 @@ h4{
   --cor-borda: #E5E7EB;
   --cor-borda-secundaria: #BABABA;
 
+}
+
+/* RESPONSIVIDADE GERAL PARA PÁGINAS DE VESTIBULARES */
+@media (max-width: 1200px) {
+  .main-vestibulares {
+    grid-template-columns: 250px 1fr 300px; /* Ajusta larguras para telas um pouco menores */
+    gap: 3%;
+    padding: 30px 15px;
+  }
+
+  .conteudo {
+    padding: 40px 60px;
+    gap: 60px;
+  }
+
+  .painel-lateral {
+    display: none;
+  }
+
+  .infos-importantes {
+    margin: 0px 100px;
+  }
+
+  .aviso-provas {
+    margin: 20px 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-vestibulares {
+    grid-template-columns: 1fr; /* Empilha colunas em uma única coluna */
+    gap: 20px;
+    padding: 30px 18px;
+  }
+
+  .painel-lateral {
+    display: none;
+  }
+
+  .infos-importantes {
+    margin: 0px 50px;
+  }
+
+  .cards-etapas {
+    grid-template-columns: 1fr; /* Empilha as etapas */
+  }
+
+  .etapa:nth-child(3) {
+    grid-column: auto; /* Reseta o grid-column para empilhar */
+  }
+
+  .formulas {
+    flex-direction: column; /* Empilha as fórmulas */
+  }
+
+  .legenda {
+    grid-template-columns: 1fr; /* Empilha a legenda */
+    padding: 20px;
+  }
+
+  .box-cards-ingresso {
+    flex-direction: column; /* Empilha os cards de ingresso */
+    margin: 20px 0;
+  }
+
+  .card-ingresso {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .conteudo {
+    padding: 20px 50px;
+    gap: 30px;
+  }
+
+  .titulo {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titulo i {
+    font-size: 35px;
+    padding: 0;
+  }
+
+  .infos-importantes {
+    margin: 0px 15px;
+    flex-direction: column;
+  }
+
+  .header-infos-importantes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .texto-infos-importantes, .destaque-texto-infos-importantes {
+    font-size: 1em;
+  }
+
+  .area-cards {
+    padding-top: 10px;
+  }
+
+  .conteudo-card {
+    padding: 20px;
+  }
+
+  .titulo-info {
+    font-size: 1.2em;
+  }
+
+  .texto-info {
+    font-size: 0.9em;
+  }
+
+  .card-passo {
+    padding: 20px;
+  }
+
+  .header-passo {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .titulo-card-passo {
+    font-size: 1.1em;
+  }
+
+  .texto-card-passo {
+    padding-left: 0;
+    font-size: 0.9em;
+  }
+
+  .lista-dados {
+    padding-left: 20px;
+    font-size: 0.9em;
+  }
+
+  .card-info {
+    margin: 10px 15px 0 15px;
+  }
+
+  .titulo-isencao {
+    font-size: 1.1em;
+  }
+
+  .lista-isencao {
+    margin-left: 10px;
+    font-size: 0.9em;
+  }
+
+  .destaques {
+    padding: 20px 15px 0px 15px;
+  }
+
+  .destaque-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .destaque-card i {
+    font-size: 2rem;
+  }
+
+  .lista-caracteristicas {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  .conteudo-cards-prova {
+    padding: 30px 20px 15px 20px;
+  }
+
+  .titulo-prova {
+    font-size: 1.2rem;
+  }
+
+  .subtitulo-prova {
+    font-size: 1.1rem;
+  }
+
+  .texto-prova {
+    font-size: 18px;
+  }
+
+  .lista-infos-prova {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .subtitulo-secao {
+    font-size: 1.2em;
+    padding: 25px 15px 20px 15px;
+  }
+
+  .cursos-habilidades {
+    grid-template-columns: 1fr;
+    padding: 0px 15px 15px 15px;
+  }
+
+  .curso {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .curso p {
+    font-size: 1.2rem;
+  }
+
+  .aviso-provas {
+    margin: 10px 15px;
+    padding: 15px;
+  }
+
+  .titulo-aviso-provas {
+    font-size: 1.1rem;
+  }
+
+  .texto-aviso-provas {
+    font-size: 0.9em;
+  }
+
+  .box-cards-ingresso {
+    margin: 15px 15px;
+  }
+
+  .titulo-ingresso {
+    font-size: 1.1rem;
+  }
+
+  .texto-ingresso {
+    font-size: 0.9em;
+  }
+
+  .header-etapa {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 15px 3px 15px;
+  }
+
+  .subtitulo-card-etapa {
+    padding: 0px 20px 15px 20px;
+  }
+
+  .texto-card-etapa {
+    padding: 0px 15px 20px 15px;
+    text-align: center !important;
+  }
+
+  .formulas {
+    gap: 15px;
+  }
+
+  .formula {
+    padding: 15px;
+  }
+
+  .titulo-calculo {
+    font-size: 0.9rem;
+  }
+
+  .calculo {
+    font-size: 1.1rem;
+  }
+
+  .legenda {
+    padding: 15px;
+  }
+
+  .legenda-formulas {
+    font-size: 0.9rem;
+  }
+
+  .desempate {
+    margin-left: 15px;
+  }
+
+  .desempate p {
+    font-size: 1.1rem;
+  }
+
+  .lista-criterios {
+    padding: 15px 15px 20px 20px;
+  }
+
+  .criterio {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .conteudo {
+    padding: 20px 30px;
+    gap: 20px;
+  }
+
+  .titulo i {
+    font-size: 30px;
+  }
+
+  .infos-importantes {
+    margin: 0px 10px;
+  }
+
+  .texto-infos-importantes, .destaque-texto-infos-importantes {
+    font-size: 0.9em;
+  }
+
+  .titulo-info {
+    font-size: 1.1em;
+  }
+
+  .texto-info {
+    font-size: 0.8em;
+  }
+
+  .titulo-card-passo {
+    font-size: 1em;
+  }
+
+  .texto-card-passo {
+    font-size: 0.8em;
+  }
+
+  .lista-dados {
+    font-size: 0.8em;
+  }
+
+  .titulo-isencao {
+    font-size: 1em;
+  }
+
+  .lista-isencao {
+    font-size: 0.8em;
+  }
+
+  .destaque-card {
+    padding: 15px;
+  }
+
+  .destaque-card i {
+    font-size: 1.8rem;
+  }
+
+  .lista-caracteristicas {
+    font-size: 16px;
+  }
+
+  .conteudo-cards-prova {
+    padding: 20px 15px 10px 15px;
+  }
+
+  .titulo-prova {
+    font-size: 1.1rem;
+  }
+
+  .subtitulo-prova {
+    font-size: 1rem;
+  }
+
+  .texto-prova {
+    font-size: 16px;
+  }
+
+  .lista-infos-prova {
+    font-size: 16px;
+  }
+
+  .subtitulo-secao {
+    font-size: 1.1em;
+    padding: 20px 10px 15px 10px;
+  }
+
+  .curso p {
+    font-size: 1.1rem;
+  }
+
+  .aviso-provas {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .titulo-aviso-provas {
+    font-size: 1em;
+  }
+
+  .texto-aviso-provas {
+    font-size: 0.8em;
+  }
+
+  .titulo-ingresso {
+    font-size: 1rem;
+  }
+
+  .texto-ingresso {
+    font-size: 0.8em;
+  }
+
+  .subtitulo-card-etapa {
+    font-size: 0.9rem;
+  }
+
+  .texto-card-etapa {
+    font-size: 0.9rem;
+  }
+
+  .titulo-calculo {
+    font-size: 0.8rem;
+  }
+
+  .calculo {
+    font-size: 1rem;
+  }
+
+  .legenda-formulas {
+    font-size: 0.8rem;
+  }
+
+  .desempate p {
+    font-size: 1rem;
+  }
+
+  .criterio {
+    font-size: 0.8rem;
+  }
+}
+
+/* UTILIDADES RESPONSIVAS E CORREÇÕES GERAIS */
+img, picture, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.conteudo, .cards-prova, .destaques, .box-cards-ingresso {
+  box-sizing: border-box;
 }
