@@ -43,6 +43,11 @@ $grupos = [
     'Aplicação das Provas' => [
         '1° dia de provas' => null,
         '2° dia de provas' => null
+    ],
+    'Resultados' => [
+        'Gabarito oficial' => null,
+        'Espelho da redação' => null,
+        'Resultado final' => null
     ]
 ];
 
@@ -173,7 +178,7 @@ unset($subitens, $valor); // Boa prática
             </section>
 
             <section id="cronograma">
-                <h2>Cronograma Completo Enem <?php echo date('Y');?></h2>
+                <h2>Cronograma Completo Enem</h2>
 
                 <?php foreach ($grupos as $nome => $eventosGrupo): ?>
                     <div class="area-card">
@@ -186,6 +191,8 @@ unset($subitens, $valor); // Boa prática
                                 <i class="bi bi-credit-card-2-front-fill"></i>
                             <?php elseif ($nome == 'Aplicação das Provas'): ?>
                                 <i class="bi bi-journal-check"></i>
+                            <?php elseif ($nome == 'Resultados'): ?>
+                                <i class="bi bi-trophy"></i>
                             <?php endif; ?>
                             <h3><?= htmlspecialchars($nome) ?></h3>
                         </div>
@@ -246,7 +253,7 @@ unset($subitens, $valor); // Boa prática
                 </div>
                 <hr>
                 <ul>
-                    <li><a href="#introducao">Cronograma Enem <?php echo date('Y');?></a></li>
+                    <li><a href="#introducao">Cronograma Enem </a></li>
                     <li><a href="#infos-importantes">Informações Importantes</a></li>
                 </ul>
             </div>

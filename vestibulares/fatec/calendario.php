@@ -39,6 +39,10 @@ $grupos = [
     ],
     'Aplicação das Provas' => [
         'Data da Prova' => null
+    ],
+    'Resultados' => [
+        'Gabarito oficial' => null,
+        'Resultado final' => null
     ]
 ];
 
@@ -149,6 +153,7 @@ unset($subitens, $valor); // Boa prática
 .itens-bloco strong {
     font-weight: 600;
     color: #000;
+    margin-right: 5px;
 }
 
     </style>
@@ -185,6 +190,8 @@ unset($subitens, $valor); // Boa prática
                                 <i class="bi bi-geo-alt"></i>
                             <?php elseif ($nome == 'Aplicação das Provas'): ?>
                                 <i class="bi bi-journal-check"></i>
+                            <?php elseif ($nome == 'Resultados'): ?>
+                                <i class="bi bi-trophy"></i>
                             <?php endif; ?>
                             <h3><?= htmlspecialchars($nome) ?></h3>
                         </div>

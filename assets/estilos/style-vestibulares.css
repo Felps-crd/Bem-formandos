@@ -1,3 +1,15 @@
+/* VARIAVEIS CSS */
+:root{
+  --background: #fff;
+  --cor-titulo: #1F2937;
+  --cor-texto-primaria: #2F3847;
+  --cor-texto-secundaria: #434B59;
+  --cor-texto-terciaria: #8B8B8B;
+  --cor-borda: #E5E7EB;
+  --cor-borda-secundaria: #BABABA;
+
+}
+
 /* Estilos padrões todas páginas*/
 a{
   text-decoration: none;
@@ -613,17 +625,7 @@ h4{
   font-size: 1rem;
   color: var(--cor-texto-primaria);
 }
-/* VARIAVEIS CSS */
-:root{
-  --background: #fff;
-  --cor-titulo: #1F2937;
-  --cor-texto-primaria: #2F3847;
-  --cor-texto-secundaria: #434B59;
-  --cor-texto-terciaria: #8B8B8B;
-  --cor-borda: #E5E7EB;
-  --cor-borda-secundaria: #BABABA;
 
-}
 
 /* RESPONSIVIDADE GERAL PARA PÁGINAS DE VESTIBULARES */
 @media (max-width: 1200px) {

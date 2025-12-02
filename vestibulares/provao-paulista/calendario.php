@@ -25,25 +25,27 @@ function formatar_datas($inicio, $fim) {
 // Estrutura fixa dos grupos
 $grupos = [
     'Inscrições' => [
-        'Solicitação de isenção de taxa' => null,
-        'Período de inscrições' => null,
-        'Solicitação de atendimento especializado' => null,
-        'Tratamento pelo nome social' => null
+        'Período de inscrições' => null
     ],
-    'Pagamento' => [
-        'Resultado da solicitação de isenção de taxa' => null,
-        'Recurso da isenção' => null,
-        'Pagamento da taxa de inscrição' => null
+    'Escolha de Cursos' => [
+        'Período de escolha' => null
     ],
-    'Cartão de Confirmação' => [
-        'Disponibilização do cartão' => null,
-        'Consulta de locais de prova' => null,
-        'Recurso de local de prova' => null
+    'Provas - 1ª Série' => [
+        '1° dia de prova da 1ª Série' => null,
+        '2° dia de prova da 1ª Série' => null
     ],
-    'Aplicação das Provas' => [
-        '1° dia de provas' => null,
-        '2° dia de provas' => null
-    ]
+    'Provas - 2ª Série' => [
+        '1° dia de prova da 2ª Série' => null,
+        '2° dia de prova da 2ª Série' => null
+    ],
+    'Provas - 3ª Série' => [
+        '1° dia de prova da 3ª Série' => null,
+        '2° dia de prova da 3ª Série' => null
+    ],
+    'Resultados' => [
+        'Divulgação do gabarito oficial' => null,
+        'Divulgação do resultado final' => null
+    ],
 ];
 
 // Distribui os eventos do banco nos grupos correspondentes
@@ -171,22 +173,27 @@ unset($subitens, $valor); // Boa prática
                         CALENDÁRIO
                     </h1>
                     <hr>
+                    <p>Fique por dentro de todas as datas importantes do Provão Paulista.</p>
                 </section>
 
                 <section id="cronograma">
-                <h2>Cronograma Completo Provão Paulista <?php echo date('Y');?></h2>
+                <h2>Cronograma Completo Provão Paulista</h2>
 
                 <?php foreach ($grupos as $nome => $eventosGrupo): ?>
                     <div class="area-card">
                         <div class="titulo-bloco">
                             <?php if ($nome == 'Inscrições'): ?>
+                                <i class="bi bi-person-plus"></i>
+                            <?php elseif ($nome == 'Escolha de Cursos'): ?>
                                 <i class="bi bi-pencil-square"></i>
-                            <?php elseif ($nome == 'Pagamento'): ?>
-                                <i class="bi bi-cash-stack"></i>
-                            <?php elseif ($nome == 'Cartão de Confirmação'): ?>
-                                <i class="bi bi-credit-card-2-front-fill"></i>
-                            <?php elseif ($nome == 'Aplicação das Provas'): ?>
+                            <?php elseif ($nome == 'Provas - 1ª Série'): ?>
                                 <i class="bi bi-journal-check"></i>
+                            <?php elseif ($nome == 'Provas - 2ª Série'): ?>
+                                <i class="bi bi-journal-check"></i>
+                            <?php elseif ($nome == 'Provas - 3ª Série'): ?>
+                                <i class="bi bi-journal-check"></i>
+                            <?php elseif ($nome == 'Resultados'): ?>
+                                <i class="bi bi-trophy"></i>
                             <?php endif; ?>
                             <h3><?= htmlspecialchars($nome) ?></h3>
                         </div>
@@ -254,7 +261,7 @@ unset($subitens, $valor); // Boa prática
                     </div>
                     <hr>
                         <ul>
-                        <li><a href="#introducao">Cronograma Provão Paulista <?php echo date('Y');?></a></li>
+                        <li><a href="#introducao">Cronograma Provão Paulista </a></li>
                         <li><a href="#infos-importantes">Informações Importantes</a></li>
                         </ul>
                 </div>

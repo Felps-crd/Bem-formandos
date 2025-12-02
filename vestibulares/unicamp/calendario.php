@@ -26,23 +26,32 @@ function formatar_datas($inicio, $fim) {
 $grupos = [
     'Inscrições' => [
         'Solicitação de isenção de taxa' => null,
-        'Período de inscrições' => null,
-        'Solicitação de atendimento especializado' => null,
-        'Tratamento pelo nome social' => null
+        'Pedido de recursos específicos' => null,
+        'Período de inscrições' => null
     ],
     'Pagamento' => [
         'Resultado da solicitação de isenção de taxa' => null,
-        'Recurso da isenção' => null,
         'Pagamento da taxa de inscrição' => null
     ],
-    'Cartão de Confirmação' => [
-        'Disponibilização do cartão' => null,
-        'Consulta de locais de prova' => null,
-        'Recurso de local de prova' => null
+    'Locais de Prova' => [
+        'Divulgação dos locais de prova da 1ª fase' => null,
+        'Divulgação dos locais de prova da 2ª fase' => null
     ],
-    'Aplicação das Provas' => [
-        '1° dia de provas' => null,
-        '2° dia de provas' => null
+    'Aplicação das Provas - 1ª Fase' => [
+        'Data da prova' => null
+    ],
+    'Aplicação das Provas - 2ª Fase' => [
+        'Lista de convocados' => null,
+        '1° dia de prova' => null,
+        '2° dia de prova' => null
+    ],
+    'Provas de Competências Específicas' => [
+        'Período de aplicação das Provas' => null
+    ],
+    'Resultados' => [
+        'Divulgação da 1ª Chamada' => null,
+        'Divulgação da 2ª Chamada' => null,
+        'Divulgação da 3ª Chamada' => null
     ]
 ];
 
@@ -171,12 +180,11 @@ unset($subitens, $valor); // Boa prática
                         CALENDÁRIO
                     </h1>
                     <hr>
-                    <p>O Vestibular da UNICAMP é o principal meio de ingresso para os cursos de graduação da Universidade Estadual de Campinas, uma das mais prestigiadas instituições de ensino superior do Brasil. O processo seletivo é composto por duas fases que avaliam conhecimentos gerais e capacidade de argumentação dos candidatos.
-                    Conheça as etapas e áreas cobradas para se preparar melhor.</p>
+                    <p>Fique por dentro de todas as datas importantes da Unicamp 2026.</p>
                 </section>
 
                 <section id="cronograma">
-                <h2>Cronograma Completo Unicamp <?php echo date('Y');?></h2>
+                <h2>Cronograma Completo Unicamp </h2>
 
                 <?php foreach ($grupos as $nome => $eventosGrupo): ?>
                     <div class="area-card">
@@ -185,10 +193,16 @@ unset($subitens, $valor); // Boa prática
                                 <i class="bi bi-pencil-square"></i>
                             <?php elseif ($nome == 'Pagamento'): ?>
                                 <i class="bi bi-cash-stack"></i>
-                            <?php elseif ($nome == 'Cartão de Confirmação'): ?>
-                                <i class="bi bi-credit-card-2-front-fill"></i>
-                            <?php elseif ($nome == 'Aplicação das Provas'): ?>
+                            <?php elseif ($nome == 'Locais de Prova'): ?>
+                                <i class="bi bi-geo-alt"></i>
+                            <?php elseif ($nome == 'Aplicação das Provas - 1ª Fase'): ?>
                                 <i class="bi bi-journal-check"></i>
+                            <?php elseif ($nome == 'Aplicação das Provas - 2ª Fase'): ?>
+                                <i class="bi bi-journal-check"></i>
+                            <?php elseif ($nome == 'Provas de Competências Específicas'): ?>
+                                <i class="bi bi-journal-check"></i>
+                            <?php elseif ($nome == 'Resultados'): ?>
+                                <i class="bi bi-trophy"></i>
                             <?php endif; ?>
                             <h3><?= htmlspecialchars($nome) ?></h3>
                         </div>
@@ -257,7 +271,7 @@ unset($subitens, $valor); // Boa prática
                     </div>
                     <hr>
                         <ul>
-                        <li><a href="#introducao">Cronograma Unicamp <?php echo date('Y');?></a></li>
+                        <li><a href="#introducao">Cronograma Unicamp </a></li>
                         <li><a href="#infos-importantes">Informações Importantes</a></li>
                         </ul>
                 </div>
